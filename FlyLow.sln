@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyLow", "FlyLow\FlyLow\FlyLow.csproj", "{6839AA82-532D-47A3-B840-F6B0D4D0B331}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "FlyLowContent", "FlyLow\FlyLowContent\FlyLowContent.contentproj", "{E68DEA06-8694-4230-9E96-442E2608BB96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6839AA82-532D-47A3-B840-F6B0D4D0B331}.Debug|x86.ActiveCfg = Debug|x86
+		{6839AA82-532D-47A3-B840-F6B0D4D0B331}.Debug|x86.Build.0 = Debug|x86
+		{6839AA82-532D-47A3-B840-F6B0D4D0B331}.Release|x86.ActiveCfg = Release|x86
+		{6839AA82-532D-47A3-B840-F6B0D4D0B331}.Release|x86.Build.0 = Release|x86
+		{E68DEA06-8694-4230-9E96-442E2608BB96}.Debug|x86.ActiveCfg = Debug|x86
+		{E68DEA06-8694-4230-9E96-442E2608BB96}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

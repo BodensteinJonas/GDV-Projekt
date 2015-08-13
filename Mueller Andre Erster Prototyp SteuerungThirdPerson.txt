@@ -1,0 +1,235 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+
+namespace FlyLow
+{
+
+    public class Game1 : Microsoft.Xna.Framework.Game
+    {
+        GraphicsDeviceManager graphics;
+        Matrix projection;
+        Player p;
+        ReferencePoint rP;
+
+  
+
+        public Game1()
+        {
+            graphics = new GraphicsDeviceManager(this);
+            Content.RootDirectory = "Content";
+            IsMouseVisible = true;
+            p = new Player(Vector3.Zero);
+
+           
+        }
+
+
+        protected override void Initialize()
+        {
+
+
+            base.Initialize();
+        }
+
+ 
+        protected override void LoadContent()
+        {
+            projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45f), graphics.GraphicsDevice.Viewport.AspectRatio, .1f, 1000f);
+            p.loadContent(Content);
+
+            rP = new ReferencePoint(Content);
+        }
+
+
+        protected override void UnloadContent()
+        {
+            Content.Unload();
+        }
+
+
+        protected override void Update(GameTime gameTime)
+        {
+
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+                this.Exit();
+
+            p.update();
+
+
+
+            base.Update(gameTime);
+        }
+
+
+        protected override void Draw(GameTime gameTime)
+        {
+            GraphicsDevice.Clear(Color.Black);
+
+            rP.draw(projection, p.view);
+            p.draw(projection);
+
+            base.Draw(gameTime);
+        }
+    }
+}
+
+
+
+
+
+########
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Input;
+
+namespace FlyLow
+{
+    class Player
+    {
+        Model model;
+        Vector3 pos;
+        Vector3 rotation;
+        float velocity = 1;
+        Vector3 camPos;
+        public Matrix view;
+        Matrix[] bonetransformations;
+
+        public Player(Vector3 position)
+        {
+            camPos = new Vector3(position.X +200 , position.Y +300, position.Z +800);
+            //view = Matrix.CreateLookAt(new Vector3(500, 400, 500), Vector3.Zero, Vector3.Up);
+            
+            rotation = Vector3.Zero;
+        }
+
+        public void loadContent(ContentManager c)
+        {
+            model = c.Load<Model>("wuerfel1");
+        }
+
+        public void update()
+        {
+            
+
+            KeyboardState keyState = Keyboard.GetState();
+
+            if (keyState.IsKeyDown(Keys.Left))
+            {
+                rotation.Y += .05f;
+            }
+
+            if (keyState.IsKeyDown(Keys.Right))
+            {
+                rotation.Y -= .05f;
+            }
+
+            if (keyState.IsKeyDown(Keys.Up))
+            {
+                pos.X += velocity * (float)Math.Sin(rotation.Y);
+                pos.Y += velocity * (float)Math.Cos(rotation.Y);
+            }
+
+            if (keyState.IsKeyDown(Keys.Down))
+            {
+                pos.X -= velocity * (float)Math.Sin(rotation.Y);
+                pos.Y -= velocity * (float)Math.Cos(rotation.Y);
+            }
+
+            camPos.X = pos.X + 800 * (float)Math.Sin(rotation.Y);
+            camPos.Z = pos.Z + 800 * (float)Math.Cos(rotation.Y);
+            view = Matrix.CreateLookAt(camPos, pos, Vector3.Up);
+
+            
+        }
+
+
+        public void draw(Matrix projection)
+        {
+            bonetransformations = new Matrix[model.Bones.Count];
+
+            model.CopyAbsoluteBoneTransformsTo(bonetransformations);
+
+
+            foreach (ModelMesh mesh in model.Meshes)
+            {
+                foreach (BasicEffect effect in mesh.Effects)
+                {
+                    effect.World = bonetransformations[mesh.ParentBone.Index] * Matrix.CreateScale(0.3f) * Matrix.CreateRotationX(rotation.X) * Matrix.CreateRotationY(rotation.Y) * Matrix.CreateRotationZ(rotation.Z)* Matrix.CreateTranslation(pos);
+                    effect.View = view;
+                    effect.Projection = projection;
+                    effect.EnableDefaultLighting();
+                }
+                mesh.Draw();
+            }
+        }
+    }
+}
+
+
+
+
+##########
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+
+namespace FlyLow
+{
+    class ReferencePoint
+    {
+        Model model;
+        Vector3 pos;
+
+        Matrix[] bonetransformations;
+
+        public ReferencePoint(ContentManager c)
+        {
+            model = c.Load<Model>("ro");
+            pos = new Vector3(-70, 0, -100);
+        }
+
+        public void draw(Matrix projection, Matrix view)
+        {
+            bonetransformations = new Matrix[model.Bones.Count];
+            model.CopyAbsoluteBoneTransformsTo(bonetransformations);
+
+            foreach (ModelMesh mesh in model.Meshes)
+            {
+                foreach (BasicEffect effect in mesh.Effects)
+                {
+                    effect.TextureEnabled = false;
+                    effect.World = bonetransformations[mesh.ParentBone.Index] * Matrix.CreateScale(0.2f) * Matrix.CreateTranslation(pos);
+                    effect.View = view;
+                    effect.Projection = projection;
+                    effect.EnableDefaultLighting();
+                }
+                mesh.Draw();
+            }
+        }
+    }
+}
+
+
+

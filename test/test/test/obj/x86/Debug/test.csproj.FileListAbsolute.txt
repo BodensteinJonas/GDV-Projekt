@@ -1,0 +1,8 @@
+C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\bin\x86\Debug\Content\eurofighter fbx.xnb
+C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\bin\x86\Debug\test.exe
+C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\bin\x86\Debug\test.pdb
+C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\obj\x86\Debug\test.exe
+C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\obj\x86\Debug\test.pdb
+C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\bin\x86\Debug\Content\plane.xnb
+C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\obj\x86\Debug\test.csprojResolveAssemblyReference.cache

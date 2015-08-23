@@ -1,0 +1,6 @@
+C:\Users\andre\Documents\Visual Studio 2010\Projects\FlyLow2\FlyLow2\FlyLow2\bin\x86\Debug\FlyLow2.exe
+C:\Users\andre\Documents\Visual Studio 2010\Projects\FlyLow2\FlyLow2\FlyLow2\bin\x86\Debug\FlyLow2.pdb
+C:\Users\andre\Documents\Visual Studio 2010\Projects\FlyLow2\FlyLow2\FlyLow2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\andre\Documents\Visual Studio 2010\Projects\FlyLow2\FlyLow2\FlyLow2\obj\x86\Debug\FlyLow2.exe
+C:\Users\andre\Documents\Visual Studio 2010\Projects\FlyLow2\FlyLow2\FlyLow2\obj\x86\Debug\FlyLow2.pdb
+C:\Users\andre\Documents\Visual Studio 2010\Projects\FlyLow2\FlyLow2\FlyLow2\bin\x86\Debug\Content\wuerfelneu.xnb

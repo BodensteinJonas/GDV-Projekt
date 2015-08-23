@@ -1,0 +1,2 @@
+Content\eurofighter fbx.xnb
+Content\plane.xnb

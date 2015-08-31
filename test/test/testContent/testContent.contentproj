@@ -42,15 +42,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="eurofighter fbx.fbx">
-      <Name>eurofighter fbx</Name>
+    <Compile Include="plane.fbx">
+      <Name>plane</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="plane.fbx">
-      <Name>plane</Name>
+    <Compile Include="flieger.fbx">
+      <Name>flieger</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="flügel_textur2.png">
+      <Name>flügel_textur2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="room.fbx">
+      <Name>room</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>

@@ -6,3 +6,14 @@ C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\obj\x86\Debu
 C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\obj\x86\Debug\test.pdb
 C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\bin\x86\Debug\Content\plane.xnb
 C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\obj\x86\Debug\test.csprojResolveAssemblyReference.cache
+C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\plane.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\test.exe
+C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\test.pdb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\obj\x86\Debug\test.csprojResolveAssemblyReference.cache
+C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\obj\x86\Debug\test.exe
+C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\obj\x86\Debug\test.pdb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flieger.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flügel_textur2.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flgel_textur2_0.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\room.xnb

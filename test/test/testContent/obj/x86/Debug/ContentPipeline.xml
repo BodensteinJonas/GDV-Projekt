@@ -1,37 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
   <Asset Type="Pipeline:BuildItemCollection">
-    <Item>
-      <Source>eurofighter fbx.fbx</Source>
-      <Name>eurofighter fbx</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\bin\x86\Debug\Content\eurofighter fbx.xnb</Output>
-      <Time>2015-08-12T22:51:25.6820835+02:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\eurofighter fbx_0.xml</Key>
-        <Value>2015-08-12T22:51:34.4405844+02:00</Value>
-      </Dependency>
-    </Item>
-    <Item>
-      <Source>eurofighter fbx.fbx</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\eurofighter fbx_0.xml</Output>
-      <Time>2015-08-12T22:51:25.6820835+02:00</Time>
-    </Item>
     <Item>
       <Source>plane.fbx</Source>
       <Name>plane</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\bin\x86\Debug\Content\plane.xnb</Output>
-      <Time>2015-08-12T23:29:57.8753333+02:00</Time>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\plane.xnb</Output>
+      <Time>2015-08-13T21:13:55.9700277+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\plane_0.xml</Key>
-        <Value>2015-08-12T23:31:05.566205+02:00</Value>
+        <Value>2015-08-29T14:55:46.3908942+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -39,7 +19,73 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\plane_0.xml</Output>
-      <Time>2015-08-12T23:29:57.8753333+02:00</Time>
+      <Time>2015-08-13T21:13:55.9700277+02:00</Time>
+    </Item>
+    <Item>
+      <Source>flieger.fbx</Source>
+      <Name>flieger</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flieger.xnb</Output>
+      <Time>2015-08-29T15:43:36.7783422+02:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\flieger_0.xml</Key>
+        <Value>2015-08-29T15:43:38.5429174+02:00</Value>
+      </Dependency>
+      <Request>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flgel_textur2_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>flieger.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\flieger_0.xml</Output>
+      <Time>2015-08-29T15:43:36.7783422+02:00</Time>
+    </Item>
+    <Item>
+      <Source>flügel_textur2.png</Source>
+      <Name>flügel_textur2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flügel_textur2.xnb</Output>
+      <Time>2015-08-29T15:43:57.438799+02:00</Time>
+    </Item>
+    <Item>
+      <Source>flügel_textur2.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flgel_textur2_0.xnb</Output>
+      <Time>2015-08-29T15:43:57.438799+02:00</Time>
+    </Item>
+    <Item>
+      <Source>room.fbx</Source>
+      <Name>room</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\room.xnb</Output>
+      <Time>2015-08-31T17:40:48.4966899+02:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\room_0.xml</Key>
+        <Value>2015-08-31T17:40:55.1680996+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>room.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\room_0.xml</Output>
+      <Time>2015-08-31T17:40:48.4966899+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -47,10 +93,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\testContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\testContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\test\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\testContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\testContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -79,7 +125,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-08-12T16:14:04.261304+02:00</Value>
+        <Value>2015-08-08T19:22:10.6575035+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

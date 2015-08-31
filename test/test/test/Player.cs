@@ -13,15 +13,21 @@ namespace test
 {
     class Player
     {
-        Model model;
+        Model room;
         Model plane;
 
         Vector3 pos;
         Vector3 rotation;
         Vector3 camPos;
 
-        Matrix view;
+        
         Matrix[] bonetransformation;
+
+        MouseState mouseState;
+
+        
+        
+        
 
         public Player(Vector3 position)
         {
@@ -32,63 +38,84 @@ namespace test
 
         public void loadContent(ContentManager c)
         {
-            model = c.Load<Model>("eurofighter fbx");
-            plane = c.Load<Model>("plane");
+            plane = c.Load<Model>("flieger");
+            room = c.Load<Model>("room");
 
         }
 
         public void update()
         {
 
-            view = Matrix.CreateLookAt(camPos, pos, Vector3.Up);
+            //view = Matrix.CreateLookAt(camPos, pos, Vector3.Up);
 
-            if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.W))
-            {
-                pos.Z += 1;
-            }
+            //if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.W))
+            //{
+            //    pos.Z += 2;
+            //    camPos.Z += 2;
+            //}
 
-            if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.S))
-            {
-                pos.Z -= 1;
-            }
+            //if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.S))
+            //{
+            //    pos.Z -= 2;
+            //    camPos.Z -= 2;
+            //}
 
-            if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.A))
-            {
+            //if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.A))
+            //{
 
-                rotation.Y += .01f;
-            }
+            //    pos.X += 2;
+            //    camPos.X += 2;
+            //}
 
-            if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.D))
-            {
+            //if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.D))
+            //{
 
-                rotation.Y -= .01f;
-            }
+            //    pos.X -= 2;
+            //    camPos.X -= 2;
+            //}
+
+            //mouseState = Mouse.GetState();
+
+            //if (mouseState.LeftButton == ButtonState.Pressed)
+            //{
+            //    rotation.X += 0.1f;
+            //}
+
+            //if (mouseState.RightButton == ButtonState.Pressed)
+            //{
+            //    rotation.X -= 0.1f;
+            //}
 
         }
 
+        
+
         public void draw(Matrix projection)
         {
-            bonetransformation = new Matrix[model.Bones.Count];
-            model.CopyAbsoluteBoneTransformsTo(bonetransformation);
+            bonetransformation = new Matrix[plane.Bones.Count];
+            plane.CopyAbsoluteBoneTransformsTo(bonetransformation);
 
-            foreach (ModelMesh mesh in model.Meshes)
+            foreach (ModelMesh mesh in plane.Meshes)
             {
                 foreach (BasicEffect effect in mesh.Effects)
                 {
-                    effect.World = bonetransformation[mesh.ParentBone.Index] *Matrix.CreateTranslation(pos)* Matrix.CreateScale(2f) * Matrix.CreateRotationX(rotation.X) * Matrix.CreateRotationY(rotation.Y) * Matrix.CreateRotationZ(rotation.Z);
-                    effect.View = view;
+                    effect.World = bonetransformation[mesh.ParentBone.Index] * Matrix.CreateScale(10f) * Matrix.CreateTranslation(pos) * Matrix.CreateRotationX(rotation.X) * Matrix.CreateRotationY(rotation.Y) * Matrix.CreateRotationZ(rotation.Z);
+                    effect.View = Game1.instance.viewMatrix;
                     effect.Projection = projection;
                     effect.EnableDefaultLighting();
                 }
                 mesh.Draw();
             }
 
-            foreach (ModelMesh mesh in plane.Meshes)
+            bonetransformation = new Matrix[room.Bones.Count];
+            room.CopyAbsoluteBoneTransformsTo(bonetransformation);
+
+            foreach (ModelMesh mesh in room.Meshes)
             {
                 foreach (BasicEffect effect in mesh.Effects)
                 {
-                    effect.World = bonetransformation[mesh.ParentBone.Index] * Matrix.CreateScale(6f) * Matrix.CreateRotationX(MathHelper.ToRadians(90f)) * Matrix.CreateRotationY(rotation.Y) * Matrix.CreateRotationZ(rotation.Z);
-                    effect.View = view;
+                    effect.World = bonetransformation[mesh.ParentBone.Index] * Matrix.CreateTranslation(0, -1f, 0) * Matrix.CreateScale(100f) * Matrix.CreateRotationX(rotation.X) * Matrix.CreateRotationY(MathHelper.ToRadians(135)) * Matrix.CreateRotationZ(rotation.Z);
+                    effect.View = Game1.instance.viewMatrix;
                     effect.Projection = projection;
                     effect.EnableDefaultLighting();
                 }

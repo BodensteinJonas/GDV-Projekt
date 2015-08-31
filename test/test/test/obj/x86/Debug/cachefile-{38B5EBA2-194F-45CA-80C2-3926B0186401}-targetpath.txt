@@ -1,2 +1,5 @@
-Content\eurofighter fbx.xnb
 Content\plane.xnb
+Content\flieger.xnb
+Content\flügel_textur2.xnb
+Content\flgel_textur2_0.xnb
+Content\room.xnb

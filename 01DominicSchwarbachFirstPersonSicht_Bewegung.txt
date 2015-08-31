@@ -157,7 +157,7 @@ namespace CameraTutorial01
         }
 
 
-        //Set cameraÂ´s position und rotation
+        //Set camera´s position und rotation
         private void MoveTo(Vector3 pos, Vector3 rot)
         {
             Position = pos;
@@ -173,7 +173,7 @@ namespace CameraTutorial01
             //Build look at offset vector
             Vector3 lookAtOffset = Vector3.Transform(Vector3.UnitZ, rotationMatrix);
 
-            //update our cemeraÂ´s look at vector
+            //update our cemera´s look at vector
             cameraLookAt = cameraPosition + lookAtOffset;
         }
 

@@ -87,7 +87,7 @@ namespace test
 
         public void UpdateControls()
         {
-            Mouse.SetPosition(centerX, centerY);
+            //Mouse.SetPosition(centerX, centerY);
             // Get mouse and keyboard
             KeyboardState keyboard = Keyboard.GetState();
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
       <Source>plane.fbx</Source>
@@ -28,19 +28,18 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flieger.xnb</Output>
-      <Time>2015-08-29T15:43:36.7783422+02:00</Time>
+      <Time>2015-09-13T16:45:23.9060539+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\flieger_0.xml</Key>
-        <Value>2015-08-29T15:43:38.5429174+02:00</Value>
+        <Value>2015-09-13T16:45:27.5434575+02:00</Value>
       </Dependency>
-      <Request>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flgel_textur2_0.xnb</Request>
     </Item>
     <Item>
       <Source>flieger.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\flieger_0.xml</Output>
-      <Time>2015-08-29T15:43:36.7783422+02:00</Time>
+      <Time>2015-09-13T16:45:23.9060539+02:00</Time>
     </Item>
     <Item>
       <Source>flügel_textur2.png</Source>
@@ -52,32 +51,16 @@
       <Time>2015-08-29T15:43:57.438799+02:00</Time>
     </Item>
     <Item>
-      <Source>flügel_textur2.png</Source>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Parameters>
-        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
-        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
-        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
-        <Data Key="GenerateMipmaps" Type="bool">true</Data>
-        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
-        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flgel_textur2_0.xnb</Output>
-      <Time>2015-08-29T15:43:57.438799+02:00</Time>
-    </Item>
-    <Item>
       <Source>room.fbx</Source>
       <Name>room</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\room.xnb</Output>
-      <Time>2015-08-31T17:40:48.4966899+02:00</Time>
+      <Time>2015-09-13T16:42:16.6096284+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\room_0.xml</Key>
-        <Value>2015-08-31T17:40:55.1680996+02:00</Value>
+        <Value>2015-09-13T16:42:23.2824037+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -85,7 +68,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\room_0.xml</Output>
-      <Time>2015-08-31T17:40:48.4966899+02:00</Time>
+      <Time>2015-09-13T16:42:16.6096284+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

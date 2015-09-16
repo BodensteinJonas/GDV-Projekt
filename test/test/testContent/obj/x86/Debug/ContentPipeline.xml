@@ -8,10 +8,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\plane.xnb</Output>
-      <Time>2015-08-13T21:13:55.9700277+02:00</Time>
+      <Time>2015-09-13T07:47:40+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\plane_0.xml</Key>
-        <Value>2015-08-29T14:55:46.3908942+02:00</Value>
+        <Value>2015-09-14T15:05:11.4082524+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -19,7 +19,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\plane_0.xml</Output>
-      <Time>2015-08-13T21:13:55.9700277+02:00</Time>
+      <Time>2015-09-13T07:47:40+02:00</Time>
     </Item>
     <Item>
       <Source>flieger.fbx</Source>
@@ -28,10 +28,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flieger.xnb</Output>
-      <Time>2015-09-13T16:45:23.9060539+02:00</Time>
+      <Time>2015-09-13T07:47:40+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\flieger_0.xml</Key>
-        <Value>2015-09-13T16:45:27.5434575+02:00</Value>
+        <Value>2015-09-14T15:05:11.5176275+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -39,7 +39,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\flieger_0.xml</Output>
-      <Time>2015-09-13T16:45:23.9060539+02:00</Time>
+      <Time>2015-09-13T07:47:40+02:00</Time>
     </Item>
     <Item>
       <Source>flügel_textur2.png</Source>
@@ -48,7 +48,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\flügel_textur2.xnb</Output>
-      <Time>2015-08-29T15:43:57.438799+02:00</Time>
+      <Time>2015-09-13T07:47:40+02:00</Time>
     </Item>
     <Item>
       <Source>room.fbx</Source>
@@ -57,10 +57,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\test\bin\x86\Debug\Content\room.xnb</Output>
-      <Time>2015-09-13T16:42:16.6096284+02:00</Time>
+      <Time>2015-09-13T07:47:40+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\room_0.xml</Key>
-        <Value>2015-09-13T16:42:23.2824037+02:00</Value>
+        <Value>2015-09-14T15:05:11.548877+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -68,7 +68,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\room_0.xml</Output>
-      <Time>2015-09-13T16:42:16.6096284+02:00</Time>
+      <Time>2015-09-13T07:47:40+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

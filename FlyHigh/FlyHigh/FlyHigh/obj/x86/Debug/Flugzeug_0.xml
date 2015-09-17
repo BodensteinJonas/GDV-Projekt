@@ -3,7 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>RootNode</Name>
     <Identity>
-      <SourceFilename>C:\Users\Creed\documents\visual studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
+      <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -85,7 +85,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>nose</Name>
       <Identity>
-        <SourceFilename>C:\Users\Creed\documents\visual studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -98,7 +98,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>cockpit</Name>
       <Identity>
-        <SourceFilename>C:\Users\Creed\documents\visual studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -111,7 +111,7 @@
     <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
       <Name>Material</Name>
       <Identity>
-        <SourceFilename>C:\Users\Creed\documents\visual studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

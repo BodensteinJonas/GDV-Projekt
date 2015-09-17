@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>pCylinder1</Name>
     <Identity>
-      <SourceFilename>C:\Users\Creed\documents\visual studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
+      <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -29,7 +29,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>blinn1</Name>
       <Identity>
-        <SourceFilename>C:\Users\Creed\documents\visual studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

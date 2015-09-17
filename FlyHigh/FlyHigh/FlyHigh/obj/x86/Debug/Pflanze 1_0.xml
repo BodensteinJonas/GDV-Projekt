@@ -3,7 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>RootNode</Name>
     <Identity>
-      <SourceFilename>C:\Users\Creed\documents\visual studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
+      <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -56,7 +56,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>lambert2</Name>
       <Identity>
-        <SourceFilename>C:\Users\Creed\documents\visual studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -69,7 +69,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>lambert3</Name>
       <Identity>
-        <SourceFilename>C:\Users\Creed\documents\visual studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

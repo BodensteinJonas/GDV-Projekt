@@ -3,7 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>RootNode</Name>
     <Identity>
-      <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Bett.fbx</SourceFilename>
+      <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh\FlyHigh\FlyHighContent\Bett.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -274,7 +274,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>Gestell</Name>
       <Identity>
-        <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Bett.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh\FlyHigh\FlyHighContent\Bett.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -287,7 +287,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>Matratze</Name>
       <Identity>
-        <SourceFilename>C:\Users\Creed\Documents\Visual Studio 2013\Projects\FlyHigh\FlyHigh\FlyHighContent\Bett.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh\FlyHigh\FlyHighContent\Bett.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

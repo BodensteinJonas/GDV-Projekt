@@ -15,24 +15,21 @@ namespace FlyHigh
     {
 
         Model objekt;
-        Vector3 position, rotation;
+        Vector3 position;
+        float rotation, scale;
 
-        public Raumobjekte(Game game)
+        public Raumobjekte(Game game, Model model, Vector3 pos, float rot, float sca)
             : base(game)
           {
-
+              objekt = model;
+              position = pos;
+              rotation = rot;
+              scale = sca;
           }
-
-        public void loadContent(ContentManager c)
-        {
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-        }
 
         public override void Draw(GameTime gameTime)
         {
+            draw();
         }
 
         private void draw()
@@ -40,9 +37,8 @@ namespace FlyHigh
             Matrix planeWorld = Matrix.Identity;
 
             planeWorld = Matrix.Identity
-                                * Matrix.CreateRotationX(Game1.instance.angle.X)
-                               // * rotation
-                                * Matrix.CreateRotationY(MathHelper.ToRadians(180.0f))
+                                * Matrix.CreateScale(scale)
+                                * Matrix.CreateRotationY(rotation)
                                 * Matrix.CreateTranslation(position);
 
             foreach (ModelMesh mesh in objekt.Meshes)

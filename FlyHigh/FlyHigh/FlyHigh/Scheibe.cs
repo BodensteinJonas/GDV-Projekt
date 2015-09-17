@@ -1,16 +1,19 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace FlyHigh
 {
     class Scheibe
     {
-        Model model;
+        Model target;
         Vector3 pos, rotation;
         Matrix[] bonetransformation;
 
@@ -18,9 +21,8 @@ namespace FlyHigh
 
         public Scheibe(Model m, Vector3 position)
         {
-            rotation = Vector3.Zero;
+            target = m;
             pos = position;
-            model = m;
         }
 
         public void Update(GameTime gameTime)
@@ -29,27 +31,26 @@ namespace FlyHigh
             rotation.Y += .05f;
         }
 
-        public void Draw(Matrix projection, Matrix view)
+        public void Draw(GameTime gameTime)
         {
+            Matrix planeWorld = Matrix.Identity;
 
-            bonetransformation = new Matrix[model.Bones.Count];
-            model.CopyAbsoluteBoneTransformsTo(bonetransformation);
+            planeWorld = Matrix.Identity
+                                * Matrix.CreateScale(0.5f)
+                                * Matrix.CreateRotationY(rotation.Y)
+                                * Matrix.CreateTranslation(pos);
 
-            foreach (ModelMesh mesh in model.Meshes)
+            foreach (ModelMesh mesh in target.Meshes)
             {
                 foreach (BasicEffect effect in mesh.Effects)
                 {
-                    effect.World = bonetransformation[mesh.ParentBone.Index] * Matrix.CreateScale(0.3f) * Matrix.CreateRotationY(rotation.Y) * Matrix.CreateTranslation(pos);
-                    effect.View = view;
-                    effect.Projection = projection;
+                    effect.World = planeWorld;
+                    effect.View = Game1.instance.viewMatrix;
+                    effect.Projection = Game1.instance.projectionMatrix;
                     effect.EnableDefaultLighting();
-
                 }
-
                 mesh.Draw();
-
             }
         }
-
     }
 }

@@ -98,15 +98,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Couch.fbx">
-      <Name>Couch</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Tisch.fbx">
-      <Name>Tisch</Name>
+    <Compile Include="Sofa.fbx">
+      <Name>Sofa</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
     </Compile>

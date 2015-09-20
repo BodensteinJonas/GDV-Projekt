@@ -1,51 +1,92 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace FlyHigh
 {
-    class Raum
+    public class Raum : Microsoft.Xna.Framework.DrawableGameComponent
     {
-        Model model;
-        Vector3 pos;
-        Matrix[] bonetransformation;
-        
 
+        Model room;
+        Model bed, couch, lowboy, plant1, plant2, rack, desk, chair, table;
+        Raumobjekte bett, sofa, kommode, pflanze1, pflanze2, schrank, schreibtisch, stuhl, tisch;
 
-
-        public Raum(Model m, Vector3 position)
+        public Raum(Game game)
+            : base(game)
         {
-            pos = position;
-            model = m;
+            loadContent(Game.Content);
+            bett = new Raumobjekte(game, bed,new Vector3(0f, 1.4f, -14f), MathHelper.ToRadians(90) , 2f);
+            sofa = new Raumobjekte(game, couch, new Vector3(-16f, 0f, -13f), MathHelper.ToRadians(90), 1.5f);
+            kommode = new Raumobjekte(game, lowboy, new Vector3(16.8f, 0f, -14f), MathHelper.ToRadians(0), 1f);
+            pflanze1 = new Raumobjekte(game, plant1, new Vector3(-15.8f, 0f, -7f), MathHelper.ToRadians(90), 0.004f);
+            pflanze2 = new Raumobjekte(game, plant2, new Vector3(14.8f, 0f, 1.5f), MathHelper.ToRadians(90), 1f);
+            schrank = new Raumobjekte(game, rack, new Vector3(16.8f, 0f, -10f), MathHelper.ToRadians(0), 1.68f);
+            schreibtisch = new Raumobjekte(game, desk, new Vector3(16.8f, 0f, 9f), MathHelper.ToRadians(180), 1.5f);
+            stuhl = new Raumobjekte(game, chair, new Vector3(13.0f, 0f, 9f), MathHelper.ToRadians(90), 1.1f);
+          //  tisch = new Raumobjekte(game, table, new Vector3(0f, 1.4f, -14f), MathHelper.ToRadians(0), 1f);
+            
         }
 
-        public void Update(GameTime gameTime)
+        public void loadContent(ContentManager c)
         {
+            room = c.Load<Model>("Raum");
+            bed = c.Load<Model>("Bett");
+            couch = c.Load<Model>("Sofa");
+            lowboy = c.Load<Model>("Kommode");
+            plant1 = c.Load<Model>("Pflanze 1");
+            plant2 = c.Load<Model>("Pflanze 2");
+            rack = c.Load<Model>("Schrank");
+            desk = c.Load<Model>("Schreibtisch");
+            chair = c.Load<Model>("Stuhl");
+          //  table = c.Load<Model>("Tisch");
 
         }
 
-        public void Update()
+        public override void Update(GameTime gameTime)
         {
 
+            base.Update(gameTime);
         }
 
-        public void Draw(Matrix projection, Matrix view)
+        public override void Draw(GameTime gameTime)
         {
+            draw();
+            bett.Draw(gameTime);
+            sofa.Draw(gameTime);
+            kommode.Draw(gameTime);
+            pflanze1.Draw(gameTime);
+            pflanze2.Draw(gameTime);
+            schrank.Draw(gameTime);
+            schreibtisch.Draw(gameTime);
+            stuhl.Draw(gameTime);
+           // tisch.Draw(gameTime);
 
-            bonetransformation = new Matrix[model.Bones.Count];
-            model.CopyAbsoluteBoneTransformsTo(bonetransformation);
+            base.Draw(gameTime);
+        }
 
-            foreach (ModelMesh mesh in model.Meshes)
+        private void draw()
+        {
+            Matrix planeWorld = Matrix.Identity;
+
+            planeWorld = Matrix.Identity
+                                * Matrix.CreateScale(2f);
+
+
+
+            foreach (ModelMesh mesh in room.Meshes)
             {
                 foreach (BasicEffect effect in mesh.Effects)
                 {
-                    effect.World = bonetransformation[mesh.ParentBone.Index] * Matrix.CreateScale(2f);
-                    effect.View = view;
-                    effect.Projection = projection;
+                    effect.World = planeWorld;
+                    effect.View = Game1.instance.viewMatrix;
+                    effect.Projection = Game1.instance.projectionMatrix;
                     effect.EnableDefaultLighting();
                 }
                 mesh.Draw();

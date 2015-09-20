@@ -16,24 +16,18 @@ namespace test
         Model room;
         Model plane;
 
-        Vector3 pos;
+        
         Vector3 rotation;
-        Vector3 camPos;
+        
 
         
         Matrix[] bonetransformation;
-
-        MouseState mouseState;
-
-        
-        
-        
 
         public Player(Vector3 position)
         {
             
             rotation = Vector3.Zero;
-            camPos = new Vector3(position.X, position.Y, position.Z-100);
+            
         }
 
         public void loadContent(ContentManager c)
@@ -90,7 +84,7 @@ namespace test
 
         
 
-        public void draw(Matrix projection)
+        public void draw(Matrix projection, Vector3 pos)
         {
             bonetransformation = new Matrix[plane.Bones.Count];
             plane.CopyAbsoluteBoneTransformsTo(bonetransformation);

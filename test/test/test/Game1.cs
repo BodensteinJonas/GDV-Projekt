@@ -30,6 +30,7 @@ namespace test
         Player p;
         public Vector3 moveNearFar;
         public Vector3 moveLeftRight;
+        public Vector3 pos;
 
         public Game1()
         {
@@ -37,6 +38,7 @@ namespace test
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             p = new Player(Vector3.Zero);
+            
             instance = this;
             
         }
@@ -120,6 +122,7 @@ namespace test
 
             if (keyboard.IsKeyDown(Keys.W))
                 camPos -= moveNearFar * speed;
+                pos -= moveNearFar * speed;
 
             if (keyboard.IsKeyDown(Keys.S))
                 camPos += moveNearFar * speed;
@@ -151,7 +154,7 @@ namespace test
         {
             GraphicsDevice.Clear(Color.White);
 
-            p.draw(projection);
+            p.draw(projection, pos);
 
             base.Draw(gameTime);
         }

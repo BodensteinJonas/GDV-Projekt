@@ -138,10 +138,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Sofa.xnb</Output>
-      <Time>2015-09-17T20:01:53.3897459+02:00</Time>
+      <Time>2015-09-20T14:29:07.6383214+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Sofa_0.xml</Key>
-        <Value>2015-09-18T19:18:03.4395773+02:00</Value>
+        <Value>2015-09-20T14:32:59.7102166+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -219,7 +219,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Sofa_0.xml</Output>
-      <Time>2015-09-17T20:01:53.3897459+02:00</Time>
+      <Time>2015-09-20T14:29:07.6383214+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

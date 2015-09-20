@@ -68,6 +68,7 @@ C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh
 C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.exe
 C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.pdb
+<<<<<<< HEAD
 C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Scheibe.xnb
 C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Flugzeug.xnb
 C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Raum.xnb
@@ -85,3 +86,5 @@ C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Fly
 C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.exe
 C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.pdb
+=======
+>>>>>>> origin/master

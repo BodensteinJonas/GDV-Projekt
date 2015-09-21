@@ -59,6 +59,7 @@ namespace FlyHigh
 
         Model missile;
         List<Bullet> schussListe = new List<Bullet>();
+        List<Bullet> schussRemoveListe = new List<Bullet>();
 
         int schussAnz;
 
@@ -179,6 +180,18 @@ namespace FlyHigh
             {
                 m.Update();
             }
+
+            foreach (Bullet m in schussListe)
+            {
+                if (m.isDead)
+                    schussRemoveListe.Add(m);
+            }
+
+            foreach (Bullet m in schussRemoveListe)
+            {
+                schussListe.Remove(m);
+            }
+            schussRemoveListe.Clear();
             
 
 

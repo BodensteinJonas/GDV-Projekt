@@ -8,10 +8,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Scheibe.xnb</Output>
-      <Time>2015-09-21T05:53:04+02:00</Time>
+      <Time>2015-09-21T19:58:27.7840851+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Scheibe_0.xml</Key>
-        <Value>2015-09-21T18:00:25.8175433+02:00</Value>
+        <Value>2015-09-21T19:58:31.5783802+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -188,7 +188,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Scheibe_0.xml</Output>
-      <Time>2015-09-21T05:53:04+02:00</Time>
+      <Time>2015-09-21T19:58:27.7840851+02:00</Time>
     </Item>
     <Item>
       <Source>Flugzeug.fbx</Source>

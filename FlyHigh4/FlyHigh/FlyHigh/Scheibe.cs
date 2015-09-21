@@ -15,6 +15,8 @@ namespace FlyHigh
     {
         Model target;
         Vector3 pos, rotation;
+        public BoundingSphere sphere;
+        Matrix sphereTranslation;
         
 
 
@@ -37,21 +39,29 @@ namespace FlyHigh
 
             planeWorld = Matrix.Identity
                                 * Matrix.CreateScale(0.5f)
-                                * Matrix.CreateRotationX(.5f)
+                                //* Matrix.CreateRotationX(.5f)
                                 * Matrix.CreateRotationY(rotation.Y)
-                                * Matrix.CreateTranslation(pos);
+                                *Matrix.CreateTranslation(pos);
+                                
+
+            sphereTranslation = Matrix.CreateTranslation(pos);//planeWorld;
 
             foreach (ModelMesh mesh in target.Meshes)
             {
+                sphere = BoundingSphere.CreateMerged(sphere, mesh.BoundingSphere);
                 foreach (BasicEffect effect in mesh.Effects)
                 {
                     effect.World = planeWorld;
                     effect.View = Game1.instance.viewMatrix;
                     effect.Projection = Game1.instance.projectionMatrix;
                     effect.EnableDefaultLighting();
+
+                    sphere.Center = sphereTranslation.Translation;
+                    sphere.Radius = .3f;
                 }
                 mesh.Draw();
             }
+            BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
         }
     }
 }

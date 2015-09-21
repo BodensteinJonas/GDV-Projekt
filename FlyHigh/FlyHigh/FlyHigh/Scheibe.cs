@@ -15,7 +15,7 @@ namespace FlyHigh
     {
         Model target;
         Vector3 pos, rotation;
-        Matrix[] bonetransformation;
+        
 
 
 
@@ -37,6 +37,7 @@ namespace FlyHigh
 
             planeWorld = Matrix.Identity
                                 * Matrix.CreateScale(0.5f)
+                                * Matrix.CreateRotationX(.5f)
                                 * Matrix.CreateRotationY(rotation.Y)
                                 * Matrix.CreateTranslation(pos);
 

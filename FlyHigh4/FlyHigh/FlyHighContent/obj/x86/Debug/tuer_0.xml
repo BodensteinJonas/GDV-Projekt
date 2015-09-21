@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Door:polySurface1</Name>
     <Identity>
-      <SourceFilename>C:\Users\Jonas\Desktop\git - Kopie\GDV-Projekt\FlyHigh\FlyHigh\FlyHighContent\tuer.fbx</SourceFilename>
+      <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh4\FlyHigh\FlyHighContent\tuer.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -40,7 +40,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>tür</Name>
       <Identity>
-        <SourceFilename>C:\Users\Jonas\Desktop\git - Kopie\GDV-Projekt\FlyHigh\FlyHigh\FlyHighContent\tuer.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh4\FlyHigh\FlyHighContent\tuer.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -53,7 +53,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>lambert3</Name>
       <Identity>
-        <SourceFilename>C:\Users\Jonas\Desktop\git - Kopie\GDV-Projekt\FlyHigh\FlyHigh\FlyHighContent\tuer.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh4\FlyHigh\FlyHighContent\tuer.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

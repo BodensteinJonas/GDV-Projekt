@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Scheibe.fbx</Source>
+      <Name>Scheibe</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Scheibe.xnb</Output>
+      <Time>2015-09-20T16:40:16+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Scheibe_0.xml</Key>
+        <Value>2015-09-21T13:18:29.9748512+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Flugzeug.fbx</Source>
+      <Name>Flugzeug</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Flugzeug.xnb</Output>
+      <Time>2015-09-17T20:01:54+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Flugzeug_0.xml</Key>
+        <Value>2015-09-21T13:18:30.0789611+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Raum.fbx</Source>
+      <Name>Raum</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Raum.xnb</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Raum_0.xml</Key>
+        <Value>2015-09-21T13:18:30.1450432+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Bett.fbx</Source>
+      <Name>Bett</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Bett.xnb</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Bett_0.xml</Key>
+        <Value>2015-09-21T13:18:30.296232+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Schreibtisch.fbx</Source>
+      <Name>Schreibtisch</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schreibtisch.xnb</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Schreibtisch_0.xml</Key>
+        <Value>2015-09-21T13:18:31.305149+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Stuhl.fbx</Source>
+      <Name>Stuhl</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Stuhl.xnb</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Stuhl_0.xml</Key>
+        <Value>2015-09-21T13:18:31.672868+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Schrank.fbx</Source>
+      <Name>Schrank</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schrank.xnb</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Schrank_0.xml</Key>
+        <Value>2015-09-21T13:18:31.732939+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Kommode.fbx</Source>
+      <Name>Kommode</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Kommode.xnb</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Kommode_0.xml</Key>
+        <Value>2015-09-21T13:18:31.8902296+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Pflanze 1.fbx</Source>
+      <Name>Pflanze 1</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 1.xnb</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 1_0.xml</Key>
+        <Value>2015-09-21T13:18:32.0924726+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Pflanze 2.fbx</Source>
+      <Name>Pflanze 2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 2.xnb</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 2_0.xml</Key>
+        <Value>2015-09-21T13:18:32.2867168+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Sofa.fbx</Source>
+      <Name>Sofa</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Sofa.xnb</Output>
+      <Time>2015-09-17T20:01:54+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Sofa_0.xml</Key>
+        <Value>2015-09-21T13:18:32.3698182+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>couch2.fbx</Source>
+      <Name>couch2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\couch2.xnb</Output>
+      <Time>2015-09-20T15:35:00+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\couch2_0.xml</Key>
+        <Value>2015-09-21T13:18:33.2309102+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>tuer.fbx</Source>
+      <Name>tuer</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\tuer.xnb</Output>
+      <Time>2015-09-20T16:24:38+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\tuer_0.xml</Key>
+        <Value>2015-09-21T13:18:33.3650685+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>missile.fbx</Source>
+      <Name>missile</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\missile.xnb</Output>
+      <Time>2015-09-20T17:04:44+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\missile_0.xml</Key>
+        <Value>2015-09-21T13:18:33.402106+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Scheibe.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Scheibe_0.xml</Output>
+      <Time>2015-09-20T16:40:16+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Flugzeug.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Flugzeug_0.xml</Output>
+      <Time>2015-09-17T20:01:54+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Raum.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Raum_0.xml</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Bett.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Bett_0.xml</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Schreibtisch.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Schreibtisch_0.xml</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Stuhl.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Stuhl_0.xml</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Schrank.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Schrank_0.xml</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Kommode.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Kommode_0.xml</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Pflanze 1.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 1_0.xml</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Pflanze 2.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 2_0.xml</Output>
+      <Time>2015-09-15T18:00:30+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sofa.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Sofa_0.xml</Output>
+      <Time>2015-09-17T20:01:54+02:00</Time>
+    </Item>
+    <Item>
+      <Source>couch2.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\couch2_0.xml</Output>
+      <Time>2015-09-20T15:35:00+02:00</Time>
+    </Item>
+    <Item>
+      <Source>tuer.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\tuer_0.xml</Output>
+      <Time>2015-09-20T16:24:38+02:00</Time>
+    </Item>
+    <Item>
+      <Source>missile.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\missile_0.xml</Output>
+      <Time>2015-09-20T17:04:44+02:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{F0723E8D-753D-4A8C-B7E5-C34BBED0C09E}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHighContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-08-20T20:51:00.0551752+02:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

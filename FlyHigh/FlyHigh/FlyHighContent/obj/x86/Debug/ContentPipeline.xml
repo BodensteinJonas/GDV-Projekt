@@ -8,10 +8,17 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Scheibe.xnb</Output>
+<<<<<<< HEAD
       <Time>2015-09-20T16:40:15.0020758+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Scheibe_0.xml</Key>
         <Value>2015-09-20T21:59:16.959903+02:00</Value>
+=======
+      <Time>2015-09-15T18:00:29.3378537+02:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Scheibe_0.xml</Key>
+        <Value>2015-09-18T19:18:00.5398042+02:00</Value>
+>>>>>>> origin/master
       </Dependency>
     </Item>
     <Item>
@@ -24,7 +31,11 @@
       <Time>2015-09-17T20:01:53.2956663+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Flugzeug_0.xml</Key>
+<<<<<<< HEAD
         <Value>2015-09-20T21:59:17.0820341+02:00</Value>
+=======
+        <Value>2015-09-18T19:18:00.6699238+02:00</Value>
+>>>>>>> origin/master
       </Dependency>
     </Item>
     <Item>
@@ -34,10 +45,17 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Raum.xnb</Output>
+<<<<<<< HEAD
       <Time>2015-09-20T21:58:52.0696239+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Raum_0.xml</Key>
         <Value>2015-09-20T21:59:17.1591033+02:00</Value>
+=======
+      <Time>2015-09-15T18:00:29.3368619+02:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Raum_0.xml</Key>
+        <Value>2015-09-18T19:18:00.7470071+02:00</Value>
+>>>>>>> origin/master
       </Dependency>
     </Item>
     <Item>
@@ -50,7 +68,11 @@
       <Time>2015-09-15T18:00:29.3158311+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Bett_0.xml</Key>
+<<<<<<< HEAD
         <Value>2015-09-20T21:59:17.3332696+02:00</Value>
+=======
+        <Value>2015-09-18T19:18:00.9221649+02:00</Value>
+>>>>>>> origin/master
       </Dependency>
     </Item>
     <Item>
@@ -63,7 +85,11 @@
       <Time>2015-09-15T18:00:29.3468616+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Schreibtisch_0.xml</Key>
+<<<<<<< HEAD
         <Value>2015-09-20T21:59:18.4663558+02:00</Value>
+=======
+        <Value>2015-09-18T19:18:02.1273202+02:00</Value>
+>>>>>>> origin/master
       </Dependency>
     </Item>
     <Item>
@@ -76,7 +102,11 @@
       <Time>2015-09-15T18:00:29.3548786+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Stuhl_0.xml</Key>
+<<<<<<< HEAD
         <Value>2015-09-20T21:59:18.9157767+02:00</Value>
+=======
+        <Value>2015-09-18T19:18:02.5617458+02:00</Value>
+>>>>>>> origin/master
       </Dependency>
     </Item>
     <Item>
@@ -89,7 +119,11 @@
       <Time>2015-09-15T18:00:29.3378537+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Schrank_0.xml</Key>
+<<<<<<< HEAD
         <Value>2015-09-20T21:59:18.9928507+02:00</Value>
+=======
+        <Value>2015-09-18T19:18:02.6368086+02:00</Value>
+>>>>>>> origin/master
       </Dependency>
     </Item>
     <Item>
@@ -102,7 +136,11 @@
       <Time>2015-09-15T18:00:29.3258509+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Kommode_0.xml</Key>
+<<<<<<< HEAD
         <Value>2015-09-20T21:59:19.1870377+02:00</Value>
+=======
+        <Value>2015-09-18T19:18:02.8410052+02:00</Value>
+>>>>>>> origin/master
       </Dependency>
     </Item>
     <Item>
@@ -115,7 +153,11 @@
       <Time>2015-09-15T18:00:29.3308555+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Pflanze 1_0.xml</Key>
+<<<<<<< HEAD
         <Value>2015-09-20T21:59:19.4422825+02:00</Value>
+=======
+        <Value>2015-09-18T19:18:03.1132652+02:00</Value>
+>>>>>>> origin/master
       </Dependency>
     </Item>
     <Item>
@@ -128,7 +170,11 @@
       <Time>2015-09-15T18:00:29.3358518+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Pflanze 2_0.xml</Key>
+<<<<<<< HEAD
         <Value>2015-09-20T21:59:19.6715014+02:00</Value>
+=======
+        <Value>2015-09-18T19:18:03.3444869+02:00</Value>
+>>>>>>> origin/master
       </Dependency>
     </Item>
     <Item>
@@ -138,6 +184,7 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHigh\bin\x86\Debug\Content\Sofa.xnb</Output>
+<<<<<<< HEAD
       <Time>2015-09-17T20:01:53.3897459+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Sofa_0.xml</Key>
@@ -181,6 +228,12 @@
       <Dependency>
         <Key>obj\x86\Debug\missile_0.xml</Key>
         <Value>2015-09-20T21:59:20.9577435+02:00</Value>
+=======
+      <Time>2015-09-20T14:29:07.6383214+02:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Sofa_0.xml</Key>
+        <Value>2015-09-20T14:32:59.7102166+02:00</Value>
+>>>>>>> origin/master
       </Dependency>
     </Item>
     <Item>
@@ -188,7 +241,11 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Scheibe_0.xml</Output>
+<<<<<<< HEAD
       <Time>2015-09-20T16:40:15.0020758+02:00</Time>
+=======
+      <Time>2015-09-15T18:00:29.3378537+02:00</Time>
+>>>>>>> origin/master
     </Item>
     <Item>
       <Source>Flugzeug.fbx</Source>
@@ -202,7 +259,11 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Raum_0.xml</Output>
+<<<<<<< HEAD
       <Time>2015-09-20T21:58:52.0696239+02:00</Time>
+=======
+      <Time>2015-09-15T18:00:29.3368619+02:00</Time>
+>>>>>>> origin/master
     </Item>
     <Item>
       <Source>Bett.fbx</Source>
@@ -258,6 +319,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Sofa_0.xml</Output>
+<<<<<<< HEAD
       <Time>2015-09-17T20:01:53.3897459+02:00</Time>
     </Item>
     <Item>
@@ -280,6 +342,9 @@
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\missile_0.xml</Output>
       <Time>2015-09-20T17:04:42.892294+02:00</Time>
+=======
+      <Time>2015-09-20T14:29:07.6383214+02:00</Time>
+>>>>>>> origin/master
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

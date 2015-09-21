@@ -1,3 +1,0 @@
-C:\Users\Jonas\Documents\Visual Studio 2010\Projects\test\test\testContent\obj\x86\Debug\testContent.contentprojResolveAssemblyReference.cache
-C:\Users\Jonas\Desktop\git\GDV-Projekt\test\test\testContent\obj\x86\Debug\testContent.contentprojResolveAssemblyReference.cache
-C:\Users\Creed\Desktop\GDV-Projekt\test\test\testContent\obj\x86\Debug\testContent.contentprojResolveAssemblyReference.cache

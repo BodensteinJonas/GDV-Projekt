@@ -163,7 +163,7 @@ namespace FlyHigh
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && lastKb.IsKeyUp(Keys.Space))
                 schussListe.Add(new Bullet(player.playerPosition, new Vector3(0.1f, 0.1f, 0.1f), Vector3.Right, player.playerRotation, missile, 0.1f, angle.X));
 
             // Wenn Klasse nicht in der Componenten Datenstruktur enthalten ist, muss Draw manuell aufgerufen werden

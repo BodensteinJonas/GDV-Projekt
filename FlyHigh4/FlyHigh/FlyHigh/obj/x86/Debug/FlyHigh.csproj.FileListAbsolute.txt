@@ -185,3 +185,23 @@ C:\Users\andre\Desktop\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.csprojReso
 C:\Users\andre\Desktop\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\andre\Desktop\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.exe
 C:\Users\andre\Desktop\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.pdb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Scheibe.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Flugzeug.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Raum.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Bett.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schreibtisch.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Stuhl.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schrank.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Kommode.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 1.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 2.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Sofa.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\couch2.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\tuer.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\missile.xnb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\FlyHigh.exe
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\FlyHigh.pdb
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.csprojResolveAssemblyReference.cache
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.exe
+C:\Users\andre\Desktop\GDV Projekt\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.pdb

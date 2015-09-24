@@ -19,6 +19,9 @@ namespace FlyHigh
         float finalSpeed, speed, xRot;
         public bool isDead = false;
 
+        public BoundingSphere sphere;
+        Matrix sphereTranslation;
+
         public Bullet(Vector3 spawnPos, Vector3 spawnScale, Vector3 offset, Matrix rotation, Model missile, float speed, float xRot)
         {
             this.spawnPos = spawnPos;
@@ -43,7 +46,7 @@ namespace FlyHigh
             Vector3 distance = spawnPos - addPos;
             float dist = distance.Length();
 
-            if (dist >= 5.0f)
+            if (dist >= 7.0f)
             {
                 isDead = true;
             }
@@ -60,23 +63,33 @@ namespace FlyHigh
         public void DrawSingleFire()
         {
 
-            foreach (ModelMesh mesh in this.missile.Meshes)
-            {
-                foreach (BasicEffect effect in mesh.Effects)
-                {
-                    //effect.EnableDefaultLighting();
-                    effect.World = Matrix.Identity 
+            Matrix bullets = Matrix.Identity;
+
+            bullets = Matrix.Identity
                                  * Matrix.CreateScale(spawnScale)
                                  * Matrix.CreateRotationX(xRot)
                                  * rotation
                                  * Matrix.CreateTranslation(spawnPos)
                                  * Matrix.CreateTranslation(addPos);
                                  //* Matrix.CreateTranslation(finX);
+            sphereTranslation = bullets;
+            foreach (ModelMesh mesh in this.missile.Meshes)
+            {
+                sphere = BoundingSphere.CreateMerged(sphere, mesh.BoundingSphere);
+                foreach (BasicEffect effect in mesh.Effects)
+                {
+                    //effect.EnableDefaultLighting();
+                    effect.World = bullets;
                     effect.View = Game1.instance.viewMatrix;
                     effect.Projection = Game1.instance.projectionMatrix;
+
+                    sphere.Center = sphereTranslation.Translation;
+                    sphere.Radius = 0.25f;
                 }
                 mesh.Draw();
             }
+            BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
+
         }
     }
 

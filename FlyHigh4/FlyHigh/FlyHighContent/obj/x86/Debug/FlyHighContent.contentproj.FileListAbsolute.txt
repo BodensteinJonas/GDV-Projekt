@@ -6,4 +6,8 @@ C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh\FlyHigh\FlyHighContent\obj\x86\De
 C:\Users\Jonas\Desktop\git - Kopie\GDV-Projekt\FlyHigh\FlyHigh\FlyHighContent\obj\x86\Debug\FlyHighContent.contentprojResolveAssemblyReference.cache
 C:\Users\Dominic\Desktop\GDV-Projekt\FlyHigh\FlyHigh\FlyHighContent\obj\x86\Debug\FlyHighContent.contentprojResolveAssemblyReference.cache
 C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHighContent\obj\x86\Debug\FlyHighContent.contentprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHighContent\obj\x86\Debug\FlyHighContent.contentprojResolveAssemblyReference.cache
+=======
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh4\FlyHigh\FlyHighContent\obj\x86\Debug\FlyHighContent.contentprojResolveAssemblyReference.cache
+>>>>>>> origin/master

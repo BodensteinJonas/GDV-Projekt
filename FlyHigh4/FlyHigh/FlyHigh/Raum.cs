@@ -30,7 +30,7 @@ namespace FlyHigh
             schrank = new Raumobjekte(game, rack, new Vector3(16.8f, 0f, -10f), MathHelper.ToRadians(0), 1.68f);
             schreibtisch = new Raumobjekte(game, desk, new Vector3(16.8f, 0f, 9f), MathHelper.ToRadians(180), 1.5f);
             stuhl = new Raumobjekte(game, chair, new Vector3(13.0f, 0f, 9f), MathHelper.ToRadians(90), 1.1f);
-            tuer = new Raumobjekte(game, door, new Vector3(-17.7f, 0f, 12f), MathHelper.ToRadians(90), 0.04f);
+            tuer = new Raumobjekte(game, door, new Vector3(-18f, 0f, 12f), MathHelper.ToRadians(-90), 0.04f);
 
           //  tisch = new Raumobjekte(game, table, new Vector3(0f, 1.4f, -14f), MathHelper.ToRadians(0), 1f);
             

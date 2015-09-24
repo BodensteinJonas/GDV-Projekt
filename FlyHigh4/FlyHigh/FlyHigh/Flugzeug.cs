@@ -19,6 +19,9 @@ namespace FlyHigh
         public Vector3 playerPosition;
         public Matrix playerRotation;
 
+        public BoundingSphere sphereFluegel1, sphereFluegel2;
+        Matrix sphereTranslation1, sphereTranslation2;
+
         public Flugzeug(Game game)
             //: base(game)
         {
@@ -73,32 +76,39 @@ namespace FlyHigh
                                 * Matrix.CreateRotationY(MathHelper.ToRadians(180.0f))
                                 * Matrix.CreateTranslation(playerPosition);
 
+
+
+            Matrix finRot = Matrix.CreateRotationX(Game1.instance.angle.X)
+                                * cameraSyncRotation
+                                * Matrix.CreateRotationY(MathHelper.ToRadians(180.0f));
+
+            Vector3 finPosSphere1 = Vector3.Transform(playerPosition + new Vector3(0.5f, 0f, 0f), finRot);
+            sphereTranslation1 = Matrix.CreateTranslation(playerPosition);// Matrix.CreateTranslation(finPosSphere1);
+    
+            //sphereTranslation2 = Matrix.CreateTranslation(playerPosition + new Vector3(-0.5f,0f,0f));
+
             foreach (ModelMesh mesh in plane.Meshes)
             {
+                sphereFluegel1 = BoundingSphere.CreateMerged(sphereFluegel1, mesh.BoundingSphere);
+                sphereFluegel2 = BoundingSphere.CreateMerged(sphereFluegel2, mesh.BoundingSphere);
                 foreach (BasicEffect effect in mesh.Effects)
                 {
                     effect.World = planeWorld;
                     effect.View = Game1.instance.viewMatrix;
                     effect.Projection = Game1.instance.projectionMatrix;
                     effect.EnableDefaultLighting();
+
+                    sphereFluegel1.Center = sphereTranslation1.Translation;
+                    sphereFluegel1.Radius = .5f;
+                    //sphereFluegel2.Center = sphereTranslation2.Translation;
+                    //sphereFluegel2.Radius = .2f;
                 }
                 mesh.Draw();
             }
 
-            //bonetransformation = new Matrix[room.Bones.Count];
-            //room.CopyAbsoluteBoneTransformsTo(bonetransformation);
-
-            //foreach (ModelMesh mesh in room.Meshes)
-            //{
-            //    foreach (BasicEffect effect in mesh.Effects)
-            //    {
-            //        effect.World = bonetransformation[mesh.ParentBone.Index] * Matrix.CreateTranslation(0, -1f, 0) * Matrix.CreateScale(100f) * Matrix.CreateRotationY(MathHelper.ToRadians(135));
-            //        effect.View = Game1.instance.viewMatrix;
-            //        effect.Projection = Game1.instance.projectionMatrix;
-            //        effect.EnableDefaultLighting();
-            //    }
-            //    mesh.Draw();
-            //}
+            BoundingSphereRenderer.Render(sphereFluegel1, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
+           // BoundingSphereRenderer.Render(sphereFluegel2, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
+            
         }
     }
 }

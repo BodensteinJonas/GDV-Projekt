@@ -145,3 +145,23 @@ C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.csprojRes
 C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.exe
 C:\Users\Dominic\Desktop\FlyHigh\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.pdb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Scheibe.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Flugzeug.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Raum.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Bett.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schreibtisch.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Stuhl.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schrank.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Kommode.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 1.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 2.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\Sofa.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\couch2.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\tuer.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\Content\missile.xnb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\FlyHigh.exe
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\bin\x86\Debug\FlyHigh.pdb
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.csprojResolveAssemblyReference.cache
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.exe
+E:\GitHub\GDV-Projekt\FlyHigh4\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.pdb

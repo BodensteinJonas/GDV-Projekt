@@ -1,2 +1,0 @@
-c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\GametimerContent\obj\x86\Debug\GametimerContent.contentprojResolveAssemblyReference.cache
-C:\Users\andre\Desktop\Timer\Gametimer\GametimerContent\obj\x86\Debug\GametimerContent.contentprojResolveAssemblyReference.cache

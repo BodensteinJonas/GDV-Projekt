@@ -7,11 +7,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Scheibe.xnb</Output>
-      <Time>2015-09-24T17:58:58.0400635+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Scheibe.xnb</Output>
+      <Time>2015-09-24T19:24:31.9176585+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Scheibe_0.xml</Key>
-        <Value>2015-09-24T18:01:57.4005037+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Scheibe_0.xml</Key>
+        <Value>2015-09-24T19:25:58.9186429+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -20,11 +20,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Flugzeug.xnb</Output>
-      <Time>2015-09-24T17:58:57.6650513+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Flugzeug.xnb</Output>
+      <Time>2015-09-24T19:24:31.8646151+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Flugzeug_0.xml</Key>
-        <Value>2015-09-24T18:01:57.8380249+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Flugzeug_0.xml</Key>
+        <Value>2015-09-24T19:25:59.0592674+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -33,11 +33,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Raum.xnb</Output>
-      <Time>2015-09-24T17:58:57.993191+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Raum.xnb</Output>
+      <Time>2015-09-24T19:24:31.9166522+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Raum_0.xml</Key>
-        <Value>2015-09-24T18:01:58.1036608+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Raum_0.xml</Key>
+        <Value>2015-09-24T19:25:59.1373934+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -46,11 +46,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Bett.xnb</Output>
-      <Time>2015-09-24T17:58:57.7588057+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Bett.xnb</Output>
+      <Time>2015-09-24T19:24:31.8636144+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Bett_0.xml</Key>
-        <Value>2015-09-24T18:01:58.6818795+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Bett_0.xml</Key>
+        <Value>2015-09-24T19:25:59.3586851+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -59,11 +59,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schreibtisch.xnb</Output>
-      <Time>2015-09-24T17:58:58.1181978+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schreibtisch.xnb</Output>
+      <Time>2015-09-24T19:24:31.9276609+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Schreibtisch_0.xml</Key>
-        <Value>2015-09-24T18:02:02.4947084+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Schreibtisch_0.xml</Key>
+        <Value>2015-09-24T19:26:00.74079+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -72,11 +72,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Stuhl.xnb</Output>
-      <Time>2015-09-24T17:58:58.1963265+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Stuhl.xnb</Output>
+      <Time>2015-09-24T19:24:31.9376676+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Stuhl_0.xml</Key>
-        <Value>2015-09-24T18:02:04.0104096+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Stuhl_0.xml</Key>
+        <Value>2015-09-24T19:26:01.2567571+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -85,11 +85,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schrank.xnb</Output>
-      <Time>2015-09-24T17:58:57.4150385+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schrank.xnb</Output>
+      <Time>2015-09-24T19:24:31.9186415+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Schrank_0.xml</Key>
-        <Value>2015-09-24T18:02:04.2604164+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Schrank_0.xml</Key>
+        <Value>2015-09-24T19:26:01.3348644+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -98,11 +98,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Kommode.xnb</Output>
-      <Time>2015-09-24T17:58:57.9463137+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Kommode.xnb</Output>
+      <Time>2015-09-24T19:24:31.9056415+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Kommode_0.xml</Key>
-        <Value>2015-09-24T18:02:04.8699195+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Kommode_0.xml</Key>
+        <Value>2015-09-24T19:26:01.55362+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -111,11 +111,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 1.xnb</Output>
-      <Time>2015-09-24T17:58:58.2589346+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 1.xnb</Output>
+      <Time>2015-09-24T19:24:31.9106446+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 1_0.xml</Key>
-        <Value>2015-09-24T18:02:05.6668289+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 1_0.xml</Key>
+        <Value>2015-09-24T19:26:01.83489+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -124,11 +124,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 2.xnb</Output>
-      <Time>2015-09-24T17:58:57.8213035+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 2.xnb</Output>
+      <Time>2015-09-24T19:24:31.9156515+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 2_0.xml</Key>
-        <Value>2015-09-24T18:02:06.401382+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 2_0.xml</Key>
+        <Value>2015-09-24T19:26:02.084894+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -137,11 +137,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Sofa.xnb</Output>
-      <Time>2015-09-24T17:58:57.618174+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Sofa.xnb</Output>
+      <Time>2015-09-24T19:24:31.9286663+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Sofa_0.xml</Key>
-        <Value>2015-09-24T18:02:06.7295171+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Sofa_0.xml</Key>
+        <Value>2015-09-24T19:26:02.1942697+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -150,11 +150,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\couch2.xnb</Output>
-      <Time>2015-09-24T17:58:57.5712917+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\couch2.xnb</Output>
+      <Time>2015-09-24T19:24:31.9686799+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\couch2_0.xml</Key>
-        <Value>2015-09-24T18:02:10.0043116+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\couch2_0.xml</Key>
+        <Value>2015-09-24T19:26:03.3349115+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -163,11 +163,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\tuer.xnb</Output>
-      <Time>2015-09-24T17:58:57.3681622+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\tuer.xnb</Output>
+      <Time>2015-09-24T19:24:32.4520209+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\tuer_0.xml</Key>
-        <Value>2015-09-24T18:02:10.520056+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\tuer_0.xml</Key>
+        <Value>2015-09-24T19:26:03.5067886+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -176,11 +176,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\missile.xnb</Output>
-      <Time>2015-09-24T17:58:58.3058067+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\missile.xnb</Output>
+      <Time>2015-09-24T19:24:31.9696792+02:00</Time>
       <Dependency>
-        <Key>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\missile_0.xml</Key>
-        <Value>2015-09-24T18:02:10.6763181+02:00</Value>
+        <Key>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\missile_0.xml</Key>
+        <Value>2015-09-24T19:26:03.5536639+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -189,8 +189,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\spielstart.xnb</Output>
-      <Time>2015-09-24T17:58:25.4088498+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\spielstart.xnb</Output>
+      <Time>2015-09-24T19:24:32.2829127+02:00</Time>
     </Item>
     <Item>
       <Source>beenden.jpg</Source>
@@ -198,8 +198,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\beenden.xnb</Output>
-      <Time>2015-09-24T17:58:25.6432355+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\beenden.xnb</Output>
+      <Time>2015-09-24T19:24:31.9406749+02:00</Time>
     </Item>
     <Item>
       <Source>layer.png</Source>
@@ -207,8 +207,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\layer.xnb</Output>
-      <Time>2015-09-24T17:58:25.4713476+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\layer.xnb</Output>
+      <Time>2015-09-24T19:24:31.9696792+02:00</Time>
     </Item>
     <Item>
       <Source>MouseRec.png</Source>
@@ -216,8 +216,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\MouseRec.xnb</Output>
-      <Time>2015-09-24T17:58:25.5651021+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\MouseRec.xnb</Output>
+      <Time>2015-09-24T19:24:31.9056415+02:00</Time>
     </Item>
     <Item>
       <Source>Zielscheibe_Sound.wav</Source>
@@ -225,8 +225,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Zielscheibe_Sound.xnb</Output>
-      <Time>2015-09-24T17:58:25.9870005+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Zielscheibe_Sound.xnb</Output>
+      <Time>2015-09-24T19:24:31.9396685+02:00</Time>
     </Item>
     <Item>
       <Source>Schuss_Sound.wav</Source>
@@ -234,8 +234,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schuss_Sound.xnb</Output>
-      <Time>2015-09-24T17:58:25.8463659+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schuss_Sound.xnb</Output>
+      <Time>2015-09-24T19:24:31.9276609+02:00</Time>
     </Item>
     <Item>
       <Source>startmusik.mp3</Source>
@@ -243,107 +243,116 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\startmusik.xnb</Output>
-      <Extra>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\startmusik.wma</Extra>
-      <Time>2015-09-24T17:58:26.7370366+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\startmusik.xnb</Output>
+      <Extra>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\startmusik.wma</Extra>
+      <Time>2015-09-24T19:24:32.4500377+02:00</Time>
     </Item>
     <Item>
       <Source>Scheibe.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Scheibe_0.xml</Output>
-      <Time>2015-09-24T17:58:58.0400635+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Scheibe_0.xml</Output>
+      <Time>2015-09-24T19:24:31.9176585+02:00</Time>
     </Item>
     <Item>
       <Source>Flugzeug.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Flugzeug_0.xml</Output>
-      <Time>2015-09-24T17:58:57.6650513+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Flugzeug_0.xml</Output>
+      <Time>2015-09-24T19:24:31.8646151+02:00</Time>
     </Item>
     <Item>
       <Source>Raum.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Raum_0.xml</Output>
-      <Time>2015-09-24T17:58:57.993191+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Raum_0.xml</Output>
+      <Time>2015-09-24T19:24:31.9166522+02:00</Time>
     </Item>
     <Item>
       <Source>Bett.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Bett_0.xml</Output>
-      <Time>2015-09-24T17:58:57.7588057+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Bett_0.xml</Output>
+      <Time>2015-09-24T19:24:31.8636144+02:00</Time>
     </Item>
     <Item>
       <Source>Schreibtisch.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Schreibtisch_0.xml</Output>
-      <Time>2015-09-24T17:58:58.1181978+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Schreibtisch_0.xml</Output>
+      <Time>2015-09-24T19:24:31.9276609+02:00</Time>
     </Item>
     <Item>
       <Source>Stuhl.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Stuhl_0.xml</Output>
-      <Time>2015-09-24T17:58:58.1963265+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Stuhl_0.xml</Output>
+      <Time>2015-09-24T19:24:31.9376676+02:00</Time>
     </Item>
     <Item>
       <Source>Schrank.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Schrank_0.xml</Output>
-      <Time>2015-09-24T17:58:57.4150385+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Schrank_0.xml</Output>
+      <Time>2015-09-24T19:24:31.9186415+02:00</Time>
     </Item>
     <Item>
       <Source>Kommode.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Kommode_0.xml</Output>
-      <Time>2015-09-24T17:58:57.9463137+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Kommode_0.xml</Output>
+      <Time>2015-09-24T19:24:31.9056415+02:00</Time>
     </Item>
     <Item>
       <Source>Pflanze 1.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 1_0.xml</Output>
-      <Time>2015-09-24T17:58:58.2589346+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 1_0.xml</Output>
+      <Time>2015-09-24T19:24:31.9106446+02:00</Time>
     </Item>
     <Item>
       <Source>Pflanze 2.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 2_0.xml</Output>
-      <Time>2015-09-24T17:58:57.8213035+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Pflanze 2_0.xml</Output>
+      <Time>2015-09-24T19:24:31.9156515+02:00</Time>
     </Item>
     <Item>
       <Source>Sofa.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Sofa_0.xml</Output>
-      <Time>2015-09-24T17:58:57.618174+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Sofa_0.xml</Output>
+      <Time>2015-09-24T19:24:31.9286663+02:00</Time>
     </Item>
     <Item>
       <Source>couch2.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\couch2_0.xml</Output>
-      <Time>2015-09-24T17:58:57.5712917+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\couch2_0.xml</Output>
+      <Time>2015-09-24T19:24:31.9686799+02:00</Time>
     </Item>
     <Item>
       <Source>tuer.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\tuer_0.xml</Output>
-      <Time>2015-09-24T17:58:57.3681622+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\tuer_0.xml</Output>
+      <Time>2015-09-24T19:24:32.4520209+02:00</Time>
     </Item>
     <Item>
       <Source>missile.fbx</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\missile_0.xml</Output>
-      <Time>2015-09-24T17:58:58.3058067+02:00</Time>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\missile_0.xml</Output>
+      <Time>2015-09-24T19:24:31.9696792+02:00</Time>
+    </Item>
+    <Item>
+      <Source>hintergrund.png</Source>
+      <Name>hintergrund</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\hintergrund.xnb</Output>
+      <Time>2015-09-24T19:28:30.6430342+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -352,10 +361,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\</RootDirectory>
+      <LoggerRootDirectory>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -383,8 +392,8 @@
         <Value>2011-09-01T16:22:30+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-09-21T19:11:31.0197884+02:00</Value>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-08-23T21:40:48.6068853+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

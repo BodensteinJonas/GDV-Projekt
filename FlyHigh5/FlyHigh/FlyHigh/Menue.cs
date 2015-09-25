@@ -14,8 +14,12 @@ namespace FlyHigh
         Texture2D sb;
         Rectangle sbrec;
 
-        // Backrounds
+        Texture2D end;
+        Rectangle endrec;        
 
+        // Backrounds
+        Texture2D backg;
+        Rectangle backgrec;
 
         // Mouse
         Texture2D mouseTex;
@@ -37,7 +41,14 @@ namespace FlyHigh
 
             // Buttons
             sb = Game1.instance.Content.Load<Texture2D>("spielstart");
-            sbrec = new Rectangle(1280/2-50,720/2-25,100,50);
+            sbrec = new Rectangle(1280 / 2 - 50, 720 / 3 - 25, 100, 50);
+
+            end = Game1.instance.Content.Load<Texture2D>("beenden");
+            endrec = new Rectangle(1280 / 2 - 50, 720 / 2 - 25, 100, 50);
+
+            //Background
+            backg = Game1.instance.Content.Load<Texture2D>("hintergrund");
+            backgrec = new Rectangle(0,0,1280,720);
         }
 
         public void update(GameTime gt)
@@ -53,6 +64,11 @@ namespace FlyHigh
                 Game1.instance.gameState = Game1.GameState.ingame;
             }
 
+            if (mouseRec.Intersects(endrec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                Game1.instance.Exit();
+            }
+            
 
             //Console.WriteLine(mousePos);
         }
@@ -61,15 +77,16 @@ namespace FlyHigh
         {
             batch.Begin();
             //White für Standartfarbe bei Texturen
+            batch.Draw(backg, backgrec, Color.White);
             batch.Draw(sb,sbrec,Color.White);
-
+            batch.Draw(end, endrec, Color.White);
             batch.Draw(mouseTex, mouseRec, Color.White);
 
 
             // Debug
-            if(!debug)
+            if(debug)
              batch.Draw(mouseTex, sbrec, Color.White);
-
+             batch.Draw(mouseTex, endrec, Color.White);
 
 
 

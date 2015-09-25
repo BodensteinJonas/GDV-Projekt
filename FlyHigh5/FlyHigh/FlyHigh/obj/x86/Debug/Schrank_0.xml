@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Mesh</Name>
     <Identity>
-      <SourceFilename>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
+      <SourceFilename>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -73,7 +73,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>Default</Name>
       <Identity>
-        <SourceFilename>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
+        <SourceFilename>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -87,7 +87,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>Line</Name>
       <Identity>
-        <SourceFilename>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
+        <SourceFilename>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -101,7 +101,7 @@
     <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
       <Name>Knop</Name>
       <Identity>
-        <SourceFilename>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
+        <SourceFilename>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -115,7 +115,7 @@
     <Resource ID="#Resource4" Type="Graphics:BasicMaterialContent">
       <Name>Glasses</Name>
       <Identity>
-        <SourceFilename>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
+        <SourceFilename>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -129,7 +129,7 @@
     <Resource ID="#Resource5" Type="Graphics:BasicMaterialContent">
       <Name>Glass</Name>
       <Identity>
-        <SourceFilename>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
+        <SourceFilename>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\Schrank.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

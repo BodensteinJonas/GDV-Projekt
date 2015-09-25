@@ -20,3 +20,4 @@ Content\Zielscheibe_Sound.xnb
 Content\Schuss_Sound.xnb
 Content\startmusik.xnb
 Content\startmusik.wma
+Content\hintergrund.xnb

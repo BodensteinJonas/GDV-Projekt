@@ -107,6 +107,7 @@ namespace FlyHigh
             }
 
             BoundingSphereRenderer.Render(sphereFluegel1, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
+            Game1.instance.Sphere.Add(sphereFluegel1);
            // BoundingSphereRenderer.Render(sphereFluegel2, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
             
         }

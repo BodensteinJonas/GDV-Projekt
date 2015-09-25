@@ -91,6 +91,7 @@ namespace FlyHigh
                 mesh.Draw();
             }
             BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
+            Game1.instance.Sphere.Add(sphere);
 
         }
     }

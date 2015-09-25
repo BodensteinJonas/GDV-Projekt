@@ -241,3 +241,32 @@ C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.csprojReso
 C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.exe
 C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.pdb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Scheibe.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Flugzeug.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Raum.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Bett.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schreibtisch.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Stuhl.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schrank.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Kommode.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 1.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Pflanze 2.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Sofa.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\couch2.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\tuer.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\missile.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\spielstart.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\beenden.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\layer.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\MouseRec.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Zielscheibe_Sound.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schuss_Sound.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\startmusik.xnb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\startmusik.wma
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\FlyHigh.exe
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\FlyHigh.pdb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.csprojResolveAssemblyReference.cache
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.exe
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.pdb
+E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHigh\bin\x86\Debug\Content\hintergrund.xnb

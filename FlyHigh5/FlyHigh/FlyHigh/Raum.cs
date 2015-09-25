@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace FlyHigh
 {
-    public class Raum : Microsoft.Xna.Framework.DrawableGameComponent
+    public class Raum// : Microsoft.Xna.Framework.DrawableGameComponent
     {
 
         Model room;
@@ -19,9 +19,9 @@ namespace FlyHigh
         Raumobjekte bett, sofa, kommode, pflanze1, pflanze2, schrank, schreibtisch, stuhl, tuer;
 
         public Raum(Game game)
-            : base(game)
+            //: base(game)
         {
-            loadContent(Game.Content);
+            loadContent(Game1.instance.Content);
             bett = new Raumobjekte(game, bed,new Vector3(0f, 1.4f, -14f), MathHelper.ToRadians(90) , 2f);
             sofa = new Raumobjekte(game, couch, new Vector3(-16f, 0f, -12f), MathHelper.ToRadians(90), 0.04f);
             kommode = new Raumobjekte(game, lowboy, new Vector3(16.8f, 0f, -14f), MathHelper.ToRadians(0), 1f);
@@ -52,15 +52,21 @@ namespace FlyHigh
 
         }
 
-        public override void Update(GameTime gameTime)
-        {
+       // public override void Update(GameTime gameTime)
+        //{
 
-            base.Update(gameTime);
-        }
+            //base.Update(gameTime);
+        //}
 
-        public override void Draw(GameTime gameTime)
+
+        //public override void Draw(GameTime gameTime)
+        public void Draw(GameTime gameTime)
         {
+            Game1.instance.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullNone);
             draw();
+            Game1.instance.spriteBatch.End();
+
+            Game1.instance.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullCounterClockwise);
             bett.Draw(gameTime);
             sofa.Draw(gameTime);
             kommode.Draw(gameTime);
@@ -69,11 +75,13 @@ namespace FlyHigh
             schrank.Draw(gameTime);
             schreibtisch.Draw(gameTime);
             stuhl.Draw(gameTime);
-            tuer.Draw(gameTime);
+            tuer.Draw(gameTime); 
+            Game1.instance.spriteBatch.End();
            // tisch.Draw(gameTime);
 
-            base.Draw(gameTime);
+            //base.Draw(gameTime);
         }
+
 
         private void draw()
         {

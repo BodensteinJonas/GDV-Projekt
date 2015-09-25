@@ -3,7 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>RootNode</Name>
     <Identity>
-      <SourceFilename>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\missile.fbx</SourceFilename>
+      <SourceFilename>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\missile.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -146,7 +146,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>phong4</Name>
       <Identity>
-        <SourceFilename>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\missile.fbx</SourceFilename>
+        <SourceFilename>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\missile.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -160,7 +160,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>phong3</Name>
       <Identity>
-        <SourceFilename>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\missile.fbx</SourceFilename>
+        <SourceFilename>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\missile.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -174,7 +174,7 @@
     <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
       <Name>phong2</Name>
       <Identity>
-        <SourceFilename>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\missile.fbx</SourceFilename>
+        <SourceFilename>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\missile.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -188,7 +188,7 @@
     <Resource ID="#Resource4" Type="Graphics:BasicMaterialContent">
       <Name>phong5</Name>
       <Identity>
-        <SourceFilename>C:\Users\andre\Desktop\FlyHigh5\FlyHigh\FlyHighContent\missile.fbx</SourceFilename>
+        <SourceFilename>E:\GitHub\GDV-Projekt\FlyHigh5\FlyHigh\FlyHighContent\missile.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

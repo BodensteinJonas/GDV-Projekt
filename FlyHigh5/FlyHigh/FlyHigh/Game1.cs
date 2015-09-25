@@ -18,7 +18,7 @@ namespace FlyHigh
 
         public static Game1 instance;
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        public SpriteBatch spriteBatch;
 
         // Controls
         public MouseState lastMouseState, mouse;
@@ -53,6 +53,7 @@ namespace FlyHigh
 
         public enum GameState { startMenue, ingame, pause, gameSettings };
         public GameState gameState = GameState.startMenue;
+
         public Sounds sound;
 
         Model target;
@@ -63,6 +64,7 @@ namespace FlyHigh
         Model missile;
         List<Bullet> schussListe = new List<Bullet>();
         List<Bullet> schussRemoveListe = new List<Bullet>();
+        public List<BoundingSphere> Sphere = new List<BoundingSphere>();
 
         // Menues
         Menue startMenue;
@@ -87,8 +89,7 @@ namespace FlyHigh
             scheibenListe = new List<Scheibe>();
             schussListe = new List<Bullet>();
             
-            scheibenAnzahl = 10;
-            
+            scheibenAnzahl = 10; 
         }
 
 
@@ -184,9 +185,6 @@ namespace FlyHigh
                     // Update Menue
                     sound.playStartmenueTrack();
 
-                    if (Keyboard.GetState().IsKeyDown(Keys.P))
-                    gameState = GameState.ingame;
-
                     startMenue.update(gameTime);
                     break;
 
@@ -217,6 +215,12 @@ namespace FlyHigh
                     }
                     schussRemoveListe.Clear();
                     break;
+
+                    for (int i = 0; i < Sphere.Count;i++)
+                    {
+
+                    }
+                    
             }
 
           
@@ -227,10 +231,10 @@ namespace FlyHigh
         public void UpdateControls()
         {
             // Turnspeed for mouse
-            float turnSpeed = 0.4f;
+            float turnSpeed = 0.2f;
 
             // Keyboard speed
-            float speed = 0.2f;
+            float speed = 0.1f;
 
             // Get mouse and keyboard
             KeyboardState keyboard = Keyboard.GetState();

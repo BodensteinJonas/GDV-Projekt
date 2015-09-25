@@ -1,0 +1,14 @@
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\bin\x86\Debug\Content\font.xnb
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\bin\x86\Debug\Gametimer.exe
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\bin\x86\Debug\Gametimer.pdb
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\obj\x86\Debug\Gametimer.csprojResolveAssemblyReference.cache
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\obj\x86\Debug\Gametimer.exe
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\obj\x86\Debug\Gametimer.pdb
+C:\Users\andre\Desktop\Timer\Gametimer\Gametimer\bin\x86\Debug\Content\font.xnb
+C:\Users\andre\Desktop\Timer\Gametimer\Gametimer\bin\x86\Debug\Gametimer.exe
+C:\Users\andre\Desktop\Timer\Gametimer\Gametimer\bin\x86\Debug\Gametimer.pdb
+C:\Users\andre\Desktop\Timer\Gametimer\Gametimer\obj\x86\Debug\Gametimer.csprojResolveAssemblyReference.cache
+C:\Users\andre\Desktop\Timer\Gametimer\Gametimer\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\andre\Desktop\Timer\Gametimer\Gametimer\obj\x86\Debug\Gametimer.exe
+C:\Users\andre\Desktop\Timer\Gametimer\Gametimer\obj\x86\Debug\Gametimer.pdb

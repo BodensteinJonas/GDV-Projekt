@@ -1,0 +1,7 @@
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\bin\x86\Debug\Content\font.xnb
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\bin\x86\Debug\Gametimer.exe
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\bin\x86\Debug\Gametimer.pdb
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\obj\x86\Debug\Gametimer.csprojResolveAssemblyReference.cache
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\obj\x86\Debug\Gametimer.exe
+c:\users\andre\documents\visual studio 2013\Projects\Gametimer\Gametimer\Gametimer\obj\x86\Debug\Gametimer.pdb

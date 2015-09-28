@@ -11,8 +11,6 @@ using Microsoft.Xna.Framework.Media;
 
 namespace FlyHigh
 {
-
-
     public class Game1 : Microsoft.Xna.Framework.Game
     {
 
@@ -40,6 +38,11 @@ namespace FlyHigh
         public Vector3 moveNearFar;
         public Vector3 moveLeftRight;
         public Matrix viewMatrix, projectionMatrix, cameraRotationMatrix;
+
+        public Quaternion qCamRotation = Quaternion.Identity;
+        public Vector3 rollLeftRight;
+        public Vector3 CamPosition;
+
 
         /// <summary>
         /// Define active camera (view matrix).
@@ -129,21 +132,7 @@ namespace FlyHigh
 
         protected override void LoadContent()
         {
-
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-
-
-
-
-
-
-            //for (int i = 0; i <= schussAnz; i++)
-            //{
-            // Vector3 targetPos = new Vector3(0,0,0);
-            // schussListe.Add(new Bullet(player.playerPosition, new Vector3(1.0f, 1.0f, 1.0f), Vector3.Right, player.playerRotation, missile, 2.0f);
-            //}
-
             player.loadContent(Content);
 
         }
@@ -158,13 +147,10 @@ namespace FlyHigh
 
         protected override void Update(GameTime gameTime)
         {
-
-
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
-
 
             // Wenn Klasse nicht in der Componenten Datenstruktur enthalten ist, muss Draw manuell aufgerufen werden
             //player.Update(gameTime);
@@ -181,21 +167,36 @@ namespace FlyHigh
 
                 case GameState.ingame:
                     // Update ingame
-                    UpdateControls();
+                    //UpdateControls();
+                     player.update();
+                    IsMouseVisible = false;
+
+                    if (Keyboard.GetState().IsKeyDown(Keys.F1) && lastKb.IsKeyUp(Keys.F1) && cameraStyle == CameraStyle.TPV)
+                        cameraStyle = CameraStyle.FPV;
+                    else if (Keyboard.GetState().IsKeyDown(Keys.F1) && lastKb.IsKeyUp(Keys.F1) && cameraStyle == CameraStyle.FPV)
+                        cameraStyle = CameraStyle.SV;
+                    else if (Keyboard.GetState().IsKeyDown(Keys.F1) && lastKb.IsKeyUp(Keys.F1) && cameraStyle == CameraStyle.SV)
+                        cameraStyle = CameraStyle.TPV;
+
+                    if (cameraStyle == CameraStyle.TPV)
+                        UpdateCameraThirdPerson();
+                    if (cameraStyle == CameraStyle.FPV)
+                        UpdateCameraFirstPerson();
 
                     schussManager.update();
                     scheibenManager.update(gameTime);
                     intersectionManager.update();
+                   
                     break;
             }
 
+            lastKb = Keyboard.GetState();
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Indigo);
-
 
             switch (gameState)
             {
@@ -220,11 +221,47 @@ namespace FlyHigh
             // Wenn Klasse nicht in der Componenten Datenstruktur enthalten ist, muss Draw manuell aufgerufen werden
             //player.Draw(gameTime);
 
-
-
             base.Draw(gameTime);
         }
+
         #region Controls
+        private void UpdateCameraThirdPerson()
+        {
+            // Set camera offset and transform it with player rotation
+            CamPosition = new Vector3(0, 0, -4);
+            CamPosition = Vector3.Transform(CamPosition, Matrix.CreateFromQuaternion(player.qPlayerRotation));
+
+            // Add player position 
+            CamPosition += player.playerPosition;
+
+            // Look at player position
+            Vector3 lookAt = player.playerPosition;
+
+            // Define up vector and transform it with player rotation
+            Vector3 up = new Vector3(0, 1, 0);
+            up = Vector3.Transform(up, Matrix.CreateFromQuaternion(player.qPlayerRotation));
+
+            // Define oculus rotation matrix
+            //Matrix oculusRot = Matrix.CreateFromQuaternion(OculusRift.Oculus.OculusClient.GetPredictedOrientation());
+
+            // Set look at
+            viewMatrix = Matrix.CreateLookAt(CamPosition, lookAt, up); // * oculusRot;
+
+        }
+
+        private void UpdateCameraFirstPerson()
+        {
+            CamPosition = new Vector3(0, 0, 0);
+            CamPosition = Vector3.Transform(CamPosition, Matrix.CreateFromQuaternion(player.qPlayerRotation));
+            CamPosition += player.playerPosition;
+            Vector3 lookAtOffset = new Vector3(0, 0, 1);
+            lookAtOffset = Vector3.Transform(lookAtOffset, Matrix.CreateFromQuaternion(player.qPlayerRotation));
+            Vector3 lookAt = player.playerPosition + lookAtOffset;
+            Vector3 up = new Vector3(0, 1, 0);
+            up = Vector3.Transform(up, Matrix.CreateFromQuaternion(player.qPlayerRotation));
+            viewMatrix = Matrix.CreateLookAt(CamPosition, lookAt, up) * Matrix.CreateTranslation(new Vector3(0, 0, 0));
+        }
+
         public void UpdateControls()
         {
             // Turnspeed for mouse

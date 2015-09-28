@@ -15,65 +15,52 @@ namespace FlyHigh
     {
         Model missile;
         public Vector3 spawnPos, spawnScale, addPos, offset, finOffset, finX;
-        public Matrix rotation;
-        public float finalSpeed, speed, xRot;
+        public Quaternion rotation;
+        float finalSpeed, speed, xRot;
         public bool isDead = false;
 
         public BoundingSphere sphere;
         Matrix sphereTranslation;
+        float bulletRange = 10.0f;
 
-        public Bullet(Vector3 spawnPos, Vector3 spawnScale, Vector3 offset, Matrix rotation, Model missile, float speed, float xRot)
+        public Bullet(Vector3 spawnPos, Vector3 spawnScale, Vector3 offset, Quaternion rotation, Model missile, float speed, float xRot)
         {
             this.spawnPos = spawnPos;
             this.spawnScale = spawnScale;
             this.offset = offset;
-            this.missile = missile;// Game1.instance.Content.Load<Model>(@"Assets/Weapons/LaserBeam");
+            this.missile = missile;
             this.speed = speed;
-            this.rotation = rotation;//Game1.instance.playerOne.PlayerRotation;
+            this.rotation = rotation;
             this.xRot = xRot;
-
         }
 
         public void Update()
         {
             finalSpeed += speed;
-            addPos = Vector3.Transform(new Vector3(0.0f, 0.0f, -finalSpeed), rotation);
-            //finOffset = Vector3.Transform(offset, rotation);
-            //finX = Vector3.Transform(new Vector3(0.0f, 0.0f, -finalSpeed), Matrix.CreateRotationX(-xRot));
-            addPos = Vector3.Transform(addPos, Matrix.CreateRotationX(-xRot));
+            addPos = Vector3.Transform(new Vector3(0, 0, -finalSpeed), Matrix.CreateFromQuaternion(rotation));
 
             // Check distance to  bulletspawnpos
-            Vector3 distance = spawnPos - addPos;
-            float dist = distance.Length();
-
-            if (dist >= 7.0f)
-            {
+            if (-finalSpeed <= -bulletRange)
                 isDead = true;
-            }
-
         }
 
         public void Draw()
         {
-            //Switch Offset for Single/DoubleFire in WeaponManager
-            DrawSingleFire();
-            //DrawDoubleFire();
+            DrawBullet();
         }
 
-        public void DrawSingleFire()
+        public void DrawBullet()
         {
+            Matrix bullets = Matrix.Identity
+                    * Matrix.CreateScale(spawnScale)
+                    * Matrix.CreateFromQuaternion(rotation)
+                    * Matrix.CreateTranslation(spawnPos)
+                    * Matrix.CreateTranslation(-addPos);
 
-            Matrix bullets = Matrix.Identity;
-
-            bullets = Matrix.Identity
-                                 * Matrix.CreateScale(spawnScale)
-                                 * Matrix.CreateRotationX(xRot)
-                                 * rotation
-                                 * Matrix.CreateTranslation(spawnPos)
-                                 * Matrix.CreateTranslation(addPos);
-                                 //* Matrix.CreateTranslation(finX);
-
-            sphereTranslation = Matrix.CreateTranslation(spawnPos)* Matrix.CreateTranslation(addPos);
+            sphereTranslation = Matrix.Identity
+                    * Matrix.CreateFromQuaternion(rotation)
+                    * Matrix.CreateTranslation(spawnPos)
+                    * Matrix.CreateTranslation(-addPos);
 
             foreach (ModelMesh mesh in this.missile.Meshes)
             {
@@ -86,15 +73,11 @@ namespace FlyHigh
                     effect.Projection = Game1.instance.projectionMatrix;
 
                     sphere.Center = sphereTranslation.Translation;
-                    sphere.Radius = 0.25f;
+                    sphere.Radius = 0.2f;
                 }
                 mesh.Draw();
             }
             BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
-            //Game1.instance.Sphere.Add(sphere);
-
         }
     }
-
-    
 }

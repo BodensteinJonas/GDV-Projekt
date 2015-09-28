@@ -30,7 +30,7 @@ namespace FlyHigh
                 schussListe.Add(new Bullet(Game1.instance.player.playerPosition,
                                 new Vector3(0.1f, 0.1f, 0.1f),
                                 Vector3.Right,
-                                Game1.instance.player.playerRotation,
+                                Game1.instance.player.qPlayerRotation,
                                 missile,
                                 0.1f,
                                 Game1.instance.angle.X));

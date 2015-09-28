@@ -330,3 +330,4 @@ G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHigh\bin\x86\Debug\FlyHigh.pdb
 G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHigh\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.exe
 G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.pdb
+G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.csprojResolveAssemblyReference.cache

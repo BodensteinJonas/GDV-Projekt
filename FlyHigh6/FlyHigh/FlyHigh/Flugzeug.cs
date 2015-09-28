@@ -17,17 +17,35 @@ namespace FlyHigh
 
         Model plane;
         public Vector3 playerPosition;
-        public Matrix playerRotation;
+        public Matrix mPlayerRotation;
+        public Quaternion qPlayerRotation;
+        Quaternion calculatedRotation; 
+
+        public float playerSpeed;
+        float playerLeftRightRot;
+        float playerUpDownRot;
+        float playerRollRot;
+        float sensitivity = 0.05f;
+        public float speedToAdd = 0.05f;
 
         public BoundingSphere sphereFluegel1, sphereFluegel2;
-        Matrix sphereTranslation1, sphereTranslation2;
-        //public List<BoundingSphere> listeFlugzeug = new List<BoundingSphere>();
+        KeyboardState kbState;
+        MouseState mState;
+
+        // BoundingSpheres
         public BoundingSphere[] planeSpheres = new BoundingSphere[3];
+
+        // BoundingBox
+        public BoundingBox boundingBox;
+        private BasicEffect lineEffect;
+        public BoundingBoxRenderer bbRenderer = new BoundingBoxRenderer();
+        public Color bbColor = Color.Blue;
 
         public Flugzeug(Game game)
             //: base(game)
         {
-            playerPosition = Vector3.Zero;
+            playerPosition = new Vector3(0, 3, 0);
+            qPlayerRotation = Quaternion.Identity;
         }
 
         public void loadContent(ContentManager c)
@@ -35,91 +53,149 @@ namespace FlyHigh
             plane = c.Load<Model>("Flugzeug");
             planeSpheres[0] = sphereFluegel1;
             planeSpheres[1] = sphereFluegel2;
+
+            lineEffect = new BasicEffect(Game1.instance.GraphicsDevice);
+            lineEffect.LightingEnabled = false;
+            lineEffect.TextureEnabled = false;
+            lineEffect.VertexColorEnabled = true;
         }
 
-       /* public override void Update(GameTime gameTime)
-        {
-
-            base.Update(gameTime);
+         public void update(){
+            setBoundingBox();
+            KeyboardControls();
+            MouseControls();
+            MoveForward();
         }
 
-        public override void Draw(GameTime gameTime)
-        {
-            draw();
-            base.Draw(gameTime);
-        }
-        */
         public void draw()
         {
-            Matrix planeWorld = Matrix.Identity;
+            Matrix PlayerTransformation = Matrix.CreateScale(new Vector3(0.5f, 0.5f, 0.5f))
+                                        * Matrix.CreateFromQuaternion(qPlayerRotation)
+                                        * Matrix.CreateTranslation(playerPosition);
+            Vector3 offsetLeft = Vector3.Transform(new Vector3(-1f, 0,0), Matrix.CreateFromQuaternion(qPlayerRotation));
 
-            // !!!! Startposition vom Spieler hier setzten (wenn mehr als zwei verschiedenen Startpositionen benötigt werden) !!!! 
-            //if(Game1.instance.cameraStyle != Game1.CameraStyle.FPV)                
-            //playerPosition = new Vector3(0.0f, -2.0f, -10.0f);
-            //else 
-            //playerPosition = Vector3.Zero;
+            Matrix sphereTrans1 = Matrix.Identity
+                                * Matrix.CreateFromQuaternion(qPlayerRotation)
+                                * Matrix.CreateTranslation(playerPosition)
+                                * Matrix.CreateTranslation(offsetLeft);
 
-            // !!!! Startposition vom Spieler hier setzten !!!! 
-            playerPosition = Game1.instance.cameraStyle != Game1.CameraStyle.FPV
-                           ? playerPosition = new Vector3(0.0f, 0.0f, -4.0f)
-                           : playerPosition = Vector3.Zero;
+           Vector3 offsetRight = Vector3.Transform(new Vector3(1f, 0,0), Matrix.CreateFromQuaternion(qPlayerRotation));
 
-            // Plane rotation -> verwendet nur yaw
-            Matrix cameraSyncRotation = Matrix.Identity * Matrix.CreateRotationY(-Game1.instance.angle.Y);
-            playerRotation = cameraSyncRotation;
-            // Playerposition mit cameraSyncPosition transformieren (hängt nun immer hinter dem Objekt, auch wenn man rotiert)
-            playerPosition = Vector3.Transform(playerPosition, cameraSyncRotation);
-            // Auf die errechnete Verschiebung nun noch die Cameraposition addieren
-            playerPosition += Game1.instance.camPos;
+            Matrix sphereTrans2 = Matrix.Identity
+                                * Matrix.CreateFromQuaternion(qPlayerRotation)
+                                * Matrix.CreateTranslation(playerPosition)
+                                * Matrix.CreateTranslation(offsetRight);
 
-            // Planetransformation
-            planeWorld = Matrix.Identity
-                                * Matrix.CreateScale(0.2f)
-                                * Matrix.CreateRotationX(Game1.instance.angle.X)
-                                * cameraSyncRotation
-                                * Matrix.CreateRotationY(MathHelper.ToRadians(180.0f))
-                                * Matrix.CreateTranslation(playerPosition);
-
-
-
-            Matrix finRot = Matrix.CreateRotationX(Game1.instance.angle.X)
-                                * cameraSyncRotation
-                                * Matrix.CreateRotationY(MathHelper.ToRadians(180.0f));
-
-            Vector3 finPosSphere1 = Vector3.Transform(playerPosition + new Vector3(0.5f, 0f, 0f), finRot);
-            sphereTranslation1 = Matrix.CreateTranslation(playerPosition);// Matrix.CreateTranslation(finPosSphere1);
-    
-            sphereTranslation2 = Matrix.CreateTranslation(playerPosition + new Vector3(-0.5f,0f,0f));
             foreach (ModelMesh mesh in plane.Meshes)
             {
-               // sphereFluegel1 = BoundingSphere.CreateMerged(sphereFluegel1, mesh.BoundingSphere);
                 planeSpheres[0] = BoundingSphere.CreateMerged(planeSpheres[0], mesh.BoundingSphere);
                 planeSpheres[1] = BoundingSphere.CreateMerged(planeSpheres[1], mesh.BoundingSphere);
-
-
                 foreach (BasicEffect effect in mesh.Effects)
                 {
-                    effect.World = planeWorld;
+                    effect.World = PlayerTransformation; //planeWorld;
                     effect.View = Game1.instance.viewMatrix;
                     effect.Projection = Game1.instance.projectionMatrix;
                     effect.EnableDefaultLighting();
 
-                    planeSpheres[0].Center = sphereTranslation1.Translation;
-                    planeSpheres[0].Radius = .5f;
-
-                    planeSpheres[1].Center = sphereTranslation2.Translation;
-                    planeSpheres[1].Radius = .5f;
-                    //sphereFluegel2.Center = sphereTranslation2.Translation;
-                    //sphereFluegel2.Radius = .2f;
+                    planeSpheres[0].Center = sphereTrans1.Translation;
+                    planeSpheres[0].Radius = .25f;
+                    planeSpheres[1].Center = sphereTrans2.Translation;
+                    planeSpheres[1].Radius = .25f;
                 }
                 mesh.Draw();
             }
 
             for (int j = 0; j < planeSpheres.Length; j++)
-                BoundingSphereRenderer.Render(planeSpheres[j], Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
-            
-            //BoundingSphereRenderer.Render(sphereFluegel2, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
-            
+                BoundingSphereRenderer.Render(planeSpheres[j], Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red); 
+
+             DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
+                    lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
         }
+
+        #region Controls
+        private void KeyboardControls()
+        {
+            // Rotation of the Ship
+            kbState = Keyboard.GetState();
+           // playerLeftRightRot = 0.0f;
+           // playerUpDownRot = 0.0f;
+
+            if (kbState.IsKeyDown(Keys.Down) || kbState.IsKeyDown(Keys.W))
+                playerUpDownRot += sensitivity;
+
+            if (kbState.IsKeyDown(Keys.Up) || kbState.IsKeyDown(Keys.S))
+                playerUpDownRot -= sensitivity;
+            
+            if (kbState.IsKeyDown(Keys.Left) || kbState.IsKeyDown(Keys.A))
+                playerLeftRightRot += sensitivity / 2;
+
+            if (kbState.IsKeyDown(Keys.Right) || kbState.IsKeyDown(Keys.D))
+                playerLeftRightRot -= sensitivity / 2;
+
+            calculatedRotation = Quaternion.CreateFromAxisAngle(new Vector3(0, 1, 0), playerLeftRightRot)
+                               * Quaternion.CreateFromAxisAngle(new Vector3(-1, 0, 0), playerUpDownRot);
+            qPlayerRotation = calculatedRotation;
+
+            // Speed of the Ship 
+            if (kbState.IsKeyDown(Keys.LeftShift))
+                playerSpeed += -speedToAdd;
+            else if (kbState.IsKeyDown(Keys.LeftControl))
+                playerSpeed += speedToAdd;
+            else playerSpeed = 0.0f;
+        }
+
+
+        private void MouseControls()
+        {
+            mState = Mouse.GetState();
+            playerLeftRightRot = 0.0f;
+            playerUpDownRot = 0.0f;
+
+            playerLeftRightRot -= (mState.X - (Game1.instance.GraphicsDevice.Viewport.Width / 2));
+            playerUpDownRot -= (mState.Y - (Game1.instance.GraphicsDevice.Viewport.Height / 2));
+
+            calculatedRotation = Quaternion.CreateFromAxisAngle(new Vector3(0, 1, 0), playerLeftRightRot * 0.01f)
+                               * Quaternion.CreateFromAxisAngle(new Vector3(-1, 0, 0), playerUpDownRot * 0.01f);
+            qPlayerRotation = calculatedRotation;
+        }
+
+        private void MoveForward()
+        {
+            Vector3 calculatedVector = Vector3.Transform(new Vector3(0, 0, -playerSpeed), Matrix.CreateFromQuaternion(qPlayerRotation));
+            playerPosition += calculatedVector;
+        }
+        #endregion
+
+        #region BoundingBox
+        public BoundingBox getBoundingBox()
+        {
+            return boundingBox;
+        }
+
+        protected void setBoundingBox()
+        {
+            Vector3 offset = Vector3.Transform(new Vector3(0.0f, 4.5f, 35.0f), qPlayerRotation);
+            Matrix translation = Matrix.CreateScale(new Vector3(1.0f, 1.0f, 1.0f)) * Matrix.CreateFromQuaternion(qPlayerRotation) * Matrix.CreateTranslation(playerPosition);// * Matrix.CreateTranslation(offset);  // scaleParam
+            boundingBox = bbRenderer.CreateBoundingBox(plane, translation);
+            // 6.1f, 2.1f, 10.1f
+        }
+
+        protected void DrawBoundingBox(BoundingBoxRenderer bbRenderer, BasicEffect effect, GraphicsDevice graphicsDevice, Matrix view, Matrix projection)
+        {
+            graphicsDevice.SetVertexBuffer(bbRenderer.Vertices);
+            graphicsDevice.Indices = bbRenderer.Indices;
+
+            effect.World = Matrix.Identity; // Matrix.CreateFromQuaternion(playerRotation) * Matrix.CreateTranslation(playerPosition);
+            effect.View = view;
+            effect.Projection = projection;
+
+            foreach (EffectPass pass in effect.CurrentTechnique.Passes)
+            {
+                pass.Apply();
+                graphicsDevice.DrawIndexedPrimitives(PrimitiveType.LineList, 0, 0,
+                    bbRenderer.VertexCount, 0, bbRenderer.PrimitiveCount);
+            }
+        }
+        #endregion
     }
 }

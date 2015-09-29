@@ -15,7 +15,11 @@ namespace FlyHigh
     public class Flugzeug// : Microsoft.Xna.Framework.DrawableGameComponent
     {
 
-        Model plane;
+        Model plane1;
+        Model plane2;
+        Texture2D texture1; 
+        Texture2D texture2;
+
         public Vector3 playerPosition;
         public Matrix mPlayerRotation;
         public Quaternion qPlayerRotation;
@@ -25,8 +29,9 @@ namespace FlyHigh
         float playerLeftRightRot;
         float playerUpDownRot;
         float playerRollRot;
-        float sensitivity = 0.05f;
-        public float speedToAdd = 0.05f;
+        float sensitivity = 0.003f;
+        public float speedToAdd = 0.003f;
+        public float maxSpeed = 0.004f;
 
         public BoundingSphere sphereFluegel1, sphereFluegel2;
         KeyboardState kbState;
@@ -50,7 +55,11 @@ namespace FlyHigh
 
         public void loadContent(ContentManager c)
         {
-            plane = c.Load<Model>("Flugzeug");
+            plane1 = c.Load<Model>("plane1");
+            plane2 = c.Load<Model>("plane2");
+            texture1 = c.Load<Texture2D>("texture1");
+            texture2 = c.Load<Texture2D>("texture2");
+            
             planeSpheres[0] = sphereFluegel1;
             planeSpheres[1] = sphereFluegel2;
 
@@ -86,23 +95,49 @@ namespace FlyHigh
                                 * Matrix.CreateTranslation(playerPosition)
                                 * Matrix.CreateTranslation(offsetRight);
 
-            foreach (ModelMesh mesh in plane.Meshes)
-            {
-                planeSpheres[0] = BoundingSphere.CreateMerged(planeSpheres[0], mesh.BoundingSphere);
-                planeSpheres[1] = BoundingSphere.CreateMerged(planeSpheres[1], mesh.BoundingSphere);
-                foreach (BasicEffect effect in mesh.Effects)
+            if (Game1.instance.model == 1) {            
+                foreach (ModelMesh mesh in plane1.Meshes)
                 {
-                    effect.World = PlayerTransformation; //planeWorld;
-                    effect.View = Game1.instance.viewMatrix;
-                    effect.Projection = Game1.instance.projectionMatrix;
-                    effect.EnableDefaultLighting();
+                    planeSpheres[0] = BoundingSphere.CreateMerged(planeSpheres[0], mesh.BoundingSphere);
+                    planeSpheres[1] = BoundingSphere.CreateMerged(planeSpheres[1], mesh.BoundingSphere);
+                    foreach (BasicEffect effect in mesh.Effects)
+                    {
+                        effect.World = PlayerTransformation; //planeWorld;
+                        effect.View = Game1.instance.viewMatrix;
+                        effect.Projection = Game1.instance.projectionMatrix;
+                        effect.EnableDefaultLighting();
+                        effect.TextureEnabled = true;
+                        effect.Texture = texture1;
 
-                    planeSpheres[0].Center = sphereTrans1.Translation;
-                    planeSpheres[0].Radius = .25f;
-                    planeSpheres[1].Center = sphereTrans2.Translation;
-                    planeSpheres[1].Radius = .25f;
+                        planeSpheres[0].Center = sphereTrans1.Translation;
+                        planeSpheres[0].Radius = .25f;
+                        planeSpheres[1].Center = sphereTrans2.Translation;
+                        planeSpheres[1].Radius = .25f;
+                    }
+                    mesh.Draw();
                 }
-                mesh.Draw();
+            }
+            else {
+                foreach (ModelMesh mesh in plane2.Meshes)
+                {
+                    planeSpheres[0] = BoundingSphere.CreateMerged(planeSpheres[0], mesh.BoundingSphere);
+                    planeSpheres[1] = BoundingSphere.CreateMerged(planeSpheres[1], mesh.BoundingSphere);
+                    foreach (BasicEffect effect in mesh.Effects)
+                    {
+                        effect.World = PlayerTransformation; //planeWorld;
+                        effect.View = Game1.instance.viewMatrix;
+                        effect.Projection = Game1.instance.projectionMatrix;
+                        effect.EnableDefaultLighting();
+                        effect.TextureEnabled = true;
+                        effect.Texture = texture2;
+
+                        planeSpheres[0].Center = sphereTrans1.Translation;
+                        planeSpheres[0].Radius = .25f;
+                        planeSpheres[1].Center = sphereTrans2.Translation;
+                        planeSpheres[1].Radius = .25f;
+                    }
+                    mesh.Draw();
+                }
             }
 
             for (int j = 0; j < planeSpheres.Length; j++)
@@ -141,7 +176,7 @@ namespace FlyHigh
                 playerSpeed += -speedToAdd;
             else if (kbState.IsKeyDown(Keys.LeftControl))
                 playerSpeed += speedToAdd;
-            else playerSpeed = 0.0f;
+           // else playerSpeed = 0.0f;
         }
 
 
@@ -176,7 +211,7 @@ namespace FlyHigh
         {
             Vector3 offset = Vector3.Transform(new Vector3(0.0f, 4.5f, 35.0f), qPlayerRotation);
             Matrix translation = Matrix.CreateScale(new Vector3(1.0f, 1.0f, 1.0f)) * Matrix.CreateFromQuaternion(qPlayerRotation) * Matrix.CreateTranslation(playerPosition);// * Matrix.CreateTranslation(offset);  // scaleParam
-            boundingBox = bbRenderer.CreateBoundingBox(plane, translation);
+            boundingBox = bbRenderer.CreateBoundingBox(plane1, translation);
             // 6.1f, 2.1f, 10.1f
         }
 

@@ -86,6 +86,7 @@
     <Compile Include="Scheibe.cs" />
     <Compile Include="ScheibenManager.cs" />
     <Compile Include="SchussManager.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Sounds.cs" />
   </ItemGroup>
   <ItemGroup>

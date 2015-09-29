@@ -3,7 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>RootNode</Name>
     <Identity>
-      <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh4\FlyHigh\FlyHighContent\Raum.fbx</SourceFilename>
+      <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Raum.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -98,7 +98,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>Wand</Name>
       <Identity>
-        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh4\FlyHigh\FlyHighContent\Raum.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Raum.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -111,7 +111,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>Boden</Name>
       <Identity>
-        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh4\FlyHigh\FlyHighContent\Raum.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Raum.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -124,7 +124,7 @@
     <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
       <Name>lambert2</Name>
       <Identity>
-        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh4\FlyHigh\FlyHighContent\Raum.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Raum.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -137,7 +137,7 @@
     <Resource ID="#Resource4" Type="Graphics:BasicMaterialContent">
       <Name>Scheibe</Name>
       <Identity>
-        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh4\FlyHigh\FlyHighContent\Raum.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Raum.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

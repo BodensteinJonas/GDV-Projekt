@@ -65,8 +65,12 @@ namespace FlyHigh
         public ScheibenManager scheibenManager;
         public IntersectionManager intersectionManager;
 
+        //Modelauswahl
+        public int model;
+
         // Menues
         Menue startMenue;
+        Settings settingMenue;
 
         public Game1()
         {
@@ -104,6 +108,7 @@ namespace FlyHigh
             // Konstruktor muss etwas modifiziert werden -> Siehe player class
 
             startMenue = new Menue();
+            settingMenue = new Settings();
             sound = new Sounds();
 
             player = new Flugzeug(this);
@@ -207,14 +212,16 @@ namespace FlyHigh
 
                 case GameState.ingame:
                     // Draw ingame
-
                     room.Draw(gameTime);
-
-
                     schussManager.draw();
                     scheibenManager.draw(gameTime);
-
                     player.draw();
+                    break;
+
+                case GameState.gameSettings:
+                    sound.playStartmenueTrack();
+                    settingMenue.update(gameTime);
+                    settingMenue.draw(spriteBatch);
                     break;
             }
 

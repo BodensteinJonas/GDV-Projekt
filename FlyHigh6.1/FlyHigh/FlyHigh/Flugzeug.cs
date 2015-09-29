@@ -31,7 +31,7 @@ namespace FlyHigh
         float playerRollRot;
         float sensitivity = 0.003f;
         public float speedToAdd = 0.003f;
-        public float maxSpeed = 0.004f;
+        public float maxSpeed = 0.002f;
 
         public BoundingSphere sphereFluegel1, sphereFluegel2;
         KeyboardState kbState;
@@ -143,8 +143,8 @@ namespace FlyHigh
             for (int j = 0; j < planeSpheres.Length; j++)
                 BoundingSphereRenderer.Render(planeSpheres[j], Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red); 
 
-             DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
-                    lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
+           //  DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
+            //        lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
         }
 
         #region Controls

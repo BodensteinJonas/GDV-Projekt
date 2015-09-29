@@ -83,16 +83,13 @@ namespace FlyHigh
 
             // Game settings
             IsMouseVisible = true;
-            graphics.PreferredBackBufferWidth = 1289;
+            graphics.PreferredBackBufferWidth = 1280;
             graphics.PreferredBackBufferHeight = 720;
 
             // Control settings
             lastMouseState = Mouse.GetState();
             Mouse.SetPosition(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
-
-
         }
-
 
         protected override void Initialize()
         {
@@ -118,7 +115,6 @@ namespace FlyHigh
 
             //bullet = new Bullet();
 
-
             //roomobj = new Raumobjekte();           
             schussManager = new SchussManager();
             scheibenManager = new ScheibenManager();
@@ -128,10 +124,15 @@ namespace FlyHigh
             // Components.Add(room);
 
             // Init projection 
-            projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45f), graphics.GraphicsDevice.Viewport.AspectRatio, .1f, 10000f);
+            projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(90f), graphics.GraphicsDevice.Viewport.AspectRatio, .1f, 10000f);
 
             camPos = Vector3.Zero;
 
+
+
+            Console.WriteLine("FUCK YOU!!!!!!!!!" + settingMenue.time);
+            timer = new GameTimer(this, settingMenue.time);
+            timer.Position = new Vector2(Window.ClientBounds.Width - 100, 0);
             base.Initialize();
         }
 
@@ -139,9 +140,7 @@ namespace FlyHigh
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            timer = new GameTimer(this, 100.0f);
-            timer.Font = Content.Load<SpriteFont>("font");
-            timer.Position = new Vector2(this.Window.ClientBounds.Width - 100, 0);
+            timer.loadContent(Content);
             player.loadContent(Content);
 
         }
@@ -150,7 +149,6 @@ namespace FlyHigh
         protected override void UnloadContent()
         {
             Content.Unload();
-
         }
 
 
@@ -172,11 +170,14 @@ namespace FlyHigh
                     sound.playStartmenueTrack();
 
                     startMenue.updateStartMenue(gameTime);
+                    //timer.updateTime(settingMenue.time);
                     break;
 
                 case GameState.ingame:
                     // Update ingame
                     //UpdateControls();
+                    
+
                      player.update();
                     IsMouseVisible = false;
 
@@ -235,6 +236,12 @@ namespace FlyHigh
                     startMenue.drawStartMenue(spriteBatch);
                     break;
 
+                case GameState.gameSettings:
+                    sound.playStartmenueTrack();
+                    settingMenue.update();
+                    settingMenue.draw(spriteBatch);
+                    break;
+
                 case GameState.ingame:
                     // Draw ingame
                     room.Draw(gameTime);
@@ -249,12 +256,6 @@ namespace FlyHigh
                     // pausemenu draw
                     startMenue.drawPauseMenue(spriteBatch);
                     timer.Draw(spriteBatch);
-                    break;
-
-                case GameState.gameSettings:
-                    sound.playStartmenueTrack();
-                    settingMenue.update(gameTime);
-                    settingMenue.draw(spriteBatch);
                     break;
             }
 

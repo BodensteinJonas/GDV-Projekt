@@ -3,7 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>RootNode</Name>
     <Identity>
-      <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
+      <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -67,7 +67,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>lambert3</Name>
       <Identity>
-        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -80,7 +80,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>lambert4</Name>
       <Identity>
-        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -93,7 +93,7 @@
     <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
       <Name>lambert2</Name>
       <Identity>
-        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Scheibe.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

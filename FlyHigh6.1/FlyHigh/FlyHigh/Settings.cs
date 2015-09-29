@@ -10,8 +10,7 @@ namespace FlyHigh
 {
     public class Settings
     {
-        public int timer;
-        
+        public int time;
         // Buttons
         Texture2D fore;
         Rectangle fRec;
@@ -25,7 +24,6 @@ namespace FlyHigh
         //Models
         Texture2D model1, model2, highlight;
         Rectangle m1Rec, m2Rec, hRec;
-        bool high = false;
 
         // Backrounds
         Texture2D backg;
@@ -37,12 +35,16 @@ namespace FlyHigh
         Rectangle mouseRec;
         Vector2 mousePos;
 
-        bool debug = true;
+       // bool debug = true;
 
         public Settings()
         {
             loadContent();
-
+            hRec = m1Rec;
+            hbRec = buRec5;
+            Game1.instance.model = 1;
+            time = 5;
+            update();
         }
 
         private void loadContent()
@@ -51,7 +53,7 @@ namespace FlyHigh
             mouseTex = Game1.instance.Content.Load<Texture2D>("Img/MouseRec");
             highlight = Game1.instance.Content.Load<Texture2D>("Img/HighLight");
 
-            hRec = new Rectangle();
+
             // Buttons
             fore = Game1.instance.Content.Load<Texture2D>("Img/ButtonForward");
             fRec = new Rectangle(1080, 600, 100, 100);
@@ -72,16 +74,13 @@ namespace FlyHigh
             button5 = Game1.instance.Content.Load<Texture2D>("Img/5min");
             buRec5 = new Rectangle(850, 500, 200, 70);
             highlightButton = Game1.instance.Content.Load<Texture2D>("Img/HighlightButton");
-            
-            
-
-
+           
             //Background
             backg = Game1.instance.Content.Load<Texture2D>("Img/HintergrundSetting");
             backgrec = new Rectangle(0, 0, 1280+20, 720);
         }
 
-        public void update(GameTime gt)
+        public void update()
         {
             mousePos = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
 
@@ -99,38 +98,8 @@ namespace FlyHigh
                 Game1.instance.gameState = Game1.GameState.startMenue;
             }
 
-            // Highlight des ausgewählten Flugzeugs
-
-            if (mouseRec.Intersects(m1Rec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
-            {
-                hRec = m1Rec;
-                Game1.instance.model = 1;
-            }
-
-            if (mouseRec.Intersects(m2Rec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
-            {
-                hRec = m2Rec;
-                Game1.instance.model = 2;
-            }
-
-            //Highligth der Timer Buttons und Auswahl der Zeit
-            if (mouseRec.Intersects(buRec2) && Mouse.GetState().LeftButton == ButtonState.Pressed)
-            {
-                hbRec = buRec2;
-                timer = 2;
-            }
-            if (mouseRec.Intersects(buRec3) && Mouse.GetState().LeftButton == ButtonState.Pressed)
-            {
-                hbRec = buRec3;
-                timer = 3;
-            }
-            if (mouseRec.Intersects(buRec5) && Mouse.GetState().LeftButton == ButtonState.Pressed)
-            {
-                hbRec = buRec5;
-                timer = 5;
-            }
-
-            //Console.WriteLine(mousePos);
+            changePlane();
+            changeTimer();
         }
 
         public void draw(SpriteBatch batch)
@@ -145,29 +114,63 @@ namespace FlyHigh
             batch.Draw(model1, m1Rec, Color.White);
             batch.Draw(model2, m2Rec, Color.White);
 
-
             batch.Draw(button2, buRec2, Color.White);
             batch.Draw(button3, buRec3, Color.White);
-            batch.Draw(button5, buRec5, Color.White); 
-         
+            batch.Draw(button5, buRec5, Color.White);  
 
             batch.Draw(highlight, hRec, Color.White);
             batch.Draw(highlightButton, hbRec, Color.White);
-
-
-            
             
             //batch.Draw(mouseTex, mouseRec, Color.White);
-
 
             // Debug
             //if(debug)
             // batch.Draw(mouseTex, sbrec, Color.White);
             // batch.Draw(mouseTex, endrec, Color.White);
 
-
-
             batch.End();
+        }
+
+        public void changePlane()
+        {
+            // Highlight des ausgewählten Flugzeugs
+
+            if (mouseRec.Intersects(m1Rec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                hRec = m1Rec;
+                Game1.instance.model = 1;
+            }
+
+            if (mouseRec.Intersects(m2Rec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                hRec = m2Rec;
+                Game1.instance.model = 2;
+            }
+        }
+        public void changeTimer()
+        {
+
+            //Highligth der Timer Buttons und Auswahl der Zeit
+            if (mouseRec.Intersects(buRec2) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                hbRec = buRec2;
+                time = 2;
+                Console.WriteLine("FUCK YOU" + time);
+            }
+            if (mouseRec.Intersects(buRec3) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                hbRec = buRec3;
+                time = 3;
+                Console.WriteLine("FUCK YOU" + time);
+            }
+            if (mouseRec.Intersects(buRec5) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                hbRec = buRec5;
+                time = 5;
+                Console.WriteLine("FUCK YOU" + time);
+            }
         }
     }
 }
+
+

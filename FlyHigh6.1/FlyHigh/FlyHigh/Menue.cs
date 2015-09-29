@@ -37,7 +37,6 @@ namespace FlyHigh
         public Menue()
         {
             loadContent();
-
         }
 
         private void loadContent()

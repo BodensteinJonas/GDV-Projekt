@@ -3,7 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>RootNode</Name>
     <Identity>
-      <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
+      <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -182,7 +182,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>rumpf1</Name>
       <Identity>
-        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -196,7 +196,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>flügel1</Name>
       <Identity>
-        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Flugzeug.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

@@ -13,6 +13,11 @@ namespace FlyHigh
 {
     public class Raumobjekte : Microsoft.Xna.Framework.DrawableGameComponent
     {
+        // BoundingBox
+        public BoundingBox boundingBox;
+        private BasicEffect lineEffect;
+        public BoundingBoxRenderer bbRenderer = new BoundingBoxRenderer();
+        public Color bbColor = Color.Blue;
 
         Model objekt;
         Vector3 position;
@@ -99,6 +104,7 @@ namespace FlyHigh
         public override void Draw(GameTime gameTime)
         {
             draw();
+
         }
 
         public void draw()
@@ -193,7 +199,7 @@ namespace FlyHigh
             
             //BoundingSphereRenderer.Render(sphereschreibtisch, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
             //listeRaumobjekte.Add(sphereschreibtisch);
-        }
 
+        }
     }
 }

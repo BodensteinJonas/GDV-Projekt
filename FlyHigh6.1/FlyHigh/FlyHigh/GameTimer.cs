@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Content;
 
 
 namespace FlyHigh
@@ -22,11 +23,16 @@ namespace FlyHigh
         public GameTimer(Game game, float startTime)
             : base(game)
         {
-            time = startTime;
+            time = startTime * 60;
             started = false;
             paused = false;
             finished = false;
             Text = "";
+        }
+
+        public void loadContent(ContentManager c)
+        {
+            font = c.Load<SpriteFont>("font");
         }
 
         #region Properties
@@ -97,8 +103,13 @@ namespace FlyHigh
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            spriteBatch.DrawString(Font, Text, Position, Color.Red);
+            spriteBatch.DrawString(font, text, position, Color.Red);
             spriteBatch.End();
+        }
+
+        public void updateTime(float t)
+        {
+            time = t;
         }
     }
 }

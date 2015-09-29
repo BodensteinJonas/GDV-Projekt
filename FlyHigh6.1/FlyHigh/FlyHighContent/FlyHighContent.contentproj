@@ -37,13 +37,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Flugzeug.fbx">
-      <Name>Flugzeug</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Raum.fbx">
       <Name>Raum</Name>
       <Importer>FbxImporter</Importer>

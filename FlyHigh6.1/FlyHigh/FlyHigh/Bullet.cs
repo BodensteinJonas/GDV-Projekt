@@ -53,6 +53,7 @@ namespace FlyHigh
         {
             Matrix bullets = Matrix.Identity
                     * Matrix.CreateScale(spawnScale)
+                    * Matrix.CreateRotationY(MathHelper.ToRadians(180.0f))
                     * Matrix.CreateFromQuaternion(rotation)
                     * Matrix.CreateTranslation(spawnPos)
                     * Matrix.CreateTranslation(-addPos);

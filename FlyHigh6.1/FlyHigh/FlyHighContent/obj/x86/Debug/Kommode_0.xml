@@ -3,7 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>RootNode</Name>
     <Identity>
-      <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Kommode.fbx</SourceFilename>
+      <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Kommode.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -104,7 +104,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>Modern_Closet:default2</Name>
       <Identity>
-        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Kommode.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Kommode.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -118,7 +118,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>Modern_Closet:default_default_1_3</Name>
       <Identity>
-        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Kommode.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Kommode.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -132,7 +132,7 @@
     <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
       <Name>Modern_Closet:default_default_1_5</Name>
       <Identity>
-        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6\FlyHigh\FlyHighContent\Kommode.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Kommode.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

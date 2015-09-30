@@ -38,7 +38,7 @@ namespace FlyHigh
         MouseState mState;
 
         // BoundingSpheres
-        public BoundingSphere[] planeSpheres = new BoundingSphere[3];
+        public BoundingSphere[] planeSpheres = new BoundingSphere[1];
 
         // BoundingBox
         public BoundingBox boundingBox;
@@ -49,7 +49,7 @@ namespace FlyHigh
         public Flugzeug(Game game)
             //: base(game)
         {
-            playerPosition = new Vector3(0, 3, 0);
+            playerPosition = new Vector3(0, 2, 0);
             qPlayerRotation = Quaternion.Identity;
         }
 
@@ -61,7 +61,7 @@ namespace FlyHigh
             texture2 = c.Load<Texture2D>("texture2");
             
             planeSpheres[0] = sphereFluegel1;
-            planeSpheres[1] = sphereFluegel2;
+            //planeSpheres[1] = sphereFluegel2;
 
             lineEffect = new BasicEffect(Game1.instance.GraphicsDevice);
             lineEffect.LightingEnabled = false;
@@ -79,27 +79,28 @@ namespace FlyHigh
         public void draw()
         {
             Matrix PlayerTransformation = Matrix.CreateScale(new Vector3(0.5f, 0.5f, 0.5f))
+                
                                         * Matrix.CreateFromQuaternion(qPlayerRotation)
                                         * Matrix.CreateTranslation(playerPosition);
-            Vector3 offsetLeft = Vector3.Transform(new Vector3(-1f, 0,0), Matrix.CreateFromQuaternion(qPlayerRotation));
+            //Vector3 offsetLeft = Vector3.Transform(new Vector3(-1f, 0,0), Matrix.CreateFromQuaternion(qPlayerRotation));
 
             Matrix sphereTrans1 = Matrix.Identity
                                 * Matrix.CreateFromQuaternion(qPlayerRotation)
-                                * Matrix.CreateTranslation(playerPosition)
-                                * Matrix.CreateTranslation(offsetLeft);
+                                * Matrix.CreateTranslation(playerPosition);
+                            //    * Matrix.CreateTranslation(offsetLeft);
 
-           Vector3 offsetRight = Vector3.Transform(new Vector3(1f, 0,0), Matrix.CreateFromQuaternion(qPlayerRotation));
+           //Vector3 offsetRight = Vector3.Transform(new Vector3(1f, 0,0), Matrix.CreateFromQuaternion(qPlayerRotation));
 
-            Matrix sphereTrans2 = Matrix.Identity
-                                * Matrix.CreateFromQuaternion(qPlayerRotation)
-                                * Matrix.CreateTranslation(playerPosition)
-                                * Matrix.CreateTranslation(offsetRight);
+           // Matrix sphereTrans2 = Matrix.Identity
+           //                     * Matrix.CreateFromQuaternion(qPlayerRotation)
+           //                     * Matrix.CreateTranslation(playerPosition)
+           //                     * Matrix.CreateTranslation(offsetRight);
 
             if (Game1.instance.model == 1) {            
                 foreach (ModelMesh mesh in plane1.Meshes)
                 {
                     planeSpheres[0] = BoundingSphere.CreateMerged(planeSpheres[0], mesh.BoundingSphere);
-                    planeSpheres[1] = BoundingSphere.CreateMerged(planeSpheres[1], mesh.BoundingSphere);
+               //     planeSpheres[1] = BoundingSphere.CreateMerged(planeSpheres[1], mesh.BoundingSphere);
                     foreach (BasicEffect effect in mesh.Effects)
                     {
                         effect.World = PlayerTransformation; //planeWorld;
@@ -110,9 +111,9 @@ namespace FlyHigh
                         effect.Texture = texture1;
 
                         planeSpheres[0].Center = sphereTrans1.Translation;
-                        planeSpheres[0].Radius = .25f;
-                        planeSpheres[1].Center = sphereTrans2.Translation;
-                        planeSpheres[1].Radius = .25f;
+                        planeSpheres[0].Radius = 0.25f;
+                        //planeSpheres[1].Center = sphereTrans2.Translation;
+                        //planeSpheres[1].Radius = .25f;
                     }
                     mesh.Draw();
                 }
@@ -121,7 +122,7 @@ namespace FlyHigh
                 foreach (ModelMesh mesh in plane2.Meshes)
                 {
                     planeSpheres[0] = BoundingSphere.CreateMerged(planeSpheres[0], mesh.BoundingSphere);
-                    planeSpheres[1] = BoundingSphere.CreateMerged(planeSpheres[1], mesh.BoundingSphere);
+                  //  planeSpheres[1] = BoundingSphere.CreateMerged(planeSpheres[1], mesh.BoundingSphere);
                     foreach (BasicEffect effect in mesh.Effects)
                     {
                         effect.World = PlayerTransformation; //planeWorld;
@@ -132,9 +133,9 @@ namespace FlyHigh
                         effect.Texture = texture2;
 
                         planeSpheres[0].Center = sphereTrans1.Translation;
-                        planeSpheres[0].Radius = .25f;
-                        planeSpheres[1].Center = sphereTrans2.Translation;
-                        planeSpheres[1].Radius = .25f;
+                        planeSpheres[0].Radius = 2f;
+                        //planeSpheres[1].Center = sphereTrans2.Translation;
+                        //planeSpheres[1].Radius = .25f;
                     }
                     mesh.Draw();
                 }
@@ -143,8 +144,8 @@ namespace FlyHigh
             for (int j = 0; j < planeSpheres.Length; j++)
                 BoundingSphereRenderer.Render(planeSpheres[j], Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red); 
 
-           //  DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
-            //        lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
+             DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
+                    lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
         }
 
         #region Controls
@@ -179,19 +180,27 @@ namespace FlyHigh
            // else playerSpeed = 0.0f;
         }
 
-
+      
         private void MouseControls()
         {
-            mState = Mouse.GetState();
+            //mState = Mouse.GetState();
+            Game1.instance.mouse = Mouse.GetState();
+            //Mouse.SetPosition(646, 371);
+           // mState.X = Mouse.GetState().X;
+           // mState.Y = Mouse.GetState().Y;
+
+
+
             playerLeftRightRot = 0.0f;
             playerUpDownRot = 0.0f;
 
-            playerLeftRightRot -= (mState.X - (Game1.instance.GraphicsDevice.Viewport.Width / 2));
-            playerUpDownRot -= (mState.Y - (Game1.instance.GraphicsDevice.Viewport.Height / 2));
+            playerLeftRightRot -= (Game1.instance.mouse.X - (Game1.instance.GraphicsDevice.Viewport.Width / 2));
+            playerUpDownRot -= (Game1.instance.mouse.Y - (Game1.instance.GraphicsDevice.Viewport.Height / 2));
 
             calculatedRotation = Quaternion.CreateFromAxisAngle(new Vector3(0, 1, 0), playerLeftRightRot * 0.01f)
                                * Quaternion.CreateFromAxisAngle(new Vector3(-1, 0, 0), playerUpDownRot * 0.01f);
             qPlayerRotation = calculatedRotation;
+          
         }
 
         private void MoveForward()
@@ -210,7 +219,7 @@ namespace FlyHigh
         protected void setBoundingBox()
         {
             Vector3 offset = Vector3.Transform(new Vector3(0.0f, 4.5f, 35.0f), qPlayerRotation);
-            Matrix translation = Matrix.CreateScale(new Vector3(1.0f, 1.0f, 1.0f)) * Matrix.CreateFromQuaternion(qPlayerRotation) * Matrix.CreateTranslation(playerPosition);// * Matrix.CreateTranslation(offset);  // scaleParam
+            Matrix translation = Matrix.CreateScale(new Vector3(0.3f, 0.3f, 0.3f)) * Matrix.CreateFromQuaternion(qPlayerRotation) * Matrix.CreateTranslation(playerPosition);// * Matrix.CreateTranslation(offset);  // scaleParam
             boundingBox = bbRenderer.CreateBoundingBox(plane1, translation);
             // 6.1f, 2.1f, 10.1f
         }

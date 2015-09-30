@@ -107,22 +107,20 @@ namespace FlyHigh
             settingMenue = new Settings();
             sound = new Sounds();
 
+        //    room = new Raum(this);
             player = new Flugzeug(this);
             Console.WriteLine(player.playerPosition);
-            room = new Raum(this);
 
             //bullet = new Bullet();
 
             //roomobj = new Raumobjekte();           
-            schussManager = new SchussManager();
-            scheibenManager = new ScheibenManager();
-            intersectionManager = new IntersectionManager();
+
 
             //Components.Add(player);
             // Components.Add(room);
 
             // Init projection 
-            projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(90f), graphics.GraphicsDevice.Viewport.AspectRatio, .1f, 10000f);
+            projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45f), graphics.GraphicsDevice.Viewport.AspectRatio, .1f, 10000f);
 
             camPos = Vector3.Zero;
 
@@ -267,7 +265,7 @@ namespace FlyHigh
         private void UpdateCameraThirdPerson()
         {
             // Set camera offset and transform it with player rotation
-            CamPosition = new Vector3(0, 0, -4);
+            CamPosition = new Vector3(0, 1, -6);
             CamPosition = Vector3.Transform(CamPosition, Matrix.CreateFromQuaternion(player.qPlayerRotation));
 
             // Add player position 

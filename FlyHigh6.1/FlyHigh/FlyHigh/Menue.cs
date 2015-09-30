@@ -127,7 +127,11 @@ namespace FlyHigh
             else if (pause)
             {
                 if (btnPlay.isClicked)
+                {
                     pause = false;
+                    mousePos = new Vector2(Game1.instance.mouse.X, Game1.instance.mouse.Y);
+                }
+                   
                 if (btnQuit.isClicked)
                     Game1.instance.Exit();
                 btnPlay.Update(mouse,0);

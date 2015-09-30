@@ -95,7 +95,7 @@ namespace FlyHigh
 
             }
 
-            Text = time.ToString("0.00");
+            Text = time.ToString("0");
 
             base.Update(gameTime);
         }
@@ -109,7 +109,7 @@ namespace FlyHigh
 
         public void updateTime(float t)
         {
-            time = t;
+            time = t * 60;
         }
     }
 }

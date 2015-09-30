@@ -87,15 +87,24 @@ namespace FlyHigh
             mouseRec = new Rectangle((int)mousePos.X - 10, (int)mousePos.Y - 10, 20, 20);
 
             // Intersect ist collsionsüberprüfung 
-            if (mouseRec.Intersects(fRec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            if (mouseRec.Intersects(fRec) && Mouse.GetState().LeftButton == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.P))
             {
                 Game1.instance.sound.stopStartmenueTrack();
+                Game1.instance.schussManager = new SchussManager();
+                Game1.instance.scheibenManager = new ScheibenManager();
+                Game1.instance.room = new Raum(Game1.instance);
+                Game1.instance.intersectionManager = new IntersectionManager();
                 Game1.instance.gameState = Game1.GameState.ingame;
+                Mouse.SetPosition(646,371);
+                Console.WriteLine("mouseX: " + Mouse.GetState().X + " mouseY: " + Mouse.GetState().Y);
+
+                
             }
 
             if (mouseRec.Intersects(bRec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
                 Game1.instance.gameState = Game1.GameState.startMenue;
+                Mouse.SetPosition(646, 371);
             }
 
             changePlane();
@@ -155,20 +164,24 @@ namespace FlyHigh
             {
                 hbRec = buRec2;
                 time = 2;
+                Game1.instance.timer.updateTime(time);
                 Console.WriteLine("FUCK YOU" + time);
             }
             if (mouseRec.Intersects(buRec3) && Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
                 hbRec = buRec3;
                 time = 3;
+                Game1.instance.timer.updateTime(time);
                 Console.WriteLine("FUCK YOU" + time);
             }
             if (mouseRec.Intersects(buRec5) && Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
                 hbRec = buRec5;
                 time = 5;
+                Game1.instance.timer.updateTime(time);
                 Console.WriteLine("FUCK YOU" + time);
             }
+
         }
     }
 }

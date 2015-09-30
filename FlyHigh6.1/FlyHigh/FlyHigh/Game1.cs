@@ -18,6 +18,7 @@ namespace FlyHigh
         GraphicsDeviceManager graphics;
         public SpriteBatch spriteBatch;
         public GameTimer timer;
+        public SpriteFont font;
 
         // Controls
         public MouseState lastMouseState, mouse;
@@ -136,7 +137,8 @@ namespace FlyHigh
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            timer.loadContent(Content);
+            font = Content.Load<SpriteFont>("font");
+            //timer.loadContent(Content);
             player.loadContent(Content);
 
         }
@@ -195,8 +197,6 @@ namespace FlyHigh
 
                     if (Keyboard.GetState().IsKeyDown(Keys.Enter))
                     {
-                        //pause = true;
-                        //btnPlay.isClicked = false;
                          Game1.instance.gameState = Game1.GameState.pause;
                     }
 
@@ -223,7 +223,7 @@ namespace FlyHigh
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Indigo);
+            GraphicsDevice.Clear(Color.PowderBlue);
 
             switch (gameState)
             {
@@ -265,7 +265,7 @@ namespace FlyHigh
         private void UpdateCameraThirdPerson()
         {
             // Set camera offset and transform it with player rotation
-            CamPosition = new Vector3(0, 1, -6);
+            CamPosition = new Vector3(0, 0.2f, -1);
             CamPosition = Vector3.Transform(CamPosition, Matrix.CreateFromQuaternion(player.qPlayerRotation));
 
             // Add player position 

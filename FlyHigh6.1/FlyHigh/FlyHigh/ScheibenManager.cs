@@ -13,6 +13,7 @@ namespace FlyHigh
         Random rand = new Random();
         int scheibenAnzahl;
 
+
         public ScheibenManager()
         {
             scheibenAnzahl = 10;
@@ -35,6 +36,10 @@ namespace FlyHigh
 
         public void draw(GameTime gameTime)
         {
+            Game1.instance.spriteBatch.Begin();
+            Game1.instance.spriteBatch.DrawString(Game1.instance.font,scheibenListe.Count.ToString(""), new Vector2(100, 0), Color.Red);
+            Game1.instance.spriteBatch.End();
+
             foreach (Scheibe target in scheibenListe)
                 target.Draw(gameTime);
         }

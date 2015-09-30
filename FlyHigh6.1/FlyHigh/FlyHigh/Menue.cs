@@ -97,14 +97,6 @@ namespace FlyHigh
             batch.Draw(end, endrec, Color.White);
             //batch.Draw(mouseTex, mouseRec, Color.White);
 
-
-            // Debug
-            if(debug)
-             //batch.Draw(mouseTex, sbrec, Color.White);
-             //batch.Draw(mouseTex, endrec, Color.White);
-
-
-
             batch.End();
         }
 

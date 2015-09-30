@@ -17,9 +17,11 @@ namespace FlyHigh
         Vector3 pos, rotation;
         public BoundingSphere sphere;
         Matrix sphereTranslation;
+        public bool isDead;
 
         public Scheibe(Model m, Vector3 position)
         {
+            isDead = false;
             target = m;
             pos = position;
         }
@@ -30,7 +32,15 @@ namespace FlyHigh
             rotation.Y += .05f;
         }
 
-        public void Draw(GameTime gameTime)
+        public void Draw(GameTime gametime)
+        {
+            if (!isDead)
+            {
+                drawScheibe(gametime);
+            }
+        }
+
+        public void drawScheibe(GameTime gameTime)
         {
             Matrix planeWorld = Matrix.Identity;
 

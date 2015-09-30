@@ -28,11 +28,11 @@ namespace FlyHigh
             {
                 Game1.instance.sound.playSchussSound();
                 schussListe.Add(new Bullet(Game1.instance.player.playerPosition,
-                                new Vector3(0.1f, 0.1f, 0.1f),
+                                new Vector3(0.05f, 0.05f, 0.05f),
                                 Vector3.Right,
                                 Game1.instance.player.qPlayerRotation,
                                 missile,
-                                0.1f,
+                                0.5f,
                                 Game1.instance.angle.X));
             }
 

@@ -11,7 +11,6 @@ namespace FlyHigh
 {
     public class GameTimer : GameComponent
     {
-        private SpriteFont font;
         private String text;
         public float time;
 
@@ -30,18 +29,13 @@ namespace FlyHigh
             Text = "";
         }
 
-        public void loadContent(ContentManager c)
-        {
-            font = c.Load<SpriteFont>("font");
-        }
-
         #region Properties
 
-        public SpriteFont Font
-        {
-            get { return font; }
-            set { font = value; }
-        }
+        //public SpriteFont Font
+        //{
+        //    get { return font; }
+        //    set { font = value; }
+        //}
 
         public String Text
         {
@@ -103,7 +97,7 @@ namespace FlyHigh
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            spriteBatch.DrawString(font, text, position, Color.Red);
+            spriteBatch.DrawString(Game1.instance.font, text, position, Color.Red);
             spriteBatch.End();
         }
 

@@ -14,6 +14,7 @@ namespace FlyHigh
 
     public class Flugzeug// : Microsoft.Xna.Framework.DrawableGameComponent
     {
+        public int hp = 1000;
 
         Model plane1;
         Model plane2;
@@ -33,12 +34,9 @@ namespace FlyHigh
         public float speedToAdd = 0.003f;
         public float maxSpeed = 0.002f;
 
-        public BoundingSphere sphereFluegel1, sphereFluegel2;
+        public BoundingSphere sphere;
         KeyboardState kbState;
         MouseState mState;
-
-        // BoundingSpheres
-        public BoundingSphere[] planeSpheres = new BoundingSphere[1];
 
         // BoundingBox
         public BoundingBox boundingBox;
@@ -59,9 +57,6 @@ namespace FlyHigh
             plane2 = c.Load<Model>("plane2");
             texture1 = c.Load<Texture2D>("texture1");
             texture2 = c.Load<Texture2D>("texture2");
-            
-            planeSpheres[0] = sphereFluegel1;
-            //planeSpheres[1] = sphereFluegel2;
 
             lineEffect = new BasicEffect(Game1.instance.GraphicsDevice);
             lineEffect.LightingEnabled = false;
@@ -70,7 +65,7 @@ namespace FlyHigh
         }
 
          public void update(){
-            setBoundingBox();
+            //setBoundingBox();
             KeyboardControls();
             MouseControls();
             MoveForward();
@@ -78,7 +73,7 @@ namespace FlyHigh
 
         public void draw()
         {
-            Matrix PlayerTransformation = Matrix.CreateScale(new Vector3(0.5f, 0.5f, 0.5f))
+            Matrix PlayerTransformation = Matrix.CreateScale(new Vector3(0.1f, 0.1f, 0.1f))
                 
                                         * Matrix.CreateFromQuaternion(qPlayerRotation)
                                         * Matrix.CreateTranslation(playerPosition);
@@ -99,8 +94,8 @@ namespace FlyHigh
             if (Game1.instance.model == 1) {            
                 foreach (ModelMesh mesh in plane1.Meshes)
                 {
-                    planeSpheres[0] = BoundingSphere.CreateMerged(planeSpheres[0], mesh.BoundingSphere);
-               //     planeSpheres[1] = BoundingSphere.CreateMerged(planeSpheres[1], mesh.BoundingSphere);
+                    sphere = BoundingSphere.CreateMerged(sphere, mesh.BoundingSphere);
+
                     foreach (BasicEffect effect in mesh.Effects)
                     {
                         effect.World = PlayerTransformation; //planeWorld;
@@ -110,10 +105,8 @@ namespace FlyHigh
                         effect.TextureEnabled = true;
                         effect.Texture = texture1;
 
-                        planeSpheres[0].Center = sphereTrans1.Translation;
-                        planeSpheres[0].Radius = 0.25f;
-                        //planeSpheres[1].Center = sphereTrans2.Translation;
-                        //planeSpheres[1].Radius = .25f;
+                        sphere.Center = sphereTrans1.Translation;
+                        sphere.Radius = 0.3f;
                     }
                     mesh.Draw();
                 }
@@ -121,8 +114,8 @@ namespace FlyHigh
             else {
                 foreach (ModelMesh mesh in plane2.Meshes)
                 {
-                    planeSpheres[0] = BoundingSphere.CreateMerged(planeSpheres[0], mesh.BoundingSphere);
-                  //  planeSpheres[1] = BoundingSphere.CreateMerged(planeSpheres[1], mesh.BoundingSphere);
+                    sphere = BoundingSphere.CreateMerged(sphere, mesh.BoundingSphere);
+
                     foreach (BasicEffect effect in mesh.Effects)
                     {
                         effect.World = PlayerTransformation; //planeWorld;
@@ -132,17 +125,15 @@ namespace FlyHigh
                         effect.TextureEnabled = true;
                         effect.Texture = texture2;
 
-                        planeSpheres[0].Center = sphereTrans1.Translation;
-                        planeSpheres[0].Radius = 2f;
-                        //planeSpheres[1].Center = sphereTrans2.Translation;
-                        //planeSpheres[1].Radius = .25f;
+                        sphere.Center = sphereTrans1.Translation;
+                        sphere.Radius = 0.1f;
+
                     }
                     mesh.Draw();
                 }
             }
 
-            for (int j = 0; j < planeSpheres.Length; j++)
-                BoundingSphereRenderer.Render(planeSpheres[j], Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red); 
+                BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red); 
 
              DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
                     lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);

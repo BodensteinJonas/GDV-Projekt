@@ -16,39 +16,63 @@ namespace FlyHigh
         {
             CheckPlaneCollideWithDisc();
             
-            CheckPlaneCollideWithChair();
+            CheckPlaneCollideWithObject();
 
+            checkPlaneCollideWithRoom();
 
-
+            CheckBulletCollideWithDisc();
 
         }
 
         private void CheckPlaneCollideWithDisc()
         {
-            for (int i = 0; i < Game1.instance.player.planeSpheres.Length; i++)
-            {
+
                 for (int j = 0; j < Game1.instance.scheibenManager.scheibenListe.Count; j++)
                 {
-                    if (Game1.instance.player.planeSpheres[i].Intersects(Game1.instance.scheibenManager.scheibenListe[j].sphere))
+                    if (Game1.instance.player.sphere.Intersects(Game1.instance.scheibenManager.scheibenListe[j].sphere))
                     {
-                        Console.WriteLine("PlayerSphere " + i + " collided with disc " + j);
+                        Console.WriteLine("PlayerSphere collided with disc " + j);
+                    }
+                }
+        }
+
+        private void CheckBulletCollideWithDisc()
+        {
+            foreach(Bullet b in Game1.instance.schussManager.schussListe)
+            {
+                foreach (Scheibe s in Game1.instance.scheibenManager.scheibenListe)
+                {
+                    if (b.sphere.Intersects(s.sphere))
+                    {
+                        b.isDead = true;
+                        s.isDead = true;
+                        Console.WriteLine("HIT!");
                     }
                 }
             }
         }
         
-        private void CheckPlaneCollideWithChair()
+        private void checkPlaneCollideWithRoom()
+        {
+            if(!Game1.instance.room.boundingBox.Intersects(Game1.instance.player.sphere))
+            {
+                Console.WriteLine("Plane collide with Room!");
+                Game1.instance.gameState = Game1.GameState.startMenue;
+            }
+        }
+        private void CheckPlaneCollideWithObject()
         {
             //TODO
 
-            //for (int j = 0; j < Game1.instance.room.stStuhlSpheres.Length; j++)
-            //{
-            //    if (Game1.instance.room.stStuhlSpheres[j].Intersects(Game1.instance.player.boundingBox))
-            //    {
-            //        Console.WriteLine("box collide with chair");
-            //    }
+            for (int j = 0; j < Game1.instance.room.rObj.Count; j++)
+            {
+                if (Game1.instance.room.rObj[j].boundingBox.Intersects(Game1.instance.player.sphere))
+                {
+                    Console.WriteLine("box collide with object");
+                    Game1.instance.gameState = Game1.GameState.startMenue;
+                }
+            }
 
-            //}
         }
     }
 }

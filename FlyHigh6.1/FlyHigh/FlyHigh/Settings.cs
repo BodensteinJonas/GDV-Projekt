@@ -165,21 +165,19 @@ namespace FlyHigh
                 hbRec = buRec2;
                 time = 2;
                 Game1.instance.timer.updateTime(time);
-                Console.WriteLine("FUCK YOU" + time);
             }
             if (mouseRec.Intersects(buRec3) && Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
                 hbRec = buRec3;
                 time = 3;
                 Game1.instance.timer.updateTime(time);
-                Console.WriteLine("FUCK YOU" + time);
+
             }
             if (mouseRec.Intersects(buRec5) && Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
                 hbRec = buRec5;
                 time = 5;
                 Game1.instance.timer.updateTime(time);
-                Console.WriteLine("FUCK YOU" + time);
             }
 
         }

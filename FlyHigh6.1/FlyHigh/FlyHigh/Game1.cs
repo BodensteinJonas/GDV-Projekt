@@ -60,8 +60,6 @@ namespace FlyHigh
 
         public Sounds sound;
 
-        public Bullet bullet;
-        public Raumobjekte roomobj;
         public SchussManager schussManager;
         public ScheibenManager scheibenManager;
         public IntersectionManager intersectionManager;
@@ -130,7 +128,7 @@ namespace FlyHigh
 
 
 
-            Console.WriteLine("FUCK YOU!!!!!!!!!" + settingMenue.time);
+            Console.WriteLine("Menü Time: " + settingMenue.time);
             timer = new GameTimer(this, settingMenue.time);
             timer.Position = new Vector2(Window.ClientBounds.Width - 100, 0);
             base.Initialize();

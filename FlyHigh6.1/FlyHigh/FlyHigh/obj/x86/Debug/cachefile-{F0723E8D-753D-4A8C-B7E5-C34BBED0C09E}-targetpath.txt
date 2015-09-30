@@ -34,9 +34,9 @@ Content\Img\2min.xnb
 Content\Img\3min.xnb
 Content\Img\5min.xnb
 Content\Img\HighlightButton.xnb
-Content\pause.xnb
 Content\play.xnb
 Content\quit.xnb
+Content\pause.xnb
 Content\Zielscheibe_Sound.xnb
 Content\Schuss_Sound.xnb
 Content\startmusik.xnb

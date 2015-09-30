@@ -23,7 +23,7 @@ namespace FlyHigh
         Vector3 position;
         float rotation, scale;
 
-        //Links zur Wand 
+        /*//Links zur Wand 
         public BoundingSphere sphereBettLW;
         Matrix sphereBettLWTranslation;
         //Rechts zur Wand
@@ -72,7 +72,7 @@ namespace FlyHigh
         public BoundingSphere[] bettSpheres = new BoundingSphere[6];
         public BoundingSphere[] blumeSpheres = new BoundingSphere[2];
         public BoundingSphere[] blume2Spheres = new BoundingSphere[2];
-        public BoundingSphere[] stStuhlSpheres = new BoundingSphere[2];
+        public BoundingSphere[] stStuhlSpheres = new BoundingSphere[2];*/
 
         public Raumobjekte(Game game, Model model, Vector3 pos, float rot, float sca)
 
@@ -86,7 +86,7 @@ namespace FlyHigh
     
         public void loadContent(ContentManager c)
         {
-            bettSpheres[0] = sphereBettLW;
+            /*bettSpheres[0] = sphereBettLW;
             bettSpheres[1] = sphereBettRW;
             bettSpheres[2] = sphereBettL;
             bettSpheres[3] = sphereBettR;
@@ -97,7 +97,7 @@ namespace FlyHigh
             blume2Spheres[0] = sphereBlumeSchreibtischT;
             blume2Spheres[1] = sphereBlumeSchreibtischK;
             stStuhlSpheres[0] = spherestStuhlB;
-            stStuhlSpheres[1] = spherestStuhlT;
+            stStuhlSpheres[1] = spherestStuhlT;*/
 
         }
 
@@ -116,7 +116,7 @@ namespace FlyHigh
                                 * Matrix.CreateRotationY(rotation)
                                 * Matrix.CreateTranslation(position);
 
-            //Translation Bett
+           /*//Translation Bett
             sphereBettLWTranslation = Matrix.CreateTranslation(1.3f, 1.4f, -17f);
             sphereBettRWTranslation = Matrix.CreateTranslation(-1.3f, 1.4f, -17f);
             sphereBettLTranslation = Matrix.CreateTranslation(1.3f, 1.4f, -10.8f);
@@ -135,7 +135,7 @@ namespace FlyHigh
             //Translation Schreibtisch
             sphereschreibtischTranslation = Matrix.CreateTranslation(16.8f, 2f, 9f);
 
-
+            */
             foreach (ModelMesh mesh in objekt.Meshes)
             {
                 foreach (BasicEffect effect in mesh.Effects)
@@ -145,7 +145,7 @@ namespace FlyHigh
                     effect.Projection = Game1.instance.projectionMatrix;
                     effect.EnableDefaultLighting();
 
-                    //Bett
+                   /* //Bett
                     bettSpheres[0].Center = sphereBettLWTranslation.Translation;
                     bettSpheres[0].Radius = 1.5f;
                     bettSpheres[1].Center = sphereBettRWTranslation.Translation;
@@ -172,15 +172,15 @@ namespace FlyHigh
                     stStuhlSpheres[0].Center = spherestStuhlBTranslation.Translation;
                     stStuhlSpheres[0].Radius = 1.5f;
                     stStuhlSpheres[1].Center = spherestStuhlTTranslation.Translation;
-                    stStuhlSpheres[1].Radius = 1.3f;
+                    stStuhlSpheres[1].Radius = 1.3f;*/
 
-
+                    
                     //sphereschreibtisch.Center = sphereschreibtischTranslation.Translation;
                     //sphereschreibtisch.Radius = 2.2f;
                 }
                 mesh.Draw();
             }
-            //Bett
+          /*  //Bett
             BoundingSphereRenderer.Render(bettSpheres[0], Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
             BoundingSphereRenderer.Render(bettSpheres[1], Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
             BoundingSphereRenderer.Render(bettSpheres[2], Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
@@ -198,7 +198,7 @@ namespace FlyHigh
             BoundingSphereRenderer.Render(stStuhlSpheres[1], Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
             
             //BoundingSphereRenderer.Render(sphereschreibtisch, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
-            //listeRaumobjekte.Add(sphereschreibtisch);
+            //listeRaumobjekte.Add(sphereschreibtisch);*/
 
         }
     }

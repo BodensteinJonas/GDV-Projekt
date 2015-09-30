@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Feisar_Ship</Name>
     <Identity>
-      <SourceFilename>C:\Users\andre\Desktop\FlyHigh6.1\FlyHigh\FlyHighContent\plane2.FBX</SourceFilename>
+      <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\plane2.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -29,7 +29,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>orig_default</Name>
       <Identity>
-        <SourceFilename>C:\Users\andre\Desktop\FlyHigh6.1\FlyHigh\FlyHighContent\plane2.FBX</SourceFilename>
+        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\plane2.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

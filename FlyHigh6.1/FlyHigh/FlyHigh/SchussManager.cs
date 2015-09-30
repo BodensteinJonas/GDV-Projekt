@@ -59,7 +59,10 @@ namespace FlyHigh
         public void draw()
         {
             foreach (Bullet m in schussListe)
+            {
                 m.Draw();
+            }
         }
+       
     }
 }

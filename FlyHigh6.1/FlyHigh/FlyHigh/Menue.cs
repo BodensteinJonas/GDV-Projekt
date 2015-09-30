@@ -57,7 +57,7 @@ namespace FlyHigh
 
 
             // Pause Menue
-            pausedTexture = Game1.instance.Content.Load<Texture2D>("pause");
+            pausedTexture = Game1.instance.Content.Load<Texture2D>("PAUSE");
             pausedRectangle = new Rectangle(0, 0, pausedTexture.Width, pausedTexture.Height);
             btnPlay = new cButton();
             btnPlay.Load(Game1.instance.Content.Load<Texture2D>("play"), new Vector2(300, 300));
@@ -130,8 +130,8 @@ namespace FlyHigh
                     pause = false;
                 if (btnQuit.isClicked)
                     Game1.instance.Exit();
-                btnPlay.Update(mouse);
-                btnQuit.Update(mouse);
+                btnPlay.Update(mouse,0);
+                btnQuit.Update(mouse,1);
             }
 
         }

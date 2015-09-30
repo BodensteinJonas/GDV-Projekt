@@ -33,7 +33,7 @@ namespace FlyHigh
         }
 
 
-        public void Update(MouseState mouse)
+        public void Update(MouseState mouse, int zustand)
         {
             mouse = Mouse.GetState();
 
@@ -46,11 +46,15 @@ namespace FlyHigh
                 if (colour.A == 255) down = false;
                 if (colour.A == 0) down = true;
                 if (down) colour.A += 3; else colour.A -= 3;
-                if (mouse.LeftButton == ButtonState.Pressed)
+                if (mouse.LeftButton == ButtonState.Pressed && zustand == 0)
                 {
                     isClicked = true;
                     colour.A = 255;
                     Game1.instance.gameState = Game1.GameState.ingame;
+                }
+                else if (mouse.LeftButton == ButtonState.Pressed && zustand == 1)
+                {
+                    Game1.instance.Exit();
                 }
             }
             else if (colour.A < 255)

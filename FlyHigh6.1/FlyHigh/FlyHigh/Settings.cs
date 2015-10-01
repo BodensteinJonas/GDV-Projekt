@@ -19,7 +19,7 @@ namespace FlyHigh
         Rectangle bRec;
 
         Texture2D button2, button3, button5, highlightButton;
-        Rectangle buRec2, buRec3, buRec5, hbRec;
+        Rectangle buRec1, buRec2, buRec3, hbRec;
 
         //Models
         Texture2D model1, model2, highlight;
@@ -41,14 +41,16 @@ namespace FlyHigh
         {
             loadContent();
             hRec = m1Rec;
-            hbRec = buRec5;
+            hbRec = buRec3;
             Game1.instance.model = 1;
-            time = 5;
+            time = 3;
+            
             update();
         }
 
         private void loadContent()
         {
+
             // Mouse
             mouseTex = Game1.instance.Content.Load<Texture2D>("Img/MouseRec");
             highlight = Game1.instance.Content.Load<Texture2D>("Img/HighLight");
@@ -67,12 +69,12 @@ namespace FlyHigh
             model2 = Game1.instance.Content.Load<Texture2D>("Img/Model2");
             m2Rec = new Rectangle(800, 100, 285, 285);
 
-            button2 = Game1.instance.Content.Load<Texture2D>("Img/2min");
-            buRec2 = new Rectangle(250, 500, 200, 70);
-            button3 = Game1.instance.Content.Load<Texture2D>("Img/3min");
-            buRec3 = new Rectangle(550, 500, 200, 70);
-            button5 = Game1.instance.Content.Load<Texture2D>("Img/5min");
-            buRec5 = new Rectangle(850, 500, 200, 70);
+            button2 = Game1.instance.Content.Load<Texture2D>("Img/1min");
+            buRec1 = new Rectangle(250, 500, 200, 70);
+            button3 = Game1.instance.Content.Load<Texture2D>("Img/2min");
+            buRec2 = new Rectangle(550, 500, 200, 70);
+            button5 = Game1.instance.Content.Load<Texture2D>("Img/3min");
+            buRec3 = new Rectangle(850, 500, 200, 70);
             highlightButton = Game1.instance.Content.Load<Texture2D>("Img/HighlightButton");
            
             //Background
@@ -82,6 +84,7 @@ namespace FlyHigh
 
         public void update()
         {
+
             mousePos = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
 
             mouseRec = new Rectangle((int)mousePos.X - 10, (int)mousePos.Y - 10, 20, 20);
@@ -89,16 +92,26 @@ namespace FlyHigh
             // Intersect ist collsionsüberprüfung 
             if (mouseRec.Intersects(fRec) && Mouse.GetState().LeftButton == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.P))
             {
+
+                // Player einstellen
+                Game1.instance.player.resetPlayer();
+                Game1.instance.player.sphere.Center = Game1.instance.player.playerPosition;
+                Console.WriteLine("Position: " + Game1.instance.player.playerPosition);
+                Console.WriteLine("Sphere:" + Game1.instance.player.sphere.Center);
+
+                Game1.instance.room = new Raum(Game1.instance);
+                Game1.instance.timer = new GameTimer(Game1.instance, this.time);
                 Game1.instance.sound.stopStartmenueTrack();
+
+                // Kollisionen einstellen
                 Game1.instance.schussManager = new SchussManager();
                 Game1.instance.scheibenManager = new ScheibenManager();
-                Game1.instance.room = new Raum(Game1.instance);
                 Game1.instance.intersectionManager = new IntersectionManager();
+
+                // Starte Spiel
                 Game1.instance.gameState = Game1.GameState.ingame;
                 Mouse.SetPosition(646,371);
-                Console.WriteLine("mouseX: " + Mouse.GetState().X + " mouseY: " + Mouse.GetState().Y);
-
-                
+                Console.WriteLine("mouseX: " + Mouse.GetState().X + " mouseY: " + Mouse.GetState().Y);            
             }
 
             if (mouseRec.Intersects(bRec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
@@ -123,19 +136,13 @@ namespace FlyHigh
             batch.Draw(model1, m1Rec, Color.White);
             batch.Draw(model2, m2Rec, Color.White);
 
-            batch.Draw(button2, buRec2, Color.White);
-            batch.Draw(button3, buRec3, Color.White);
-            batch.Draw(button5, buRec5, Color.White);  
+            batch.Draw(button2, buRec1, Color.White);
+            batch.Draw(button3, buRec2, Color.White);
+            batch.Draw(button5, buRec3, Color.White);  
 
             batch.Draw(highlight, hRec, Color.White);
             batch.Draw(highlightButton, hbRec, Color.White);
-            
-            //batch.Draw(mouseTex, mouseRec, Color.White);
 
-            // Debug
-            //if(debug)
-            // batch.Draw(mouseTex, sbrec, Color.White);
-            // batch.Draw(mouseTex, endrec, Color.White);
 
             batch.End();
         }
@@ -160,24 +167,22 @@ namespace FlyHigh
         {
 
             //Highligth der Timer Buttons und Auswahl der Zeit
+            if (mouseRec.Intersects(buRec1) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                hbRec = buRec1;
+                time = 1;
+            }
+
             if (mouseRec.Intersects(buRec2) && Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
                 hbRec = buRec2;
                 time = 2;
-                Game1.instance.timer.updateTime(time);
             }
+
             if (mouseRec.Intersects(buRec3) && Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
                 hbRec = buRec3;
                 time = 3;
-                Game1.instance.timer.updateTime(time);
-
-            }
-            if (mouseRec.Intersects(buRec5) && Mouse.GetState().LeftButton == ButtonState.Pressed)
-            {
-                hbRec = buRec5;
-                time = 5;
-                Game1.instance.timer.updateTime(time);
             }
 
         }

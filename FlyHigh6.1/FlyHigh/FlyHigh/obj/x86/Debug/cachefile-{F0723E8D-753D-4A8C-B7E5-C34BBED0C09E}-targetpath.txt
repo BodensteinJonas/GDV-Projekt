@@ -13,7 +13,6 @@ Content\tuer.xnb
 Content\missile.xnb
 Content\plane2.xnb
 Content\plane1.xnb
-Content\logo.xnb
 Content\spielstart.xnb
 Content\beenden.xnb
 Content\layer.xnb
@@ -33,12 +32,10 @@ Content\Img\Spielbeenden.xnb
 Content\Img\Spielstart.xnb
 Content\Img\2min.xnb
 Content\Img\3min.xnb
-Content\Img\5min.xnb
 Content\Img\HighlightButton.xnb
 Content\play.xnb
 Content\quit.xnb
 Content\pause.xnb
-Content\Img\logo.xnb
 Content\Zielscheibe_Sound.xnb
 Content\Schuss_Sound.xnb
 Content\startmusik.xnb
@@ -46,5 +43,13 @@ Content\startmusik.wma
 Content\font.xnb
 Content\texture2_0.xnb
 Content\texture1_0.xnb
+Content\logo.xnb
+Content\Img\logo.xnb
 Content\ingame.xnb
 Content\ingame.wma
+Content\Img\1min.xnb
+Content\Img\pause.xnb
+Content\Img\Weiter.xnb
+Content\Img\gameover.xnb
+Content\Img\spielbeendenCrashed.xnb
+Content\Img\SpielstartCrashed.xnb

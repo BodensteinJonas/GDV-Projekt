@@ -6,9 +6,6 @@
       <SourceFilename>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\logo.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
-    <OpaqueData>
-      <Data Key="currentUVSet">map1</Data>
-    </OpaqueData>
     <Transform>3.061617E-17 0.5 0 0 1 -6.123234E-17 1.22464685E-16 0 1.22464685E-16 -7.498799E-33 -1 0 0 2.5 0 1</Transform>
     <Positions>-5 -1.110223E-15 5 5 -1.110223E-15 5 -5 1.110223E-15 -5 5 1.110223E-15 -5</Positions>
     <Geometry>
@@ -20,6 +17,7 @@
           <Channels>
             <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 1 2.220446E-16 0 1 2.220446E-16 0 1 2.220446E-16 0 1 2.220446E-16</VertexChannel>
             <VertexChannel Name="TextureCoordinate0" ElementType="Framework:Vector2">0 1 1 1 1 0 0 0</VertexChannel>
+            <VertexChannel Name="Color0" ElementType="Framework:Vector4">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</VertexChannel>
           </Channels>
         </Vertices>
       </Batch>
@@ -33,28 +31,14 @@
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
-        <Data Key="DiffuseColor" Type="Framework:Vector3">0.8 0.8 0.8</Data>
-        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
-        <Data Key="Alpha" Type="float">1</Data>
-        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Effect">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Trait Data="..\..\..\..\..\..\..\Program Files (x86)\Common7\IDE\Extensions\Microsoft\VsGraphics\Assets\Effects\Lambert.dgsl" Desc="" Flags="9240" Id="Effect" Name="Effekt" Type="9" Vis="1" xmlns="Trait" /&gt;</Data>
+        <Data Key="MaterialAmbient" Type="Framework:Vector4">0 0 0 1</Data>
+        <Data Key="MaterialDiffuse" Type="Framework:Vector4">0.8 0.8 0.8 1</Data>
+        <Data Key="Texture1">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Trait Data=".\Img\logo.png" Desc="" Flags="8200" Id="Texture1" Name="Texture1" Type="9" Vis="4" xmlns="Trait" /&gt;</Data>
+        <Data Key="transparencyFactor" Type="float">1</Data>
       </OpaqueData>
-      <Textures>
-        <Texture Key="Texture">
-          <OpaqueData>
-            <Data Key="TextureCoordinate">TextureCoordinate0</Data>
-          </OpaqueData>
-          <Reference>#External1</Reference>
-        </Texture>
-        <Texture Key="Transparency">
-          <OpaqueData>
-            <Data Key="TextureCoordinate">TextureCoordinate0</Data>
-          </OpaqueData>
-          <Reference>#External1</Reference>
-        </Texture>
-      </Textures>
     </Resource>
   </Resources>
-  <ExternalReferences>
-    <ExternalReference ID="#External1" TargetType="Graphics:TextureContent">..\..\..\..\..\..\..\..\logo.png</ExternalReference>
-  </ExternalReferences>
 </XnaContent>

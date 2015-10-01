@@ -370,15 +370,6 @@
       <Time>2015-09-30T16:25:21.0501464+02:00</Time>
     </Item>
     <Item>
-      <Source>Img\5min.png</Source>
-      <Name>Img\5min</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\5min.xnb</Output>
-      <Time>2015-09-30T16:25:21.0511475+02:00</Time>
-    </Item>
-    <Item>
       <Source>Img\HighlightButton.png</Source>
       <Name>Img\HighlightButton</Name>
       <Importer>TextureImporter</Importer>
@@ -595,12 +586,11 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\logo.xnb</Output>
-      <Time>2015-09-30T17:47:58.1776618+02:00</Time>
+      <Time>2015-10-01T10:56:03.2423427+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\logo_0.xml</Key>
-        <Value>2015-09-30T17:48:01.3557159+02:00</Value>
+        <Value>2015-10-01T10:58:58.9869151+02:00</Value>
       </Dependency>
-      <Request>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\logo_0.xnb</Request>
     </Item>
     <Item>
       <Source>Img\logo.png</Source>
@@ -616,23 +606,71 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\logo_0.xml</Output>
-      <Time>2015-09-30T17:47:58.1776618+02:00</Time>
+      <Time>2015-10-01T10:56:03.2423427+02:00</Time>
     </Item>
     <Item>
-      <Source>C:\Users\Jonas\Desktop\logo.png</Source>
+      <Source>ingame.mp3</Source>
+      <Name>ingame</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\ingame.xnb</Output>
+      <Extra>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\ingame.wma</Extra>
+      <Time>2015-10-01T10:56:03.240326+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\1min.png</Source>
+      <Name>Img\1min</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
-      <Parameters>
-        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
-        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
-        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
-        <Data Key="GenerateMipmaps" Type="bool">true</Data>
-        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
-        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
-      </Parameters>
       <Options>None</Options>
-      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\logo_0.xnb</Output>
-      <Time>2015-09-30T17:49:12.4289973+02:00</Time>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\1min.xnb</Output>
+      <Time>2015-10-01T11:09:55.735239+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\pause.png</Source>
+      <Name>Img\pause</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\pause.xnb</Output>
+      <Time>2015-10-01T11:25:28.4728304+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Weiter.png</Source>
+      <Name>Img\Weiter</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\Weiter.xnb</Output>
+      <Time>2015-10-01T11:26:46.097819+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\gameover.png</Source>
+      <Name>Img\gameover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\gameover.xnb</Output>
+      <Time>2015-10-01T11:39:15.0720988+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\spielbeendenCrashed.png</Source>
+      <Name>Img\spielbeendenCrashed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\spielbeendenCrashed.xnb</Output>
+      <Time>2015-10-01T11:39:15.0720988+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\SpielstartCrashed.png</Source>
+      <Name>Img\SpielstartCrashed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\SpielstartCrashed.xnb</Output>
+      <Time>2015-10-01T11:39:15.0877371+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

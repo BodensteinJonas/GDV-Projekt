@@ -24,7 +24,6 @@ namespace FlyHigh
         float rotation, scale;
         Vector3 boxScale;
 
-
         public Raumobjekte(Game game, Model model, Vector3 pos, float rot, float sca, Vector3 boxScale)
             : base(game)
           {
@@ -47,7 +46,6 @@ namespace FlyHigh
             draw();
             DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
                 lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
-
         }
 
         public void draw()
@@ -58,9 +56,7 @@ namespace FlyHigh
                                 * Matrix.CreateScale(scale)
                                 * Matrix.CreateRotationY(rotation)
                                 * Matrix.CreateTranslation(position);
-
-
-            
+  
             foreach (ModelMesh mesh in objekt.Meshes)
             {
                 foreach (BasicEffect effect in mesh.Effects)
@@ -69,12 +65,10 @@ namespace FlyHigh
                     effect.View = Game1.instance.viewMatrix;
                     effect.Projection = Game1.instance.projectionMatrix;
                     effect.EnableDefaultLighting();
-
                 }
                 mesh.Draw();
             }
         }
-
         #region BoundingBox
         public BoundingBox getBoundingBox()
         {

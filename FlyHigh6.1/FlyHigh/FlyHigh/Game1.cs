@@ -56,7 +56,7 @@ namespace FlyHigh
         public enum CameraStyle { FPV, TPV, SV };
         public CameraStyle cameraStyle = CameraStyle.TPV;
 
-        public enum GameState { startMenue, ingame, pause, gameSettings, loose, win };
+        public enum GameState { startMenue, ingame, pause, gameSettings, gameover, win };
         public GameState gameState = GameState.startMenue;
 
         public Sounds sound;
@@ -127,9 +127,7 @@ namespace FlyHigh
 
 
 
-            Console.WriteLine("Menü Time: " + settingMenue.time);
-            timer = new GameTimer(this, settingMenue.time);
-            timer.Position = new Vector2(Window.ClientBounds.Width - 100, 0);
+            Console.WriteLine("Menü Time: " + settingMenue.time);;
             base.Initialize();
         }
 
@@ -217,6 +215,10 @@ namespace FlyHigh
                         Game1.instance.gameState = Game1.GameState.ingame;
                     }
                     break;
+                case GameState.gameover:
+                    startMenue.updateGameover();
+                    IsMouseVisible = true;
+                    break;
             }
 
             lastKb = Keyboard.GetState();
@@ -255,6 +257,9 @@ namespace FlyHigh
                     startMenue.drawPauseMenue(spriteBatch);
                     timer.Draw(spriteBatch);
                     break;
+                case GameState.gameover:
+                    startMenue.drawGameover(spriteBatch);
+                    break;
             }
 
             // Wenn Klasse nicht in der Componenten Datenstruktur enthalten ist, muss Draw manuell aufgerufen werden
@@ -290,7 +295,7 @@ namespace FlyHigh
 
         private void UpdateCameraFirstPerson()
         {
-            CamPosition = new Vector3(0, 0, 0);
+            CamPosition = new Vector3(0, 0, .15f);
             CamPosition = Vector3.Transform(CamPosition, Matrix.CreateFromQuaternion(player.qPlayerRotation));
             CamPosition += player.playerPosition;
             Vector3 lookAtOffset = new Vector3(0, 0, 1);

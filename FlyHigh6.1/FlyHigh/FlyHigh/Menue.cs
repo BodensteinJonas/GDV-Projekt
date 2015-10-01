@@ -34,6 +34,11 @@ namespace FlyHigh
         Texture2D pausedTexture;
         Rectangle pausedRectangle;
 
+        // Gameover Buttons
+        Texture2D go, beC, stC;
+        Rectangle goRec, beCRec, stCRec;
+
+
         public Menue()
         {
             loadContent();
@@ -57,12 +62,21 @@ namespace FlyHigh
 
 
             // Pause Menue
-            pausedTexture = Game1.instance.Content.Load<Texture2D>("PAUSE");
+            pausedTexture = Game1.instance.Content.Load<Texture2D>("Img/pause");
             pausedRectangle = new Rectangle(0, 0, pausedTexture.Width, pausedTexture.Height);
             btnPlay = new cButton();
-            btnPlay.Load(Game1.instance.Content.Load<Texture2D>("play"), new Vector2(300, 300));
+            btnPlay.Load(Game1.instance.Content.Load<Texture2D>("Img/Weiter"), new Vector2(480, 350));
             btnQuit = new cButton();
-            btnQuit.Load(Game1.instance.Content.Load<Texture2D>("quit"), new Vector2(800, 300));
+            btnQuit.Load(Game1.instance.Content.Load<Texture2D>("Img/Spielbeenden"), new Vector2(480, 500));
+
+            // Gameover Menue
+            go = Game1.instance.Content.Load<Texture2D>("Img/gameover");
+            goRec = new Rectangle(0, 0, 1280 + 20, 720);
+
+            beC = Game1.instance.Content.Load<Texture2D>("Img/spielbeendenCrashed");
+            beCRec = new Rectangle(900, 550, 324, 104);
+            stC = Game1.instance.Content.Load<Texture2D>("Img/SpielstartCrashed");
+            stCRec = new Rectangle(900, 400, 324, 104);
         }
 
         public void updateStartMenue(GameTime gt)
@@ -142,6 +156,34 @@ namespace FlyHigh
             btnQuit.Draw(spriteBatch);
             //}
             spriteBatch.End();
+        }
+
+        public void updateGameover()
+        {
+            mousePos = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+
+            mouseRec = new Rectangle((int)mousePos.X - 10, (int)mousePos.Y - 10, 20, 20);
+
+            // Intersect ist collsionsüberprüfung 
+            if (mouseRec.Intersects(stCRec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                //Game1.instance.sound.stopStartmenueTrack();
+                Game1.instance.gameState = Game1.GameState.gameSettings;
+            }
+
+            if (mouseRec.Intersects(beCRec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                Game1.instance.Exit();
+            }
+        }
+
+        public void drawGameover(SpriteBatch batch)
+        {
+            batch.Begin();
+            batch.Draw(go, goRec, Color.White);
+            batch.Draw(stC, stCRec, Color.White);
+            batch.Draw(beC, beCRec, Color.White);
+            batch.End();
         }
     }
 }

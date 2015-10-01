@@ -14,8 +14,8 @@ namespace FlyHigh
 
         public void update()
         {
-            CheckPlaneCollideWithDisc();
-            
+            CheckDiscCollideWithAny();
+        
             CheckPlaneCollideWithObject();
 
             checkPlaneCollideWithRoom();
@@ -24,7 +24,7 @@ namespace FlyHigh
 
         }
 
-        private void CheckPlaneCollideWithDisc()
+        private void CheckDiscCollideWithAny()
         {
 
                 for (int j = 0; j < Game1.instance.scheibenManager.scheibenListe.Count; j++)
@@ -46,7 +46,8 @@ namespace FlyHigh
                     {
                         b.isDead = true;
                         s.isDead = true;
-                        Console.WriteLine("HIT!");
+                        //Console.WriteLine("HIT!");
+                        Game1.instance.scheibenManager.scheibenAnzahl -= 1;
                     }
                 }
             }
@@ -57,19 +58,17 @@ namespace FlyHigh
             if(!Game1.instance.room.boundingBox.Intersects(Game1.instance.player.sphere))
             {
                 Console.WriteLine("Plane collide with Room!");
-                Game1.instance.gameState = Game1.GameState.startMenue;
+                Game1.instance.gameState = Game1.GameState.gameover;
             }
         }
         private void CheckPlaneCollideWithObject()
         {
-            //TODO
-
             for (int j = 0; j < Game1.instance.room.rObj.Count; j++)
             {
                 if (Game1.instance.room.rObj[j].boundingBox.Intersects(Game1.instance.player.sphere))
                 {
                     Console.WriteLine("box collide with object");
-                    Game1.instance.gameState = Game1.GameState.startMenue;
+                    Game1.instance.gameState = Game1.GameState.gameover;
                 }
             }
 

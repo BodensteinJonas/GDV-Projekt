@@ -54,8 +54,7 @@ namespace FlyHigh
         {
             room = c.Load<Model>("Raum");
             bed = c.Load<Model>("Bett");
-            couch = c.Load<Model>("couch2");
-            
+            couch = c.Load<Model>("couch2");     
             lowboy = c.Load<Model>("Kommode");
             plant1 = c.Load<Model>("Pflanze 1");
             plant2 = c.Load<Model>("Pflanze 2");
@@ -65,9 +64,6 @@ namespace FlyHigh
             door = c.Load<Model>("tuer");
             logo = c.Load<Model>("logo");
             logoTex = c.Load<Texture2D>("Img/logo");
-
-
-
         }
 
         public void Draw(GameTime gameTime)
@@ -92,7 +88,6 @@ namespace FlyHigh
 
             DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
                             lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
-            //base.Draw(gameTime);
         }
 
 
@@ -112,7 +107,6 @@ namespace FlyHigh
                     effect.Projection = Game1.instance.projectionMatrix;
                     effect.EnableDefaultLighting();
                 }
-
                 mesh.Draw();
             }
         }

@@ -39,8 +39,7 @@ namespace FlyHigh
                  MediaPlayer.Play(lied);
                  MediaPlayer.IsRepeating = true;
                  liedIsFinished = true;
-            }
-           
+            }      
         }
 
         public void playInGameTrack()
@@ -51,7 +50,6 @@ namespace FlyHigh
                 MediaPlayer.IsRepeating = true;
                 liedIsFinished = true;
             }
-
         }
        
         public void stopStartmenueTrack()

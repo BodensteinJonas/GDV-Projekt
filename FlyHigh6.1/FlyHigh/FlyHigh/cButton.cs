@@ -43,9 +43,7 @@ namespace FlyHigh
 
             if (mouseRectangle.Intersects(rectangle))
             {
-                if (colour.A == 255) down = false;
-                if (colour.A == 0) down = true;
-                if (down) colour.A += 3; else colour.A -= 3;
+
                 if (mouse.LeftButton == ButtonState.Pressed && zustand == 0)
                 {
                     isClicked = true;

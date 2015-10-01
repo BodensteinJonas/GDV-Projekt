@@ -31,12 +31,6 @@ namespace FlyHigh
 
         #region Properties
 
-        //public SpriteFont Font
-        //{
-        //    get { return font; }
-        //    set { font = value; }
-        //}
-
         public String Text
         {
             get { return text; }
@@ -62,12 +56,6 @@ namespace FlyHigh
             set { finished = value; }
         }
 
-        public Vector2 Position
-        {
-            get { return position; }
-            set { position = value; }
-        }
-
         #endregion
 
         public override void Update(GameTime gameTime)
@@ -82,11 +70,8 @@ namespace FlyHigh
                     if (time > 0)
                         time -= deltaTime;
                     else
-                        //   finished = true;
-                        Game1.instance.gameState = Game1.GameState.startMenue;  // wechsel in win screen
-
+                        Game1.instance.gameState = Game1.GameState.gameover;
                 }
-
             }
 
             Text = time.ToString("0");
@@ -97,7 +82,7 @@ namespace FlyHigh
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            spriteBatch.DrawString(Game1.instance.font, text, position, Color.Red);
+            spriteBatch.DrawString(Game1.instance.font, text, new Vector2(1180, 0), Color.Red);
             spriteBatch.End();
         }
 

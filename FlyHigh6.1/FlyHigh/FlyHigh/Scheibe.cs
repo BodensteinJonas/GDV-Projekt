@@ -28,7 +28,6 @@ namespace FlyHigh
 
         public void Update(GameTime gameTime)
         {
-
             rotation.Y += .05f;
         }
 
@@ -51,7 +50,7 @@ namespace FlyHigh
                                 * Matrix.CreateTranslation(pos);
                                 
 
-            sphereTranslation = Matrix.CreateTranslation(pos);//planeWorld;
+            sphereTranslation = Matrix.CreateTranslation(pos);
 
             foreach (ModelMesh mesh in target.Meshes)
             {

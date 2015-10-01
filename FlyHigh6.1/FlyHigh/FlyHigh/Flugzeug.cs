@@ -14,17 +14,15 @@ namespace FlyHigh
 
     public class Flugzeug// : Microsoft.Xna.Framework.DrawableGameComponent
     {
-        public int hp = 1000;
-
         Model plane1;
         Model plane2;
-        Texture2D texture1; 
+        Texture2D texture1;
         Texture2D texture2;
 
         public Vector3 playerPosition;
         public Matrix mPlayerRotation;
         public Quaternion qPlayerRotation;
-        Quaternion calculatedRotation; 
+        Quaternion calculatedRotation;
 
         public float playerSpeed;
         float playerLeftRightRot;
@@ -45,9 +43,10 @@ namespace FlyHigh
         public Color bbColor = Color.Blue;
 
         public Flugzeug(Game game)
-            //: base(game)
+        //: base(game)
         {
-            playerPosition = new Vector3(0, 2, 0);
+            // playerPosition = new Vector3(0, 2, 0);
+            //  resetPosition();
             qPlayerRotation = Quaternion.Identity;
         }
 
@@ -64,8 +63,8 @@ namespace FlyHigh
             lineEffect.VertexColorEnabled = true;
         }
 
-         public void update(){
-            //setBoundingBox();
+        public void update()
+        {
             KeyboardControls();
             MouseControls();
             MoveForward();
@@ -74,31 +73,25 @@ namespace FlyHigh
         public void draw()
         {
             Matrix PlayerTransformation = Matrix.CreateScale(new Vector3(0.1f, 0.1f, 0.1f))
-                
+
                                         * Matrix.CreateFromQuaternion(qPlayerRotation)
                                         * Matrix.CreateTranslation(playerPosition);
-            //Vector3 offsetLeft = Vector3.Transform(new Vector3(-1f, 0,0), Matrix.CreateFromQuaternion(qPlayerRotation));
+
 
             Matrix sphereTrans1 = Matrix.Identity
                                 * Matrix.CreateFromQuaternion(qPlayerRotation)
                                 * Matrix.CreateTranslation(playerPosition);
-                            //    * Matrix.CreateTranslation(offsetLeft);
 
-           //Vector3 offsetRight = Vector3.Transform(new Vector3(1f, 0,0), Matrix.CreateFromQuaternion(qPlayerRotation));
 
-           // Matrix sphereTrans2 = Matrix.Identity
-           //                     * Matrix.CreateFromQuaternion(qPlayerRotation)
-           //                     * Matrix.CreateTranslation(playerPosition)
-           //                     * Matrix.CreateTranslation(offsetRight);
-
-            if (Game1.instance.model == 1) {            
+            if (Game1.instance.model == 1)
+            {
                 foreach (ModelMesh mesh in plane1.Meshes)
                 {
                     sphere = BoundingSphere.CreateMerged(sphere, mesh.BoundingSphere);
 
                     foreach (BasicEffect effect in mesh.Effects)
                     {
-                        effect.World = PlayerTransformation; //planeWorld;
+                        effect.World = PlayerTransformation;
                         effect.View = Game1.instance.viewMatrix;
                         effect.Projection = Game1.instance.projectionMatrix;
                         effect.EnableDefaultLighting();
@@ -111,14 +104,15 @@ namespace FlyHigh
                     mesh.Draw();
                 }
             }
-            else {
+            else
+            {
                 foreach (ModelMesh mesh in plane2.Meshes)
                 {
                     sphere = BoundingSphere.CreateMerged(sphere, mesh.BoundingSphere);
 
                     foreach (BasicEffect effect in mesh.Effects)
                     {
-                        effect.World = PlayerTransformation; //planeWorld;
+                        effect.World = PlayerTransformation;
                         effect.View = Game1.instance.viewMatrix;
                         effect.Projection = Game1.instance.projectionMatrix;
                         effect.EnableDefaultLighting();
@@ -133,26 +127,32 @@ namespace FlyHigh
                 }
             }
 
-                BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red); 
+            BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
 
-             DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
-                    lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
+            DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
+                   lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
         }
+
+        public void resetPlayer()
+        {
+            playerPosition = new Vector3(0, 2, 0);
+            playerSpeed = 0f;
+        }
+
 
         #region Controls
         private void KeyboardControls()
         {
             // Rotation of the Ship
             kbState = Keyboard.GetState();
-           // playerLeftRightRot = 0.0f;
-           // playerUpDownRot = 0.0f;
+
 
             if (kbState.IsKeyDown(Keys.Down) || kbState.IsKeyDown(Keys.W))
                 playerUpDownRot += sensitivity;
 
             if (kbState.IsKeyDown(Keys.Up) || kbState.IsKeyDown(Keys.S))
                 playerUpDownRot -= sensitivity;
-            
+
             if (kbState.IsKeyDown(Keys.Left) || kbState.IsKeyDown(Keys.A))
                 playerLeftRightRot += sensitivity / 2;
 
@@ -168,19 +168,14 @@ namespace FlyHigh
                 playerSpeed += -speedToAdd;
             else if (kbState.IsKeyDown(Keys.LeftControl))
                 playerSpeed += speedToAdd;
-           // else playerSpeed = 0.0f;
+            // else playerSpeed = 0.0f;
         }
 
-      
+
         private void MouseControls()
         {
             //mState = Mouse.GetState();
             Game1.instance.mouse = Mouse.GetState();
-            //Mouse.SetPosition(646, 371);
-           // mState.X = Mouse.GetState().X;
-           // mState.Y = Mouse.GetState().Y;
-
-
 
             playerLeftRightRot = 0.0f;
             playerUpDownRot = 0.0f;
@@ -191,7 +186,7 @@ namespace FlyHigh
             calculatedRotation = Quaternion.CreateFromAxisAngle(new Vector3(0, 1, 0), playerLeftRightRot * 0.01f)
                                * Quaternion.CreateFromAxisAngle(new Vector3(-1, 0, 0), playerUpDownRot * 0.01f);
             qPlayerRotation = calculatedRotation;
-          
+
         }
 
         private void MoveForward()

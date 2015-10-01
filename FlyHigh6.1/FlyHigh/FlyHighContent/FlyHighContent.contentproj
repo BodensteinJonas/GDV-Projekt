@@ -147,22 +147,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Zielscheibe_Sound.wav">
-      <Name>Zielscheibe_Sound</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="startmusik.mp3">
-      <Name>startmusik</Name>
+    <Compile Include="GameOver.mp3">
+      <Name>GameOver</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Schuss_Sound.wav">
-      <Name>Schuss_Sound</Name>
+    <Compile Include="SpaceSchuss.wav">
+      <Name>SpaceSchuss</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
@@ -316,13 +309,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ingame.mp3">
-      <Name>ingame</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Img\1min.png">
       <Name>1min</Name>
       <Importer>TextureImporter</Importer>
@@ -358,6 +344,41 @@
       <Name>SpielstartCrashed</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SpaceIngame.mp3">
+      <Name>SpaceIngame</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FliegerIngame.mp3">
+      <Name>FliegerIngame</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Start.mp3">
+      <Name>Start</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FliegerSchuss2.wav">
+      <Name>FliegerSchuss2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ZielscheibeSound.wav">
+      <Name>ZielscheibeSound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

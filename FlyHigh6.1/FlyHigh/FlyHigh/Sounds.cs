@@ -9,10 +9,14 @@ namespace FlyHigh
 {
     public class Sounds
     {
-        SoundEffectInstance schuss;
-        Song lied;
-        Song igame;
-        bool liedIsFinished = false;
+        SoundEffectInstance FliegerSchuss;
+        SoundEffectInstance SpaceSchuss;
+        SoundEffectInstance ScheibenSound;
+        Song Start;
+        Song SpaceIngame;
+        Song FliegerIngame;
+        Song GameOver;
+        public bool liedIsFinished = false;
 
         public Sounds()
         {
@@ -21,32 +25,66 @@ namespace FlyHigh
 
         public void loadContent()
         {
-            schuss = Game1.instance.Content.Load<SoundEffect>("Schuss_Sound").CreateInstance();
-            lied = Game1.instance.Content.Load<Song>("startmusik");
-            igame = Game1.instance.Content.Load<Song>("ingame");
+            SpaceSchuss = Game1.instance.Content.Load<SoundEffect>("SpaceSchuss").CreateInstance();
+            FliegerSchuss = Game1.instance.Content.Load<SoundEffect>("FliegerSchuss2").CreateInstance();
+            ScheibenSound = Game1.instance.Content.Load<SoundEffect>("ZielscheibeSound").CreateInstance();
+            GameOver = Game1.instance.Content.Load<Song>("GameOver");
+            SpaceIngame = Game1.instance.Content.Load<Song>("SpaceIngame");
+            FliegerIngame = Game1.instance.Content.Load<Song>("FliegerIngame");
+            Start = Game1.instance.Content.Load<Song>("Start");
         }
 
-        public void playSchussSound()
+        public void playFliegerSchussSound()
         {
-            if (schuss.State != SoundState.Playing)
-            schuss.Play();
+            if (FliegerSchuss.State != SoundState.Playing)
+            FliegerSchuss.Play();
+        }
+
+        public void playSpaceSchussSound()
+        {
+            if (SpaceSchuss.State != SoundState.Playing)
+                SpaceSchuss.Play();
+        }
+        public void playScheibenSound()
+        {
+            if (ScheibenSound.State != SoundState.Playing)
+                ScheibenSound.Play();
         }
 
         public void playStartmenueTrack()
         {
             if (!liedIsFinished)
             {
-                 MediaPlayer.Play(lied);
+                 MediaPlayer.Play(Start);
                  MediaPlayer.IsRepeating = true;
                  liedIsFinished = true;
             }      
         }
 
-        public void playInGameTrack()
+        public void playInGameTrackSpace()
         {
             if (!liedIsFinished)
             {
-                MediaPlayer.Play(igame);
+                MediaPlayer.Play(SpaceIngame);
+                MediaPlayer.IsRepeating = true;
+                liedIsFinished = true;
+            }
+        }
+        
+        public void playInGameTrackFlieger()
+        {
+            if (!liedIsFinished)
+            {
+                MediaPlayer.Play(FliegerIngame);
+                MediaPlayer.IsRepeating = true;
+                liedIsFinished = true;
+            }
+        }
+        public void playGameover()
+        {
+            if (!liedIsFinished)
+            {
+                MediaPlayer.Play(GameOver);
                 MediaPlayer.IsRepeating = true;
                 liedIsFinished = true;
             }
@@ -55,6 +93,18 @@ namespace FlyHigh
         public void stopStartmenueTrack()
         {
             MediaPlayer.Stop();
+            liedIsFinished = false;
         }
+        public void stopInGameTrackFlieger()
+        {
+            MediaPlayer.Stop();
+            liedIsFinished = false;
+        }
+        public void stopInGameTrackSpace()
+        {
+            MediaPlayer.Stop();
+            liedIsFinished = false;
+        }
+
     }
 }

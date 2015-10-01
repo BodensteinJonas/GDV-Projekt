@@ -406,34 +406,6 @@
       <Time>2015-09-30T16:25:21.3734583+02:00</Time>
     </Item>
     <Item>
-      <Source>Zielscheibe_Sound.wav</Source>
-      <Name>Zielscheibe_Sound</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Zielscheibe_Sound.xnb</Output>
-      <Time>2015-09-30T16:25:21.1352283+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Schuss_Sound.wav</Source>
-      <Name>Schuss_Sound</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Schuss_Sound.xnb</Output>
-      <Time>2015-09-30T16:25:21.1192135+02:00</Time>
-    </Item>
-    <Item>
-      <Source>startmusik.mp3</Source>
-      <Name>startmusik</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\startmusik.xnb</Output>
-      <Extra>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\startmusik.wma</Extra>
-      <Time>2015-09-30T16:25:21.6166916+02:00</Time>
-    </Item>
-    <Item>
       <Source>font.spritefont</Source>
       <Name>font</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -609,16 +581,6 @@
       <Time>2015-10-01T10:56:03.2423427+02:00</Time>
     </Item>
     <Item>
-      <Source>ingame.mp3</Source>
-      <Name>ingame</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\ingame.xnb</Output>
-      <Extra>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\ingame.wma</Extra>
-      <Time>2015-10-01T10:56:03.240326+02:00</Time>
-    </Item>
-    <Item>
       <Source>Img\1min.png</Source>
       <Name>Img\1min</Name>
       <Importer>TextureImporter</Importer>
@@ -671,6 +633,73 @@
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\SpielstartCrashed.xnb</Output>
       <Time>2015-10-01T11:39:15.0877371+02:00</Time>
+    </Item>
+    <Item>
+      <Source>SpaceSchuss.wav</Source>
+      <Name>SpaceSchuss</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\SpaceSchuss.xnb</Output>
+      <Time>2015-09-30T16:25:21.1192135+02:00</Time>
+    </Item>
+    <Item>
+      <Source>GameOver.mp3</Source>
+      <Name>GameOver</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\GameOver.xnb</Output>
+      <Extra>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\GameOver.wma</Extra>
+      <Time>2015-10-01T14:38:29.988109+02:00</Time>
+    </Item>
+    <Item>
+      <Source>SpaceIngame.mp3</Source>
+      <Name>SpaceIngame</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\SpaceIngame.xnb</Output>
+      <Extra>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\SpaceIngame.wma</Extra>
+      <Time>2015-10-01T13:17:28.2155742+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Start.mp3</Source>
+      <Name>Start</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Start.xnb</Output>
+      <Extra>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Start.wma</Extra>
+      <Time>2015-10-01T13:37:39.5136517+02:00</Time>
+    </Item>
+    <Item>
+      <Source>FliegerIngame.mp3</Source>
+      <Name>FliegerIngame</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\FliegerIngame.xnb</Output>
+      <Extra>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\FliegerIngame.wma</Extra>
+      <Time>2015-10-01T13:17:58.1857457+02:00</Time>
+    </Item>
+    <Item>
+      <Source>FliegerSchuss2.wav</Source>
+      <Name>FliegerSchuss2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\FliegerSchuss2.xnb</Output>
+      <Time>2015-10-01T15:13:56.786885+02:00</Time>
+    </Item>
+    <Item>
+      <Source>ZielscheibeSound.wav</Source>
+      <Name>ZielscheibeSound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\ZielscheibeSound.xnb</Output>
+      <Time>2015-10-01T15:35:16.5577152+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

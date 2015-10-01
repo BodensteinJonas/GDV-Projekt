@@ -26,7 +26,15 @@ namespace FlyHigh
 
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && lkb.IsKeyUp(Keys.Space))
             {
-                Game1.instance.sound.playSchussSound();
+                if(Game1.instance.model == 1)
+                {
+                    Game1.instance.sound.playFliegerSchussSound();
+                }
+                else
+                {
+                    Game1.instance.sound.playSpaceSchussSound();
+                }
+                
                 schussListe.Add(new Bullet(Game1.instance.player.playerPosition,
                                 new Vector3(0.05f, 0.05f, 0.05f),
                                 Vector3.Right,

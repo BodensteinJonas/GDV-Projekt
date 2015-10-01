@@ -111,7 +111,9 @@ namespace FlyHigh
                 // Starte Spiel
                 Game1.instance.gameState = Game1.GameState.ingame;
                 Mouse.SetPosition(646,371);
-                Console.WriteLine("mouseX: " + Mouse.GetState().X + " mouseY: " + Mouse.GetState().Y);            
+                Console.WriteLine("mouseX: " + Mouse.GetState().X + " mouseY: " + Mouse.GetState().Y);
+                
+  
             }
 
             if (mouseRec.Intersects(bRec) && Mouse.GetState().LeftButton == ButtonState.Pressed)

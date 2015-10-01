@@ -59,6 +59,8 @@ namespace FlyHigh
             {
                 Console.WriteLine("Plane collide with Room!");
                 Game1.instance.gameState = Game1.GameState.gameover;
+                Game1.instance.sound.stopInGameTrackFlieger();
+                Game1.instance.sound.stopInGameTrackSpace();
             }
         }
         private void CheckPlaneCollideWithObject()
@@ -69,6 +71,8 @@ namespace FlyHigh
                 {
                     Console.WriteLine("box collide with object");
                     Game1.instance.gameState = Game1.GameState.gameover;
+                    Game1.instance.sound.stopInGameTrackFlieger();
+                    Game1.instance.sound.stopInGameTrackSpace();
                 }
             }
 

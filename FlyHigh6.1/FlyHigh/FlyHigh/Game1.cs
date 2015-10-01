@@ -171,13 +171,12 @@ namespace FlyHigh
                     break;
 
                 case GameState.ingame:
-                    // Update ingame
-                    //UpdateControls();
-                    
-
-                     player.update();
+                    if (model == 1)
+                        sound.playInGameTrackFlieger();
+                    else
+                        sound.playInGameTrackSpace();
+                    player.update();
                     IsMouseVisible = false;
-                    sound.playInGameTrack();
 
                     if (Keyboard.GetState().IsKeyDown(Keys.F1) && lastKb.IsKeyUp(Keys.F1) && cameraStyle == CameraStyle.TPV)
                         cameraStyle = CameraStyle.FPV;
@@ -216,6 +215,8 @@ namespace FlyHigh
                     }
                     break;
                 case GameState.gameover:
+                   
+                    Game1.instance.sound.playGameover();
                     startMenue.updateGameover();
                     IsMouseVisible = true;
                     break;
@@ -396,7 +397,6 @@ namespace FlyHigh
 
             // if (mouse.LeftButton == ButtonState.Pressed)
             if (keyboard.IsKeyDown(Keys.P))
-                Console.WriteLine("foo");
             //gameState = GameState.ingame;
 
 

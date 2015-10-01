@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,17 +25,39 @@ namespace FlyHigh
 
         }
 
+        // Kollision zwischen den Scheiben und allen Objekten + Flugzeug
         private void CheckDiscCollideWithAny()
         {
-
-                for (int j = 0; j < Game1.instance.scheibenManager.scheibenListe.Count; j++)
+                foreach(Scheibe s in Game1.instance.scheibenManager.scheibenListe)
                 {
-                    if (Game1.instance.player.sphere.Intersects(Game1.instance.scheibenManager.scheibenListe[j].sphere))
+
+                    // Mindestens eine Durchführung
+                    do
                     {
-                        Console.WriteLine("PlayerSphere collided with disc " + j);
-                    }
+                        // Kollisions-Check mit Flugzeug
+                        if (s.sphere.Intersects(Game1.instance.player.sphere))
+                        {
+                            Console.WriteLine("PlayerSphere collided with disc ");
+                            s.posiblePos = false;
+                        }
+
+                        // Kollisions-Check mit Objekten
+                        foreach(Raumobjekte o in Game1.instance.room.rObj)
+                        {
+                            if(s.sphere.Intersects(o.boundingBox))
+                            {
+                                Console.WriteLine("Bllaaaa");
+                                s.posiblePos = false;
+                            }
+                        }
+                        // Wenn Kollision erfolgt, wird neue Position bestimmt
+                        if(s.posiblePos == false)
+                              s.newPos();
+
+                    } while (s.posiblePos == false); // Nochmalige durchführung, wenn kollidiert ist
                 }
-        }
+         }
+
 
         private void CheckBulletCollideWithDisc()
         {

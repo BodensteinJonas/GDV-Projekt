@@ -3,7 +3,7 @@
   <Asset Type="Graphics:NodeContent">
     <Name>RootNode</Name>
     <Identity>
-      <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
+      <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -72,7 +72,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>lambert2</Name>
       <Identity>
-        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -85,7 +85,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>lambert3</Name>
       <Identity>
-        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Pflanze 1.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

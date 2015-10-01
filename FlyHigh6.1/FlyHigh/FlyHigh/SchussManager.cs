@@ -39,13 +39,10 @@ namespace FlyHigh
             foreach (Bullet m in schussListe)
             {
                 m.Update();
-            }
-
-            foreach (Bullet m in schussListe)
-            {
                 if (m.isDead)
                     schussRemoveListe.Add(m);
             }
+
 
             foreach (Bullet m in schussRemoveListe)
             {

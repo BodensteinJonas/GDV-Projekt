@@ -96,17 +96,20 @@ namespace FlyHigh
                 // Player einstellen
                 Game1.instance.player.resetPlayer();
                 Game1.instance.player.sphere.Center = Game1.instance.player.playerPosition;
+                Game1.instance.cameraStyle = Game1.CameraStyle.TPV;
                 Console.WriteLine("Position: " + Game1.instance.player.playerPosition);
                 Console.WriteLine("Sphere:" + Game1.instance.player.sphere.Center);
+
 
                 Game1.instance.room = new Raum(Game1.instance);
                 Game1.instance.timer = new GameTimer(Game1.instance, this.time);
                 Game1.instance.sound.stopStartmenueTrack();
 
                 // Kollisionen einstellen
+                Game1.instance.intersectionManager = new IntersectionManager();
                 Game1.instance.schussManager = new SchussManager();
                 Game1.instance.scheibenManager = new ScheibenManager();
-                Game1.instance.intersectionManager = new IntersectionManager();
+
 
                 // Starte Spiel
                 Game1.instance.gameState = Game1.GameState.ingame;

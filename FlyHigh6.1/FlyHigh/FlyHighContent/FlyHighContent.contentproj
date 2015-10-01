@@ -154,13 +154,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="startmusik.mp3">
-      <Name>startmusik</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Schuss_Sound.wav">
       <Name>Schuss_Sound</Name>
       <Importer>WavImporter</Importer>

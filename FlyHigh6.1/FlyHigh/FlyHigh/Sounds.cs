@@ -22,7 +22,7 @@ namespace FlyHigh
         public void loadContent()
         {
             schuss = Game1.instance.Content.Load<SoundEffect>("Schuss_Sound").CreateInstance();
-            lied = Game1.instance.Content.Load<Song>("startmusik");
+            //lied = Game1.instance.Content.Load<Song>("startmusik");
             igame = Game1.instance.Content.Load<Song>("ingame");
         }
 
@@ -36,7 +36,7 @@ namespace FlyHigh
         {
             if (!liedIsFinished)
             {
-                 MediaPlayer.Play(lied);
+                // MediaPlayer.Play(lied);
                  MediaPlayer.IsRepeating = true;
                  liedIsFinished = true;
             }      

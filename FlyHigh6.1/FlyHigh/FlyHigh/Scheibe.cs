@@ -13,14 +13,18 @@ namespace FlyHigh
 {
     public class Scheibe
     {
+        Random rand = new Random();
+
         Model target;
-        Vector3 pos, rotation;
+        public Vector3 pos, rotation;
         public BoundingSphere sphere;
         Matrix sphereTranslation;
         public bool isDead;
+        public bool posiblePos;
 
         public Scheibe(Model m, Vector3 position)
         {
+            posiblePos = true;
             isDead = false;
             target = m;
             pos = position;
@@ -68,6 +72,16 @@ namespace FlyHigh
                 mesh.Draw();
             }
             BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
+        }
+        // Ändert Position der Scheiben und stellt posiblePos auf "true"
+        public void newPos()
+        {
+            if (posiblePos == false)
+            {
+                pos = new Vector3(rand.Next(-11, 11), rand.Next(1, 8), rand.Next(-18, 18));
+                posiblePos = true;
+                Console.WriteLine("Geändert");
+            }
         }
     }
 }

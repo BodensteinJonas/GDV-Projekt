@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 namespace FlyHigh
 {
 
-    public class Flugzeug// : Microsoft.Xna.Framework.DrawableGameComponent
+    public class Flugzeug
     {
         Model plane1;
         Model plane2;
@@ -27,14 +27,12 @@ namespace FlyHigh
         public float playerSpeed;
         float playerLeftRightRot;
         float playerUpDownRot;
-        float playerRollRot;
         float sensitivity = 0.003f;
         public float speedToAdd = 0.003f;
-        public float maxSpeed = 0.002f;
+        public float maxSpeed = 0.2f;
 
         public BoundingSphere sphere;
         KeyboardState kbState;
-        MouseState mState;
 
         // BoundingBox
         public BoundingBox boundingBox;
@@ -43,10 +41,8 @@ namespace FlyHigh
         public Color bbColor = Color.Blue;
 
         public Flugzeug(Game game)
-        //: base(game)
         {
-            // playerPosition = new Vector3(0, 2, 0);
-            //  resetPosition();
+
             qPlayerRotation = Quaternion.Identity;
         }
 
@@ -164,11 +160,14 @@ namespace FlyHigh
             qPlayerRotation = calculatedRotation;
 
             // Speed of the Ship 
-            if (kbState.IsKeyDown(Keys.LeftShift))
-                playerSpeed += -speedToAdd;
-            else if (kbState.IsKeyDown(Keys.LeftControl))
+            // Vorwärts, wenn negative maxSpeed nicht erreicht ist
+            if (kbState.IsKeyDown(Keys.W) && (playerSpeed > -maxSpeed))           
+                 playerSpeed += -speedToAdd;
+
+            // Rückwärts, wenn die hälfte der MaxSpeed nicht erreicht ist
+            if (kbState.IsKeyDown(Keys.S) && (playerSpeed < (maxSpeed / 3)))
                 playerSpeed += speedToAdd;
-            // else playerSpeed = 0.0f;
+
         }
 
 

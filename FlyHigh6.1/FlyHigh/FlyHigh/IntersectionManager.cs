@@ -37,8 +37,8 @@ namespace FlyHigh
                         // Kollisions-Check mit Flugzeug
                         if (s.sphere.Intersects(Game1.instance.player.sphere))
                         {
-                            Console.WriteLine("PlayerSphere collided with disc ");
                             s.posiblePos = false;
+                            Game1.instance.Highscore -= 50;
                         }
 
                         // Kollisions-Check mit Objekten
@@ -46,7 +46,6 @@ namespace FlyHigh
                         {
                             if(s.sphere.Intersects(o.boundingBox))
                             {
-                                Console.WriteLine("Bllaaaa");
                                 s.posiblePos = false;
                             }
                         }
@@ -69,8 +68,7 @@ namespace FlyHigh
                     {
                         b.isDead = true;
                         s.isDead = true;
-                        //Console.WriteLine("HIT!");
-                        Game1.instance.scheibenManager.scheibenAnzahl -= 1;
+                        Game1.instance.Highscore += 100;
                     }
                 }
             }

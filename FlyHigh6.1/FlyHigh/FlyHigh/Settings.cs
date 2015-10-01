@@ -97,8 +97,8 @@ namespace FlyHigh
                 Game1.instance.player.resetPlayer();
                 Game1.instance.player.sphere.Center = Game1.instance.player.playerPosition;
                 Game1.instance.cameraStyle = Game1.CameraStyle.TPV;
-                Console.WriteLine("Position: " + Game1.instance.player.playerPosition);
-                Console.WriteLine("Sphere:" + Game1.instance.player.sphere.Center);
+                Game1.instance.Highscore = 0;
+                
 
 
                 Game1.instance.room = new Raum(Game1.instance);

@@ -17,7 +17,7 @@ namespace FlyHigh
 
         public ScheibenManager()
         {
-            scheibenAnzahl = 50;
+            scheibenAnzahl = 100;
             Model target = Game1.instance.Content.Load<Model>("Scheibe");
             
             for (int i = 0; i <= scheibenAnzahl; i++)
@@ -50,7 +50,8 @@ namespace FlyHigh
 
             // Restliche Scheiben werden angezeigt
             Game1.instance.spriteBatch.Begin();
-            Game1.instance.spriteBatch.DrawString(Game1.instance.font,scheibenListe.Count.ToString(""), new Vector2(100, 0), Color.Red);
+            Game1.instance.spriteBatch.DrawString(Game1.instance.font,"Restliche Scheiben: " + scheibenListe.Count.ToString(""), new Vector2(50, 40), Color.Black);
+            Game1.instance.spriteBatch.DrawString(Game1.instance.font, "Highscore: " + Game1.instance.Highscore.ToString(""), new Vector2(50, 60), Color.Black);
             Game1.instance.spriteBatch.End();
 
             foreach (Scheibe target in scheibenListe)

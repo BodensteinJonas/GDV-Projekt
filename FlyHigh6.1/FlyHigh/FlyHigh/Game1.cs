@@ -13,6 +13,7 @@ namespace FlyHigh
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        public int Highscore;
 
         public static Game1 instance;
         GraphicsDeviceManager graphics;

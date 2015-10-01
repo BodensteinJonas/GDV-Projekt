@@ -695,3 +695,7 @@ C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\
 C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\logo_0.xnb
 C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\logo.xnb
 C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\logo.xnb
+G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\logo.xnb
+G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\logo.xnb
+G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\ingame.xnb
+G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHigh\bin\x86\Debug\Content\ingame.wma

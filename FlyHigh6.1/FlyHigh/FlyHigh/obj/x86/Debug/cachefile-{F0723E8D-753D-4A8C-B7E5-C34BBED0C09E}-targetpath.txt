@@ -46,3 +46,5 @@ Content\startmusik.wma
 Content\font.xnb
 Content\texture2_0.xnb
 Content\texture1_0.xnb
+Content\ingame.xnb
+Content\ingame.wma

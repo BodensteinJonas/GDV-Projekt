@@ -11,6 +11,7 @@ namespace FlyHigh
     {
         SoundEffectInstance schuss;
         Song lied;
+        Song igame;
         bool liedIsFinished = false;
 
         public Sounds()
@@ -22,6 +23,7 @@ namespace FlyHigh
         {
             schuss = Game1.instance.Content.Load<SoundEffect>("Schuss_Sound").CreateInstance();
             lied = Game1.instance.Content.Load<Song>("startmusik");
+            igame = Game1.instance.Content.Load<Song>("ingame");
         }
 
         public void playSchussSound()
@@ -39,6 +41,17 @@ namespace FlyHigh
                  liedIsFinished = true;
             }
            
+        }
+
+        public void playInGameTrack()
+        {
+            if (!liedIsFinished)
+            {
+                MediaPlayer.Play(igame);
+                MediaPlayer.IsRepeating = true;
+                liedIsFinished = true;
+            }
+
         }
        
         public void stopStartmenueTrack()

@@ -169,6 +169,7 @@ namespace FlyHigh
 
                     startMenue.updateStartMenue(gameTime);
                     //timer.updateTime(settingMenue.time);
+                    IsMouseVisible = true;
                     break;
 
                 case GameState.ingame:
@@ -178,6 +179,7 @@ namespace FlyHigh
 
                      player.update();
                     IsMouseVisible = false;
+                    sound.playInGameTrack();
 
                     if (Keyboard.GetState().IsKeyDown(Keys.F1) && lastKb.IsKeyUp(Keys.F1) && cameraStyle == CameraStyle.TPV)
                         cameraStyle = CameraStyle.FPV;

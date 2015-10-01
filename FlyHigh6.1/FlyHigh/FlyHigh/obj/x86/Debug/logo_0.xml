@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>pPlane1</Name>
     <Identity>
-      <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\logo.fbx</SourceFilename>
+      <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\logo.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>3.061617E-17 0.5 0 0 1 -6.123234E-17 1.22464685E-16 0 1.22464685E-16 -7.498799E-33 -1 0 0 2.5 0 1</Transform>
@@ -27,7 +27,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>logo</Name>
       <Identity>
-        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\logo.fbx</SourceFilename>
+        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\logo.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

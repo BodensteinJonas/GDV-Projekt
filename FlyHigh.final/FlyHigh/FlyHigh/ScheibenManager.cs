@@ -17,7 +17,7 @@ namespace FlyHigh
 
         public ScheibenManager()
         {
-            scheibenAnzahl = 1;
+            scheibenAnzahl = 19;
             Model target = Game1.instance.Content.Load<Model>("Scheibe");
             
             for (int i = 0; i <= scheibenAnzahl; i++)

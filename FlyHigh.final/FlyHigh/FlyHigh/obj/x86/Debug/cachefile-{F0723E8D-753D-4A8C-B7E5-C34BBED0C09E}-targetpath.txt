@@ -14,8 +14,6 @@ Content\missile.xnb
 Content\plane2.xnb
 Content\plane1.xnb
 Content\logo.xnb
-Content\grimm.xnb
-Content\poster.xnb
 Content\beenden.xnb
 Content\hintergrund.xnb
 Content\Img\HintergrundSetting.xnb
@@ -40,9 +38,6 @@ Content\Img\spielbeendenCrashed.xnb
 Content\Img\SpielstartCrashed.xnb
 Content\texture1.xnb
 Content\texture2.xnb
-Content\Img\grimmPoster.xnb
-Content\Img\poster.xnb
-Content\Img\win.xnb
 Content\font.xnb
 Content\Sounds\FliegerSchuss2.xnb
 Content\Sounds\ZielscheibeSound.xnb
@@ -59,8 +54,14 @@ Content\Sounds\FliegerIngame.xnb
 Content\Sounds\FliegerIngame.wma
 Content\Sounds\Victory.xnb
 Content\Sounds\Victory.wma
-Content\OculusRift.xnb
 Content\texture2_0.xnb
 Content\texture1_0.xnb
+Content\grimm.xnb
+Content\Img\grimmPoster.xnb
 Content\Img\grimmPoster_0.xnb
+Content\OculusRift.xnb
+Content\poster.xnb
+Content\Img\poster.xnb
 Content\Img\poster_0.xnb
+Content\Img\win.xnb
+Content\Img\kreuz.xnb

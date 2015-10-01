@@ -922,3 +922,4 @@ G:\GitHub\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.csproj
 G:\GitHub\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 G:\GitHub\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.exe
 G:\GitHub\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.pdb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\kreuz.xnb

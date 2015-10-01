@@ -71,6 +71,10 @@ namespace FlyHigh
         //Modelauswahl
         public int model;
 
+        //First Person View
+        Texture2D kreuz;
+        Rectangle kreuzRec;
+
         // Menues
         Menue startMenue;
         Settings settingMenue;
@@ -183,6 +187,9 @@ namespace FlyHigh
             font = Content.Load<SpriteFont>("font");
             //timer.loadContent(Content);
             player.loadContent(Content);
+            //First Person View
+            kreuz = Content.Load<Texture2D>("Img/kreuz");
+            kreuzRec = new Rectangle(1280/2-35, 720/2-35, 70,70);
         }
 
 
@@ -304,12 +311,14 @@ namespace FlyHigh
 
                 DrawOculusRenderTargets();
             }
+            
 
             base.Draw(gameTime);
         }
 
         private void drawGame(GameTime gameTime)
         {
+            
             switch (gameState)
             {
                 case GameState.startMenue:
@@ -347,6 +356,15 @@ namespace FlyHigh
                     startMenue.drawWin(spriteBatch);
                     break;
             }
+
+            // Zeichnen von Fadenkreuz in der FPV
+            if (cameraStyle == CameraStyle.FPV)
+            {
+                spriteBatch.Begin();
+                spriteBatch.Draw(kreuz, kreuzRec, Color.White);
+                spriteBatch.End();
+            }
+
         }
 
 
@@ -467,6 +485,7 @@ namespace FlyHigh
                 cameraRotationMatrix = Matrix.Identity * Matrix.CreateRotationY(angle.Y) * Matrix.CreateRotationX(angle.X);
                 viewMatrix = Matrix.Identity * Matrix.CreateTranslation(-camPos) * cameraRotationMatrix;
                 IsMouseVisible = true;
+                
             }
 
             // Set view matrix for static view 

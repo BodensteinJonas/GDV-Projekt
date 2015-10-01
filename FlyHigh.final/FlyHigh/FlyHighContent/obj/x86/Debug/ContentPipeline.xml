@@ -777,6 +777,15 @@
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\win.xnb</Output>
       <Time>2015-10-01T22:17:07.8936212+02:00</Time>
     </Item>
+    <Item>
+      <Source>Img\kreuz.png</Source>
+      <Name>Img\kreuz</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\kreuz.xnb</Output>
+      <Time>2015-10-01T23:42:27.0607077+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

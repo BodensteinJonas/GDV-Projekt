@@ -36,7 +36,7 @@ namespace FlyHigh
         {
             if (FliegerSchuss.State != SoundState.Playing)
                 FliegerSchuss.Play();
-            FliegerSchuss.Volume = .1f;
+            FliegerSchuss.Volume = .2f;
         }
 
         public void playSpaceSchussSound()
@@ -47,6 +47,7 @@ namespace FlyHigh
         public void playScheibenSound()
         {
             if (ScheibenSound.State != SoundState.Playing)
+                MediaPlayer.Volume = 1f;
                 ScheibenSound.Play();
         }
 
@@ -55,7 +56,7 @@ namespace FlyHigh
             if (!liedIsFinished)
             {
                 MediaPlayer.Play(Start);
-                MediaPlayer.Volume = 1f;
+                MediaPlayer.Volume = 0.9f;
                 MediaPlayer.IsRepeating = true;
                 liedIsFinished = true;
             }
@@ -66,6 +67,7 @@ namespace FlyHigh
             if (!liedIsFinished)
             {
                 MediaPlayer.Play(SpaceIngame);
+                MediaPlayer.Volume = 0.2f;
                 MediaPlayer.IsRepeating = true;
                 liedIsFinished = true;
             }
@@ -84,7 +86,8 @@ namespace FlyHigh
         public void playVictory()
         {
             if (!liedIsFinished)
-                MediaPlayer.Play(Victory);
+            MediaPlayer.Play(Victory);
+            MediaPlayer.Volume = 0.5f;
             MediaPlayer.IsRepeating = true;
             liedIsFinished = true;
         }
@@ -93,6 +96,7 @@ namespace FlyHigh
             if (!liedIsFinished)
             {
                 MediaPlayer.Play(GameOver);
+                MediaPlayer.Volume = 0.5f;
                 MediaPlayer.IsRepeating = true;
                 liedIsFinished = true;
             }

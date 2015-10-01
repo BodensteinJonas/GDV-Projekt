@@ -25,6 +25,7 @@ namespace FlyHigh
 
         public void loadContent()
         {
+<<<<<<< HEAD
             SpaceSchuss = Game1.instance.Content.Load<SoundEffect>("SpaceSchuss").CreateInstance();
             FliegerSchuss = Game1.instance.Content.Load<SoundEffect>("FliegerSchuss2").CreateInstance();
             ScheibenSound = Game1.instance.Content.Load<SoundEffect>("ZielscheibeSound").CreateInstance();
@@ -32,6 +33,11 @@ namespace FlyHigh
             SpaceIngame = Game1.instance.Content.Load<Song>("SpaceIngame");
             FliegerIngame = Game1.instance.Content.Load<Song>("FliegerIngame");
             Start = Game1.instance.Content.Load<Song>("Start");
+=======
+            schuss = Game1.instance.Content.Load<SoundEffect>("Schuss_Sound").CreateInstance();
+            //lied = Game1.instance.Content.Load<Song>("startmusik");
+            igame = Game1.instance.Content.Load<Song>("ingame");
+>>>>>>> Final
         }
 
         public void playFliegerSchussSound()
@@ -55,7 +61,11 @@ namespace FlyHigh
         {
             if (!liedIsFinished)
             {
+<<<<<<< HEAD
                  MediaPlayer.Play(Start);
+=======
+                // MediaPlayer.Play(lied);
+>>>>>>> Final
                  MediaPlayer.IsRepeating = true;
                  liedIsFinished = true;
             }      

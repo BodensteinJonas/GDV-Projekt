@@ -13,6 +13,7 @@ namespace FlyHigh
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        public int Highscore;
 
         public static Game1 instance;
         GraphicsDeviceManager graphics;
@@ -76,6 +77,7 @@ namespace FlyHigh
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.IsFullScreen = false;
 
             // Global game instance
             instance = this;
@@ -97,13 +99,6 @@ namespace FlyHigh
             centerY = GraphicsDevice.Viewport.Height / 2;
             Mouse.SetPosition(centerX, centerY);
 
-            // Initialisierung von Gameobjekten geschieht hier
-            // Hier noch ein Trick: 
-            // Wenn man das player-Objekt der Componenten-Datenstruktur hinzufügt, wird die
-            // Update und Draw-Methode der Playerklasse automatisch sequentiell aufgerufen !
-            // Allerdings muss die Playerklasse von DrawableComponent erben und auch der 
-            // Konstruktor muss etwas modifiziert werden -> Siehe player class
-
             startMenue = new Menue();
             settingMenue = new Settings();
             sound = new Sounds();
@@ -112,20 +107,10 @@ namespace FlyHigh
             player = new Flugzeug(this);
             Console.WriteLine(player.playerPosition);
 
-            //bullet = new Bullet();
-
-            //roomobj = new Raumobjekte();           
-
-
-            //Components.Add(player);
-            // Components.Add(room);
-
             // Init projection 
             projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45f), graphics.GraphicsDevice.Viewport.AspectRatio, .1f, 10000f);
 
             camPos = Vector3.Zero;
-
-
 
             Console.WriteLine("Menü Time: " + settingMenue.time);;
             base.Initialize();
@@ -138,7 +123,6 @@ namespace FlyHigh
             font = Content.Load<SpriteFont>("font");
             //timer.loadContent(Content);
             player.loadContent(Content);
-
         }
 
 
@@ -155,9 +139,6 @@ namespace FlyHigh
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
-            // Wenn Klasse nicht in der Componenten Datenstruktur enthalten ist, muss Draw manuell aufgerufen werden
-            //player.Update(gameTime);
-
             // Switch gamestates
             switch (gameState)
             {
@@ -166,15 +147,19 @@ namespace FlyHigh
                     sound.playStartmenueTrack();
 
                     startMenue.updateStartMenue(gameTime);
-                    //timer.updateTime(settingMenue.time);
                     IsMouseVisible = true;
                     break;
 
+<<<<<<< HEAD
                 case GameState.ingame:
                     if (model == 1)
                         sound.playInGameTrackFlieger();
                     else
                         sound.playInGameTrackSpace();
+=======
+                case GameState.ingame:                
+
+>>>>>>> Final
                     player.update();
                     IsMouseVisible = false;
 
@@ -199,6 +184,13 @@ namespace FlyHigh
                          Game1.instance.gameState = Game1.GameState.pause;
                     }
 
+                    // Win Bedingung
+
+                    if (scheibenManager.scheibenListe.Count == 0)
+                    {
+                        Game1.instance.gameState = Game1.GameState.win;
+                    }
+
                     timer.Update(gameTime);
                    
                     break;
@@ -210,7 +202,6 @@ namespace FlyHigh
 
                     if (Keyboard.GetState().IsKeyDown(Keys.P))
                     {
-
                         Game1.instance.gameState = Game1.GameState.ingame;
                     }
                     break;
@@ -219,6 +210,10 @@ namespace FlyHigh
                     Game1.instance.sound.playGameover();
                     startMenue.updateGameover();
                     IsMouseVisible = true;
+                    break;
+
+                case GameState.win:
+                    startMenue.updateGameover();
                     break;
             }
 
@@ -258,13 +253,15 @@ namespace FlyHigh
                     startMenue.drawPauseMenue(spriteBatch);
                     timer.Draw(spriteBatch);
                     break;
+
                 case GameState.gameover:
                     startMenue.drawGameover(spriteBatch);
                     break;
-            }
 
-            // Wenn Klasse nicht in der Componenten Datenstruktur enthalten ist, muss Draw manuell aufgerufen werden
-            //player.Draw(gameTime);
+                case GameState.win:
+                    startMenue.drawGameover(spriteBatch);
+                    break;
+            }
 
             base.Draw(gameTime);
         }

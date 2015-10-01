@@ -21,7 +21,7 @@ namespace FlyHigh
 
         public BoundingSphere sphere;
         Matrix sphereTranslation;
-        float bulletRange = 15.0f;
+        float bulletRange = 20.0f;
 
         public Bullet(Vector3 spawnPos, Vector3 spawnScale, Vector3 offset, Quaternion rotation, Model missile, float speed, float xRot)
         {

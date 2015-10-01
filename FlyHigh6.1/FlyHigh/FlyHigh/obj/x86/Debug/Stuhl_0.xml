@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Office_chair:Office_chair</Name>
     <Identity>
-      <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Stuhl.fbx</SourceFilename>
+      <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Stuhl.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>
@@ -51,7 +51,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>lambert3</Name>
       <Identity>
-        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Stuhl.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Stuhl.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -64,7 +64,7 @@
     <Resource ID="#Resource2" Type="Graphics:BasicMaterialContent">
       <Name>lambert5</Name>
       <Identity>
-        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Stuhl.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Stuhl.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -77,7 +77,7 @@
     <Resource ID="#Resource3" Type="Graphics:BasicMaterialContent">
       <Name>lambert4</Name>
       <Identity>
-        <SourceFilename>G:\GitHub\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Stuhl.fbx</SourceFilename>
+        <SourceFilename>C:\Users\Creed\Desktop\GDV-Projekt\FlyHigh6.1\FlyHigh\FlyHighContent\Stuhl.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>

@@ -147,6 +147,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="GameOver.mp3">
       <Name>GameOver</Name>
       <Importer>Mp3Importer</Importer>
@@ -156,6 +157,17 @@
   <ItemGroup>
     <Compile Include="SpaceSchuss.wav">
       <Name>SpaceSchuss</Name>
+=======
+    <Compile Include="Zielscheibe_Sound.wav">
+      <Name>Zielscheibe_Sound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Schuss_Sound.wav">
+      <Name>Schuss_Sound</Name>
+>>>>>>> Final
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>

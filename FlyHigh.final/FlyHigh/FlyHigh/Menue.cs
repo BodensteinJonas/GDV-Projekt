@@ -86,7 +86,7 @@ namespace FlyHigh
             mouseRec = new Rectangle((int)mousePos.X - 10, (int)mousePos.Y - 10, 20, 20);
 
             // Intersect ist collsionsüberprüfung 
-            if (mouseRec.Intersects(sbrec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            if (mouseRec.Intersects(sbrec) && Mouse.GetState().LeftButton == ButtonState.Pressed  || Keyboard.GetState().IsKeyDown(Keys.G))
             {
                 //Game1.instance.sound.stopStartmenueTrack();
                 Game1.instance.gameState = Game1.GameState.gameSettings;

@@ -20,9 +20,9 @@ namespace FlyHigh
         public Color bbColor = Color.Blue;
 
         Model room;
-        Model bed, couch, lowboy, plant1, plant2, rack, desk, chair, door, logo;
+        Model bed, couch, lowboy, plant1, plant2, rack, desk, chair, door, logo, spezial;
         Raumobjekte bett, sofa, kommode, pflanze1, pflanze2, schrank, schreibtisch, stuhl, tuer;
-        Texture2D logoTex;
+        Texture2D logoTex, poster1;
 
         public List<Raumobjekte> rObj;
 
@@ -41,6 +41,7 @@ namespace FlyHigh
             rObj.Add(schreibtisch = new Raumobjekte(game, desk, new Vector3(16.8f, 0f, 9f), MathHelper.ToRadians(180), 1.5f, new Vector3(1.7f, 1.6f, 1.5f)));
             rObj.Add(stuhl = new Raumobjekte(game, chair, new Vector3(13.0f, 0f, 9f), MathHelper.ToRadians(90), 1.1f, new Vector3(1f, 1.1f, 1f)));
             rObj.Add(tuer = new Raumobjekte(game, door, new Vector3(-18f, 0f, 12f), MathHelper.ToRadians(0), .8f, new Vector3(1, .8f, .8f)));
+            
 
             lineEffect = new BasicEffect(Game1.instance.GraphicsDevice);
             lineEffect.LightingEnabled = false;
@@ -64,13 +65,16 @@ namespace FlyHigh
             door = c.Load<Model>("tuer");
             logo = c.Load<Model>("logo");
             logoTex = c.Load<Texture2D>("Img/logo");
+            spezial = c.Load<Model>("grimm");
+            poster1 = c.Load<Texture2D>("Img/grimmPoster");
         }
 
         public void Draw(GameTime gameTime)
         {
-            Game1.instance.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullCounterClockwise);
+            Game1.instance.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullNone);
             draw();
             drawTexObekte();
+            drawSpezial();
             Game1.instance.spriteBatch.End();
 
             Game1.instance.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullCounterClockwise);
@@ -83,7 +87,8 @@ namespace FlyHigh
             schrank.Draw(gameTime);
             schreibtisch.Draw(gameTime);
             stuhl.Draw(gameTime);
-            tuer.Draw(gameTime); 
+            tuer.Draw(gameTime);
+            
             Game1.instance.spriteBatch.End();
 
             DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
@@ -116,7 +121,7 @@ namespace FlyHigh
             Matrix planeWorld = Matrix.Identity;
 
             planeWorld = Matrix.Identity
-                                * Matrix.CreateScale(new Vector3(1f, 1f, 0.7f))
+                                * Matrix.CreateScale(new Vector3(1f, 1f, 1f))
                                 * Matrix.CreateRotationX(MathHelper.ToRadians(90f))
                                 * Matrix.CreateRotationY(MathHelper.ToRadians(180f))
                                 * Matrix.CreateTranslation(new Vector3(0f, 4.0f, 17.90f));
@@ -131,6 +136,30 @@ namespace FlyHigh
                     effect.EnableDefaultLighting();
                     effect.TextureEnabled = true;
                     effect.Texture = logoTex;
+                }
+                mesh.Draw();
+            }
+        }
+        private void drawSpezial()
+        {
+            Matrix planeWorld = Matrix.Identity;
+
+            planeWorld = Matrix.Identity
+                                * Matrix.CreateScale(new Vector3(2f, 1f, 2f))
+                                * Matrix.CreateRotationX(MathHelper.ToRadians(90f))
+                                * Matrix.CreateRotationY(MathHelper.ToRadians(-90f))
+                                * Matrix.CreateTranslation(new Vector3(17.9f, 5f, 11f));
+
+            foreach (ModelMesh mesh in spezial.Meshes)
+            {
+                foreach (BasicEffect effect in mesh.Effects)
+                {
+                    effect.World = planeWorld;
+                    effect.View = Game1.instance.viewMatrix;
+                    effect.Projection = Game1.instance.projectionMatrix;
+                    effect.EnableDefaultLighting();
+                    effect.TextureEnabled = true;
+                    effect.Texture = poster1;
                 }
                 mesh.Draw();
             }

@@ -82,7 +82,7 @@ namespace FlyHigh
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            spriteBatch.DrawString(Game1.instance.font, "Restliche Zeit: " + text, new Vector2(50, 20), Color.Black);
+            spriteBatch.DrawString(Game1.instance.font, "Restliche Zeit: " + text, new Vector2(50, 20), Color.White);
             spriteBatch.End();
         }
 

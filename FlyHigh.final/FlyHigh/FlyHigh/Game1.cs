@@ -9,6 +9,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+using OculusRift.Oculus;
+
 namespace FlyHigh
 {
     public class Game1 : Microsoft.Xna.Framework.Game
@@ -73,6 +75,45 @@ namespace FlyHigh
         Menue startMenue;
         Settings settingMenue;
 
+
+        #region Oculus Vars
+        OculusClient oculusClient;
+        Effect oculusRiftDistortionShader;
+        RenderTarget2D renderTargetLeft;
+        RenderTarget2D renderTargetRight;
+        Texture2D renderTextureLeft;
+        Texture2D renderTextureRight;
+        float scaleImageFactor;
+        float fov_x;
+        float fov_d;
+        int IPD = 0;
+        public static float aspectRatio;
+        float yfov;
+        float viewCenter;
+        float eyeProjectionShift;
+        float projectionCenterOffset;
+        Matrix projCenter;
+        Matrix projLeft;
+        Matrix projRight;
+        Matrix viewLeft;
+        Matrix viewRight;
+        float halfIPD;
+
+        // View, Projection, Resolution
+        public Matrix projection,
+                      view;
+        double resolutionX = 1280,
+               resolutionY = 800;
+
+        // Update ResolutionAndRenderTargets-Function
+        private int viewportWidth;
+        private int viewportHeight;
+        private Rectangle sideBySideLeftSpriteSize;
+        private Rectangle sideBySideRightSpriteSize;
+        #endregion
+
+        bool oculusActive = false;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -84,8 +125,23 @@ namespace FlyHigh
 
             // Game settings
             IsMouseVisible = true;
-            graphics.PreferredBackBufferWidth = 1280;
-            graphics.PreferredBackBufferHeight = 720;
+            if (!oculusActive)
+            {
+                graphics.PreferredBackBufferWidth = 1280;
+                graphics.PreferredBackBufferHeight = 720;
+            }
+
+            if (oculusActive) { 
+                // Create the OculusClient
+                oculusClient = new OculusClient();
+                scaleImageFactor = 0.71f;
+
+                // PresentationSettings
+                graphics.PreferredBackBufferWidth = (int)Math.Ceiling(resolutionX / scaleImageFactor);
+                graphics.PreferredBackBufferHeight = (int)Math.Ceiling(resolutionY / scaleImageFactor);
+
+                graphics.IsFullScreen = true;
+            }
 
             // Control settings
             lastMouseState = Mouse.GetState();
@@ -111,6 +167,10 @@ namespace FlyHigh
             projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45f), graphics.GraphicsDevice.Viewport.AspectRatio, .1f, 10000f);
 
             camPos = Vector3.Zero;
+
+            if(oculusActive)
+                InitOculus();
+            // Dont forget to call InitOculus()
 
             Console.WriteLine("Menü Time: " + settingMenue.time);;
             base.Initialize();
@@ -226,6 +286,30 @@ namespace FlyHigh
         {
             GraphicsDevice.Clear(Color.PowderBlue);
 
+            if (!oculusActive)
+            {
+                drawGame(gameTime);
+            }
+
+            if (oculusActive)
+            {
+                // Oculus Setup
+                SetProjectionOffset();
+
+                DrawLeftEye();
+                drawGame(gameTime);
+
+                DrawRightEye();
+                drawGame(gameTime);
+
+                DrawOculusRenderTargets();
+            }
+
+            base.Draw(gameTime);
+        }
+
+        private void drawGame(GameTime gameTime)
+        {
             switch (gameState)
             {
                 case GameState.startMenue:
@@ -263,9 +347,8 @@ namespace FlyHigh
                     startMenue.drawGameover(spriteBatch);
                     break;
             }
-
-            base.Draw(gameTime);
         }
+
 
         #region Controls
         private void UpdateCameraThirdPerson()
@@ -285,15 +368,17 @@ namespace FlyHigh
             up = Vector3.Transform(up, Matrix.CreateFromQuaternion(player.qPlayerRotation));
 
             // Define oculus rotation matrix
-            //Matrix oculusRot = Matrix.CreateFromQuaternion(OculusRift.Oculus.OculusClient.GetPredictedOrientation());
+            Matrix oculusRot = Matrix.CreateFromQuaternion(OculusRift.Oculus.OculusClient.GetPredictedOrientation());
 
             // Set look at
-            viewMatrix = Matrix.CreateLookAt(CamPosition, lookAt, up); // * oculusRot;
+            viewMatrix = Matrix.CreateLookAt(CamPosition, lookAt, up) * oculusRot;
 
         }
 
         private void UpdateCameraFirstPerson()
         {
+            // Define oculus rotation matrix
+            Matrix oculusRot = Matrix.CreateFromQuaternion(OculusRift.Oculus.OculusClient.GetPredictedOrientation());
             CamPosition = new Vector3(0, 0, .15f);
             CamPosition = Vector3.Transform(CamPosition, Matrix.CreateFromQuaternion(player.qPlayerRotation));
             CamPosition += player.playerPosition;
@@ -302,7 +387,7 @@ namespace FlyHigh
             Vector3 lookAt = player.playerPosition + lookAtOffset;
             Vector3 up = new Vector3(0, 1, 0);
             up = Vector3.Transform(up, Matrix.CreateFromQuaternion(player.qPlayerRotation));
-            viewMatrix = Matrix.CreateLookAt(CamPosition, lookAt, up) * Matrix.CreateTranslation(new Vector3(0, 0, 0));
+            viewMatrix = Matrix.CreateLookAt(CamPosition, lookAt, up) * oculusRot;// * Matrix.CreateTranslation(new Vector3(0, 0, 0));
         }
 
         public void UpdateControls()
@@ -401,6 +486,110 @@ namespace FlyHigh
 
             // Alter keyboardstate muss aktualisiert werden -> für einmaliges Keyevent 
             lastKb = Keyboard.GetState();
+        }
+        #endregion
+
+        #region Oculus Functions
+        private void UpdateResolutionAndRenderTargets()
+        {
+
+            if (viewportWidth != GraphicsDevice.Viewport.Width || viewportHeight != GraphicsDevice.Viewport.Height)
+            {
+                viewportWidth = GraphicsDevice.Viewport.Width;
+                viewportHeight = GraphicsDevice.Viewport.Height;
+                sideBySideLeftSpriteSize = new Microsoft.Xna.Framework.Rectangle(0, 0, viewportWidth / 2, viewportHeight);
+                sideBySideRightSpriteSize = new Microsoft.Xna.Framework.Rectangle(viewportWidth / 2, 0, viewportWidth / 2, viewportHeight);
+            }
+        }
+
+        private void InitOculus()
+        {
+            // Load the Oculus Rift Distortion Shader
+            // https://mega.co.nz/#!E4YkjJ6K!MuIDuB78NwgHsGgeONikDAT_OLJQ0ZeLXbfGF1OAhzw
+            oculusRiftDistortionShader = Content.Load<Effect>(@"OculusRift");
+
+            aspectRatio = (float)(OculusClient.GetScreenResolution().X * 0.5f / (float)(OculusClient.GetScreenResolution().Y));
+            fov_d = OculusClient.GetEyeToScreenDistance();
+            fov_x = OculusClient.GetScreenSize().Y * scaleImageFactor;
+            yfov = 2.0f * (float)Math.Atan(fov_x / fov_d);
+
+            // Set ProjectionMatrix
+            projection = Matrix.CreatePerspectiveFieldOfView(yfov, aspectRatio, 1.0f, 100000.0f);
+
+            // Init left and right RenderTarget
+            renderTargetLeft = new RenderTarget2D(GraphicsDevice, graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight);
+            renderTargetRight = new RenderTarget2D(GraphicsDevice, graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight);
+
+            OculusClient.SetSensorPredictionTime(0, 0.03f);
+            UpdateResolutionAndRenderTargets();
+        }
+
+        private void SetProjectionOffset()
+        {
+            viewCenter = OculusClient.GetScreenSize().X * 0.212f; // 0.25f
+            eyeProjectionShift = viewCenter - OculusClient.GetLensSeparationDistance() * 0.5f;
+            projectionCenterOffset = 4.0f * eyeProjectionShift / OculusClient.GetScreenSize().X;
+
+            projCenter = projection;
+            projLeft = Matrix.CreateTranslation(projectionCenterOffset, 0, 0) * projCenter;
+            projRight = Matrix.CreateTranslation(-projectionCenterOffset, 0, 0) * projCenter;
+
+            halfIPD = OculusClient.GetInterpupillaryDistance() * 0.5f;
+            viewLeft = Matrix.CreateTranslation(halfIPD, 0, 0) * view;
+            viewRight = Matrix.CreateTranslation(-halfIPD, 0, 0) * view;
+        }
+
+        private void DrawLeftEye()
+        {
+            GraphicsDevice.SetRenderTarget(renderTargetLeft);
+            GraphicsDevice.Clear(Color.Black);
+            view = viewLeft;
+            projection = projLeft;
+        }
+
+        private void DrawRightEye()
+        {
+            GraphicsDevice.SetRenderTarget(renderTargetRight);
+            GraphicsDevice.Clear(Color.Black);
+            view = viewRight;
+            projection = projRight;
+        }
+
+        private void DrawOculusRenderTargets()
+        {
+            // Set RenderTargets
+            GraphicsDevice.SetRenderTarget(null);
+            renderTextureLeft = (Texture2D)renderTargetLeft;
+            renderTextureRight = (Texture2D)renderTargetRight;
+            GraphicsDevice.Clear(Color.Black);
+
+            //Set the four Distortion params of the oculus
+            oculusRiftDistortionShader.Parameters["distK0"].SetValue(oculusClient.DistK0);
+            oculusRiftDistortionShader.Parameters["distK1"].SetValue(oculusClient.DistK1);
+            oculusRiftDistortionShader.Parameters["distK2"].SetValue(oculusClient.DistK2);
+            oculusRiftDistortionShader.Parameters["distK3"].SetValue(oculusClient.DistK3);
+            oculusRiftDistortionShader.Parameters["imageScaleFactor"].SetValue(scaleImageFactor);
+
+            // Pass for left lens
+            oculusRiftDistortionShader.Parameters["drawLeftLens"].SetValue(true);
+            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Opaque, null, null, null, oculusRiftDistortionShader);
+            spriteBatch.Draw(renderTextureLeft, sideBySideLeftSpriteSize, Microsoft.Xna.Framework.Color.White);
+            spriteBatch.End();
+
+            // Pass for right lens
+            oculusRiftDistortionShader.Parameters["drawLeftLens"].SetValue(false);
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Opaque, null, null, null, oculusRiftDistortionShader);
+            spriteBatch.Draw(renderTextureRight, sideBySideRightSpriteSize, Microsoft.Xna.Framework.Color.White);
+            spriteBatch.End();
+        }
+
+        private void ResetRiftOrientation()
+        {
+            bool resetOk;
+            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+            {
+                resetOk = OculusClient.ResetSensorOrientation(0);
+            }
         }
         #endregion
     }

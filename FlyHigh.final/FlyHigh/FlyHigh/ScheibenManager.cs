@@ -50,8 +50,8 @@ namespace FlyHigh
 
             // Restliche Scheiben werden angezeigt
             Game1.instance.spriteBatch.Begin();
-            Game1.instance.spriteBatch.DrawString(Game1.instance.font,"Restliche Scheiben: " + scheibenListe.Count.ToString(""), new Vector2(50, 40), Color.Black);
-            Game1.instance.spriteBatch.DrawString(Game1.instance.font, "Highscore: " + Game1.instance.Highscore.ToString(""), new Vector2(50, 60), Color.Black);
+            Game1.instance.spriteBatch.DrawString(Game1.instance.font,"Restliche Scheiben: " + scheibenListe.Count.ToString(""), new Vector2(50, 40), Color.White);
+            Game1.instance.spriteBatch.DrawString(Game1.instance.font, "Highscore: " + Game1.instance.Highscore.ToString(""), new Vector2(50, 60), Color.White);
             Game1.instance.spriteBatch.End();
 
             foreach (Scheibe target in scheibenListe)

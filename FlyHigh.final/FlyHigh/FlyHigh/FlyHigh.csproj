@@ -98,6 +98,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\XNAOculusRift\OculusParrotKinect.OculusRift\OculusRift.csproj">
+      <Project>{ae4ce294-06cf-467c-bb9b-4b2eb9783ed9}</Project>
+      <Name>OculusRift</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FlyHighContent\FlyHighContent.contentproj">
       <Name>FlyHighContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>

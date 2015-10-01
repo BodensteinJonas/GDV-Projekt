@@ -844,3 +844,7 @@ C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Deb
 C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\OculusParrotKinect.OculusRift.dll
 C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\OculusParrotKinect.OculusRift.pdb
 C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\OculusRift.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\poster.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\poster.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\poster_0.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\win.xnb

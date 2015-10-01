@@ -273,7 +273,7 @@ namespace FlyHigh
 
                 case GameState.win:
                     sound.playVictory();
-                    startMenue.updateGameover();
+                    startMenue.updateWin();
                     IsMouseVisible = true;
                     break;
             }
@@ -344,7 +344,7 @@ namespace FlyHigh
                     break;
 
                 case GameState.win:
-                    startMenue.drawGameover(spriteBatch);
+                    startMenue.drawWin(spriteBatch);
                     break;
             }
         }

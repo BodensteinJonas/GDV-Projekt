@@ -36,6 +36,7 @@ namespace FlyHigh
         {
             if (FliegerSchuss.State != SoundState.Playing)
                 FliegerSchuss.Play();
+            FliegerSchuss.Volume = .1f;
         }
 
         public void playSpaceSchussSound()
@@ -54,6 +55,7 @@ namespace FlyHigh
             if (!liedIsFinished)
             {
                 MediaPlayer.Play(Start);
+                MediaPlayer.Volume = 1f;
                 MediaPlayer.IsRepeating = true;
                 liedIsFinished = true;
             }

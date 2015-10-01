@@ -38,6 +38,10 @@ namespace FlyHigh
         Texture2D go, beC, stC;
         Rectangle goRec, beCRec, stCRec;
 
+        // Win Stuff
+        Texture2D win;
+        Rectangle winRec;
+
 
         public Menue()
         {
@@ -77,6 +81,9 @@ namespace FlyHigh
             beCRec = new Rectangle(900, 550, 324, 104);
             stC = Game1.instance.Content.Load<Texture2D>("Img/SpielstartCrashed");
             stCRec = new Rectangle(900, 400, 324, 104);
+
+            win = Game1.instance.Content.Load<Texture2D>("Img/win");
+            winRec = new Rectangle(0, 0, 1280 + 20, 720);
         }
 
         public void updateStartMenue(GameTime gt)
@@ -184,6 +191,36 @@ namespace FlyHigh
             batch.Draw(go, goRec, Color.White);
             batch.Draw(stC, stCRec, Color.White);
             batch.Draw(beC, beCRec, Color.White);
+            batch.End();
+        }
+
+
+        public void updateWin()
+        {
+            mousePos = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+
+            mouseRec = new Rectangle((int)mousePos.X - 10, (int)mousePos.Y - 10, 20, 20);
+
+            // Intersect ist collsionsüberprüfung 
+            if (mouseRec.Intersects(stCRec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                //Game1.instance.sound.stopStartmenueTrack();
+                Game1.instance.sound.stopTrack();
+                Game1.instance.gameState = Game1.GameState.gameSettings;
+            }
+
+            if (mouseRec.Intersects(beCRec) && Mouse.GetState().LeftButton == ButtonState.Pressed)
+            {
+                Game1.instance.Exit();
+            }
+        }
+
+        public void drawWin(SpriteBatch batch)
+        {
+            batch.Begin();
+            batch.Draw(win, winRec, Color.White);
+            batch.Draw(sb, sbrec, Color.White);
+            batch.Draw(end, endrec, Color.White);
             batch.End();
         }
     }

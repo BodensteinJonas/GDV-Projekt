@@ -722,6 +722,61 @@
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\OculusRift.xnb</Output>
       <Time>2015-10-01T20:14:05.8778743+02:00</Time>
     </Item>
+    <Item>
+      <Source>poster.fbx</Source>
+      <Name>poster</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\poster.xnb</Output>
+      <Time>2015-10-01T21:58:24.7871497+02:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\poster_0.xml</Key>
+        <Value>2015-10-01T21:58:28.1772522+02:00</Value>
+      </Dependency>
+      <Request>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\poster_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Img\poster.png</Source>
+      <Name>Img\poster</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\poster.xnb</Output>
+      <Time>2015-10-01T22:00:46.3640868+02:00</Time>
+    </Item>
+    <Item>
+      <Source>poster.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\poster_0.xml</Output>
+      <Time>2015-10-01T21:58:24.7871497+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\poster.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\poster_0.xnb</Output>
+      <Time>2015-10-01T22:00:46.3640868+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\win.png</Source>
+      <Name>Img\win</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\win.xnb</Output>
+      <Time>2015-10-01T22:17:07.8936212+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

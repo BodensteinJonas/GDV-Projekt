@@ -20,9 +20,9 @@ namespace FlyHigh
         public Color bbColor = Color.Blue;
 
         Model room;
-        Model bed, couch, lowboy, plant1, plant2, rack, desk, chair, door, logo, spezial;
+        Model bed, couch, lowboy, plant1, plant2, rack, desk, chair, door, logo, spezial, poster;
         Raumobjekte bett, sofa, kommode, pflanze1, pflanze2, schrank, schreibtisch, stuhl, tuer;
-        Texture2D logoTex, poster1;
+        Texture2D logoTex, poster1, poster2;
 
         public List<Raumobjekte> rObj;
 
@@ -67,6 +67,9 @@ namespace FlyHigh
             logoTex = c.Load<Texture2D>("Img/logo");
             spezial = c.Load<Model>("grimm");
             poster1 = c.Load<Texture2D>("Img/grimmPoster");
+            poster = c.Load<Model>("poster");
+            poster2 = c.Load<Texture2D>("Img/poster");
+
         }
 
         public void Draw(GameTime gameTime)
@@ -75,6 +78,7 @@ namespace FlyHigh
             draw();
             drawTexObekte();
             drawSpezial();
+            drawPoster();
             Game1.instance.spriteBatch.End();
 
             Game1.instance.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullCounterClockwise);
@@ -160,6 +164,30 @@ namespace FlyHigh
                     effect.EnableDefaultLighting();
                     effect.TextureEnabled = true;
                     effect.Texture = poster1;
+                }
+                mesh.Draw();
+            }
+        }
+        private void drawPoster()
+        {
+            Matrix planeWorld = Matrix.Identity;
+
+            planeWorld = Matrix.Identity
+                                * Matrix.CreateScale(new Vector3(6f, 1f, 6f))
+                                * Matrix.CreateRotationX(MathHelper.ToRadians(90f))
+                                * Matrix.CreateRotationY(MathHelper.ToRadians(90))
+                                * Matrix.CreateTranslation(new Vector3(-17.9f, 4f, -7f));
+
+            foreach (ModelMesh mesh in poster.Meshes)
+            {
+                foreach (BasicEffect effect in mesh.Effects)
+                {
+                    effect.World = planeWorld;
+                    effect.View = Game1.instance.viewMatrix;
+                    effect.Projection = Game1.instance.projectionMatrix;
+                    effect.EnableDefaultLighting();
+                    effect.TextureEnabled = true;
+                    effect.Texture = poster2;
                 }
                 mesh.Draw();
             }

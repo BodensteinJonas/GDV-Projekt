@@ -137,11 +137,6 @@ namespace FlyHigh
 
             missile = Content.Load<Model>("Missile");
 
-            //for (int i = 0; i <= schussAnz; i++)
-            //{
-               // Vector3 targetPos = new Vector3(0,0,0);
-               // schussListe.Add(new Bullet(player.playerPosition, new Vector3(1.0f, 1.0f, 1.0f), Vector3.Right, player.playerRotation, missile, 2.0f);
-            //}
 
             player.loadContent(Content);
 
@@ -226,8 +221,6 @@ namespace FlyHigh
             // Mouse yaw (gieren)
             angle.Y += MathHelper.ToRadians((mouse.X - centerX) * turnSpeed);
 
-            //Console.WriteLine("Deg X: " + (oldMousePos.Y - centerY) * turnSpeed + " | Deg Y: " + (oldMousePos.X - centerX) * turnSpeed);
-            //Console.WriteLine("Rad X: " + angle.X + " | Rad Y: " + angle.Y);
 
             // Move to direction we are looking at
             moveNearFar = Vector3.Normalize(new Vector3((float)Math.Sin(-angle.Y) * (float)Math.Cos(angle.X), (float)Math.Sin(angle.X), (float)Math.Cos(-angle.Y) * (float)Math.Cos(angle.X)));

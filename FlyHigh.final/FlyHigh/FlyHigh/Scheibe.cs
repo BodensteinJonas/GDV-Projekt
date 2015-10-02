@@ -71,7 +71,8 @@ namespace FlyHigh
                 }
                 mesh.Draw();
             }
-            BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
+            if (Game1.instance.debug)
+                BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
         }
         // Ändert Position der Scheiben und stellt posiblePos auf "true"
         public void newPos()
@@ -80,7 +81,6 @@ namespace FlyHigh
             {
                 pos = new Vector3(rand.Next(-11, 11), rand.Next(1, 8), rand.Next(-18, 18));
                 posiblePos = true;
-                Console.WriteLine("Geändert");
             }
         }
     }

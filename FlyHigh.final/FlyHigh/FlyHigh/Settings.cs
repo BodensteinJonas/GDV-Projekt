@@ -96,7 +96,7 @@ namespace FlyHigh
                 // Player einstellen
                 Game1.instance.player.resetPlayer();
                 Game1.instance.player.sphere.Center = Game1.instance.player.playerPosition;
-                Game1.instance.cameraStyle = Game1.CameraStyle.TPV;
+                Game1.instance.cameraStyle = Game1.CameraStyle.FPV;
                 Game1.instance.Highscore = 0;
                 
 
@@ -110,11 +110,9 @@ namespace FlyHigh
                 Game1.instance.schussManager = new SchussManager();
                 Game1.instance.scheibenManager = new ScheibenManager();
 
-
                 // Starte Spiel
                 Game1.instance.gameState = Game1.GameState.ingame;
-                Mouse.SetPosition(646,371);
-                Console.WriteLine("mouseX: " + Mouse.GetState().X + " mouseY: " + Mouse.GetState().Y);            
+                Mouse.SetPosition(646,371);            
             }
 
             if (mouseRec.Intersects(bRec) && Mouse.GetState().LeftButton == ButtonState.Pressed)

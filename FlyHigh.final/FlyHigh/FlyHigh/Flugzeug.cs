@@ -34,16 +34,18 @@ namespace FlyHigh
         public BoundingSphere sphere;
         KeyboardState kbState;
 
-        // BoundingBox
-        public BoundingBox boundingBox;
-        private BasicEffect lineEffect;
-        public BoundingBoxRenderer bbRenderer = new BoundingBoxRenderer();
-        public Color bbColor = Color.Blue;
-
         public Flugzeug(Game game)
         {
 
             qPlayerRotation = Quaternion.Identity;
+            //cockpit
+            
+                Game1.instance.cockpit1 = Game1.instance.Content.Load<Texture2D>("Img/cockpit1");
+                Game1.instance.cockRec1 = new Rectangle(0, 0, 1280, 720);
+            
+                Game1.instance.cockpit2 = Game1.instance.Content.Load<Texture2D>("Img/cockpit2");
+                Game1.instance.cockRec2 = new Rectangle(0, 0, 1280, 720);
+            
         }
 
         public void loadContent(ContentManager c)
@@ -53,10 +55,6 @@ namespace FlyHigh
             texture1 = c.Load<Texture2D>("texture1");
             texture2 = c.Load<Texture2D>("texture2");
 
-            lineEffect = new BasicEffect(Game1.instance.GraphicsDevice);
-            lineEffect.LightingEnabled = false;
-            lineEffect.TextureEnabled = false;
-            lineEffect.VertexColorEnabled = true;
         }
 
         public void update()
@@ -122,11 +120,8 @@ namespace FlyHigh
                     mesh.Draw();
                 }
             }
-
-            BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
-
-            DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
-                   lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
+            if (Game1.instance.debug)
+                BoundingSphereRenderer.Render(sphere, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix, Color.Red);
         }
 
         public void resetPlayer()
@@ -161,15 +156,13 @@ namespace FlyHigh
 
             // Speed of the Ship 
             // Vorwärts, wenn negative maxSpeed nicht erreicht ist
-            if (kbState.IsKeyDown(Keys.W) && (playerSpeed > -maxSpeed))           
-                 playerSpeed += -speedToAdd;
+            if (kbState.IsKeyDown(Keys.W) && (playerSpeed > -maxSpeed))
+                playerSpeed += -speedToAdd;
 
             // Rückwärts, wenn die hälfte der MaxSpeed nicht erreicht ist
             if (kbState.IsKeyDown(Keys.S) && (playerSpeed < (maxSpeed / 3)))
                 playerSpeed += speedToAdd;
-
         }
-
 
         private void MouseControls()
         {
@@ -195,36 +188,5 @@ namespace FlyHigh
         }
         #endregion
 
-        #region BoundingBox
-        public BoundingBox getBoundingBox()
-        {
-            return boundingBox;
-        }
-
-        protected void setBoundingBox()
-        {
-            Vector3 offset = Vector3.Transform(new Vector3(0.0f, 4.5f, 35.0f), qPlayerRotation);
-            Matrix translation = Matrix.CreateScale(new Vector3(0.3f, 0.3f, 0.3f)) * Matrix.CreateFromQuaternion(qPlayerRotation) * Matrix.CreateTranslation(playerPosition);// * Matrix.CreateTranslation(offset);  // scaleParam
-            boundingBox = bbRenderer.CreateBoundingBox(plane1, translation);
-            // 6.1f, 2.1f, 10.1f
-        }
-
-        protected void DrawBoundingBox(BoundingBoxRenderer bbRenderer, BasicEffect effect, GraphicsDevice graphicsDevice, Matrix view, Matrix projection)
-        {
-            graphicsDevice.SetVertexBuffer(bbRenderer.Vertices);
-            graphicsDevice.Indices = bbRenderer.Indices;
-
-            effect.World = Matrix.Identity; // Matrix.CreateFromQuaternion(playerRotation) * Matrix.CreateTranslation(playerPosition);
-            effect.View = view;
-            effect.Projection = projection;
-
-            foreach (EffectPass pass in effect.CurrentTechnique.Passes)
-            {
-                pass.Apply();
-                graphicsDevice.DrawIndexedPrimitives(PrimitiveType.LineList, 0, 0,
-                    bbRenderer.VertexCount, 0, bbRenderer.PrimitiveCount);
-            }
-        }
-        #endregion
     }
 }

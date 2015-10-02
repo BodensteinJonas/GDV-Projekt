@@ -21,11 +21,12 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Raum.xnb</Output>
-      <Time>2015-10-01T19:13:54.9158956+02:00</Time>
+      <Time>2015-10-02T14:30:56.0241958+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Raum_0.xml</Key>
-        <Value>2015-10-01T19:14:20.9779149+02:00</Value>
+        <Value>2015-10-02T14:30:59.968747+02:00</Value>
       </Dependency>
+      <Request>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\teppich_0.xnb</Request>
     </Item>
     <Item>
       <Source>Bett.fbx</Source>
@@ -535,7 +536,7 @@
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Raum_0.xml</Output>
-      <Time>2015-10-01T19:13:54.9158956+02:00</Time>
+      <Time>2015-10-02T14:30:56.0241958+02:00</Time>
     </Item>
     <Item>
       <Source>Bett.fbx</Source>
@@ -785,6 +786,115 @@
       <Options>None</Options>
       <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\kreuz.xnb</Output>
       <Time>2015-10-01T23:42:27.0607077+02:00</Time>
+    </Item>
+    <Item>
+      <Source>poster3.fbx</Source>
+      <Name>poster3</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\poster3.xnb</Output>
+      <Time>2015-10-02T13:36:37.2468427+02:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\poster3_0.xml</Key>
+        <Value>2015-10-02T13:44:18.3981052+02:00</Value>
+      </Dependency>
+      <Request>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\poster3_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Img\poster3.png</Source>
+      <Name>Img\poster3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\poster3.xnb</Output>
+      <Time>2015-10-02T14:02:08.0122448+02:00</Time>
+    </Item>
+    <Item>
+      <Source>poster3.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\poster3_0.xml</Output>
+      <Time>2015-10-02T13:36:37.2468427+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\poster3.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\poster3_0.xnb</Output>
+      <Time>2015-10-02T14:02:08.0122448+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\teppich.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\teppich_0.xnb</Output>
+      <Time>2015-10-02T14:33:10.5344145+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Teppich.png</Source>
+      <Name>Img\Teppich</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\Teppich.xnb</Output>
+      <Time>2015-10-02T14:33:10.5344145+02:00</Time>
+    </Item>
+    <Item>
+      <Source>lazzor.fbx</Source>
+      <Name>lazzor</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\lazzor.xnb</Output>
+      <Time>2015-10-02T14:40:06.9301806+02:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\lazzor_0.xml</Key>
+        <Value>2015-10-02T14:41:34.0020824+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>lazzor.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\lazzor_0.xml</Output>
+      <Time>2015-10-02T14:40:06.9301806+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\cockpit2.png</Source>
+      <Name>Img\cockpit2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\cockpit2.xnb</Output>
+      <Time>2015-10-02T14:48:46.5964166+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\cockpit1.png</Source>
+      <Name>Img\cockpit1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\cockpit1.xnb</Output>
+      <Time>2015-10-02T15:44:45.1280192+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

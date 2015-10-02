@@ -26,8 +26,6 @@ namespace FlyHigh
         Rectangle mouseRec;
         Vector2 mousePos;
 
-        bool debug = true;
-
         // Pause Menue Stuff
         cButton btnPlay, btnQuit;
         bool pause = false;
@@ -104,19 +102,15 @@ namespace FlyHigh
                 Game1.instance.Exit();
             }
 
-
-
-            //Console.WriteLine(mousePos);
         }
 
         public void drawStartMenue(SpriteBatch batch)
         {
             batch.Begin();
-            //White für Standartfarbe bei Texturen
             batch.Draw(backg, backgrec, Color.White);
             batch.Draw(sb, sbrec, Color.White);
             batch.Draw(end, endrec, Color.White);
-            //batch.Draw(mouseTex, mouseRec, Color.White);
+
 
             batch.End();
         }

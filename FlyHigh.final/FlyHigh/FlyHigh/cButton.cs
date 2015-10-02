@@ -16,7 +16,6 @@ namespace FlyHigh
 
         Color colour = new Color(255, 255, 255, 255);
 
-        bool down;
         public bool isClicked;
 
         public cButton()

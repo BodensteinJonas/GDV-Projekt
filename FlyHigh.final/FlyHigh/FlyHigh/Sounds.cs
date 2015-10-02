@@ -36,13 +36,14 @@ namespace FlyHigh
         {
             if (FliegerSchuss.State != SoundState.Playing)
                 FliegerSchuss.Play();
-            FliegerSchuss.Volume = .2f;
+                FliegerSchuss.Volume = .2f;
         }
 
         public void playSpaceSchussSound()
         {
             if (SpaceSchuss.State != SoundState.Playing)
                 SpaceSchuss.Play();
+            FliegerSchuss.Volume = .2f;
         }
         public void playScheibenSound()
         {

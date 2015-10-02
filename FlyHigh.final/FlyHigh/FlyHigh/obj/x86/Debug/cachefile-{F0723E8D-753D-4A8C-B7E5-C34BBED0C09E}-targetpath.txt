@@ -65,3 +65,11 @@ Content\Img\poster.xnb
 Content\Img\poster_0.xnb
 Content\Img\win.xnb
 Content\Img\kreuz.xnb
+Content\poster3.xnb
+Content\Img\poster3.xnb
+Content\Img\poster3_0.xnb
+Content\Img\teppich_0.xnb
+Content\Img\Teppich.xnb
+Content\lazzor.xnb
+Content\Img\cockpit2.xnb
+Content\Img\cockpit1.xnb

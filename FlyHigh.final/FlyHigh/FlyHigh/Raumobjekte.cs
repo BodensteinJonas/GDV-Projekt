@@ -44,8 +44,11 @@ namespace FlyHigh
         public override void Draw(GameTime gameTime)
         {
             draw();
-            DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
-                lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
+            if (Game1.instance.debug)
+            {
+                DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
+                    lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
+            }
         }
 
         public void draw()

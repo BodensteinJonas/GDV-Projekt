@@ -20,9 +20,9 @@ namespace FlyHigh
         public Color bbColor = Color.Blue;
 
         Model room;
-        Model bed, couch, lowboy, plant1, plant2, rack, desk, chair, door, logo, spezial, poster;
+        Model bed, couch, lowboy, plant1, plant2, rack, desk, chair, door, logo, spezial, poster, poster3, teppich;
         Raumobjekte bett, sofa, kommode, pflanze1, pflanze2, schrank, schreibtisch, stuhl, tuer;
-        Texture2D logoTex, poster1, poster2;
+        Texture2D logoTex, poster1, poster2, poster3Tex, teppichTex;
 
         public List<Raumobjekte> rObj;
 
@@ -69,8 +69,13 @@ namespace FlyHigh
             poster1 = c.Load<Texture2D>("Img/grimmPoster");
             poster = c.Load<Model>("poster");
             poster2 = c.Load<Texture2D>("Img/poster");
+            teppichTex = c.Load<Texture2D>("Img/Teppich");
+            poster3 = c.Load<Model>("poster3");
+            poster3Tex = c.Load<Texture2D>("Img/poster3");
 
         }
+
+        // Zeichne Alle Raumobjekte
 
         public void Draw(GameTime gameTime)
         {
@@ -79,6 +84,8 @@ namespace FlyHigh
             drawTexObekte();
             drawSpezial();
             drawPoster();
+            drawCredits();
+     
             Game1.instance.spriteBatch.End();
 
             Game1.instance.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullCounterClockwise);
@@ -94,11 +101,14 @@ namespace FlyHigh
             tuer.Draw(gameTime);
             
             Game1.instance.spriteBatch.End();
-
-            DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
-                            lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
+            if (Game1.instance.debug)
+            {
+                DrawBoundingBox(bbRenderer.CreateBoundingBoxBuffers(boundingBox, Game1.instance.GraphicsDevice, bbColor),
+                                lineEffect, Game1.instance.GraphicsDevice, Game1.instance.viewMatrix, Game1.instance.projectionMatrix);
+            }
         }
 
+        // Zeichne den Raum
 
         private void draw()
         {
@@ -115,17 +125,20 @@ namespace FlyHigh
                     effect.View = Game1.instance.viewMatrix;
                     effect.Projection = Game1.instance.projectionMatrix;
                     effect.EnableDefaultLighting();
+                    effect.TextureEnabled = true;
+                    effect.Texture = teppichTex;
                 }
                 mesh.Draw();
             }
         }
 
+        // Zeichne das Hochschullogo
         private void drawTexObekte()
         {
             Matrix planeWorld = Matrix.Identity;
 
             planeWorld = Matrix.Identity
-                                * Matrix.CreateScale(new Vector3(1f, 1f, 1f))
+                                * Matrix.CreateScale(new Vector3(.8f, 1f, .8f))
                                 * Matrix.CreateRotationX(MathHelper.ToRadians(90f))
                                 * Matrix.CreateRotationY(MathHelper.ToRadians(180f))
                                 * Matrix.CreateTranslation(new Vector3(0f, 4.0f, 17.90f));
@@ -144,6 +157,8 @@ namespace FlyHigh
                 mesh.Draw();
             }
         }
+
+        // Zeichne das Easter-Egg
         private void drawSpezial()
         {
             Matrix planeWorld = Matrix.Identity;
@@ -168,6 +183,8 @@ namespace FlyHigh
                 mesh.Draw();
             }
         }
+
+        // Zeichne die Game-Poster
         private void drawPoster()
         {
             Matrix planeWorld = Matrix.Identity;
@@ -192,6 +209,35 @@ namespace FlyHigh
                 mesh.Draw();
             }
         }
+
+        // Zeichne die Credits
+        private void drawCredits()
+        {
+            Matrix planeWorld = Matrix.Identity;
+
+            planeWorld = Matrix.Identity
+                                * Matrix.CreateScale(new Vector3(4f, 1f, 4f))
+                                * Matrix.CreateRotationX(MathHelper.ToRadians(90f))
+                                //* Matrix.CreateRotationY(MathHelper.ToRadians(90))
+                                * Matrix.CreateTranslation(new Vector3(0f, 5f, -17.9f));
+
+            foreach (ModelMesh mesh in poster3.Meshes)
+            {
+                foreach (BasicEffect effect in mesh.Effects)
+                {
+                    effect.World = planeWorld;
+                    effect.View = Game1.instance.viewMatrix;
+                    effect.Projection = Game1.instance.projectionMatrix;
+                    effect.EnableDefaultLighting();
+                    effect.TextureEnabled = true;
+                    effect.Texture = poster3Tex;
+                }
+                mesh.Draw();
+            }
+
+
+        }
+
         #region BoundingBox
         public BoundingBox getBoundingBox()
         {

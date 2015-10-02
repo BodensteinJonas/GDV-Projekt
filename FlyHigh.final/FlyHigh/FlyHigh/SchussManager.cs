@@ -10,14 +10,17 @@ namespace FlyHigh
 {
     public class SchussManager
     {
-        public Model missile;
+        public Model missile, laser;
         public List<Bullet> schussListe = new List<Bullet>();
         public List<Bullet> schussRemoveListe = new List<Bullet>();
 
         KeyboardState lkb;
         public SchussManager()
         {
-            missile = Game1.instance.Content.Load<Model>("Missile");
+            if (Game1.instance.model == 1)
+                missile = Game1.instance.Content.Load<Model>("Missile");
+            else
+                missile = Game1.instance.Content.Load<Model>("Lazzor");
             lkb = Keyboard.GetState();
         }
 
@@ -26,7 +29,11 @@ namespace FlyHigh
 
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && lkb.IsKeyUp(Keys.Space))
             {
-                Game1.instance.sound.playFliegerSchussSound();
+                if (Game1.instance.model == 1)
+                    Game1.instance.sound.playFliegerSchussSound();
+                else
+                    Game1.instance.sound.playSpaceSchussSound();
+
                 schussListe.Add(new Bullet(Game1.instance.player.playerPosition,
                                 new Vector3(0.05f, 0.05f, 0.05f),
                                 Vector3.Right,

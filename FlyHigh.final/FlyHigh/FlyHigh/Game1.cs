@@ -57,7 +57,7 @@ namespace FlyHigh
         /// Note: Chance style with F1-Key
         /// </summary>
         public enum CameraStyle { FPV, TPV, SV };
-        public CameraStyle cameraStyle = CameraStyle.TPV;
+        public CameraStyle cameraStyle = CameraStyle.FPV;
 
         public enum GameState { startMenue, ingame, pause, gameSettings, gameover, win };
         public GameState gameState = GameState.startMenue;
@@ -75,6 +75,10 @@ namespace FlyHigh
         Texture2D kreuz;
         Rectangle kreuzRec;
 
+        // Cockpit
+        public Texture2D cockpit1, cockpit2;
+        public Rectangle cockRec1, cockRec2;
+
         // Menues
         Menue startMenue;
         Settings settingMenue;
@@ -90,7 +94,7 @@ namespace FlyHigh
         float scaleImageFactor;
         float fov_x;
         float fov_d;
-        int IPD = 0;
+        //int IPD = 0;
         public static float aspectRatio;
         float yfov;
         float viewCenter;
@@ -117,6 +121,7 @@ namespace FlyHigh
         #endregion
 
         bool oculusActive = false;
+        public bool debug = false;
 
         public Game1()
         {
@@ -165,7 +170,6 @@ namespace FlyHigh
 
         //    room = new Raum(this);
             player = new Flugzeug(this);
-            Console.WriteLine(player.playerPosition);
 
             // Init projection 
             projectionMatrix = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45f), graphics.GraphicsDevice.Viewport.AspectRatio, .1f, 10000f);
@@ -175,8 +179,6 @@ namespace FlyHigh
             if(oculusActive)
                 InitOculus();
             // Dont forget to call InitOculus()
-
-            Console.WriteLine("Menü Time: " + settingMenue.time);;
             base.Initialize();
         }
 
@@ -190,6 +192,9 @@ namespace FlyHigh
             //First Person View
             kreuz = Content.Load<Texture2D>("Img/kreuz");
             kreuzRec = new Rectangle(1280/2-35, 720/2-35, 70,70);
+            
+            
+            
         }
 
 
@@ -358,10 +363,15 @@ namespace FlyHigh
             }
 
             // Zeichnen von Fadenkreuz in der FPV
-            if (cameraStyle == CameraStyle.FPV)
+            if (cameraStyle == CameraStyle.FPV && gameState == GameState.ingame)
             {
                 spriteBatch.Begin();
                 spriteBatch.Draw(kreuz, kreuzRec, Color.White);
+                if (model == 1)
+                    spriteBatch.Draw(cockpit1, cockRec1, Color.White);
+                else
+                    spriteBatch.Draw(cockpit2, cockRec2, Color.White);
+
                 spriteBatch.End();
             }
 
@@ -434,9 +444,6 @@ namespace FlyHigh
             // Mouse yaw (gieren)
             angle.Y += MathHelper.ToRadians((mouse.X - centerX) * turnSpeed);
 
-            //Console.WriteLine("Deg X: " + (oldMousePos.Y - centerY) * turnSpeed + " | Deg Y: " + (oldMousePos.X - centerX) * turnSpeed);
-            //Console.WriteLine("Rad X: " + angle.X + " | Rad Y: " + angle.Y);
-
             // Move to direction we are looking at
             moveNearFar = Vector3.Normalize(new Vector3((float)Math.Sin(-angle.Y) * (float)Math.Cos(angle.X), (float)Math.Sin(angle.X), (float)Math.Cos(-angle.Y) * (float)Math.Cos(angle.X)));
             moveLeftRight = Vector3.Normalize(new Vector3((float)Math.Cos(angle.Y), 0f, (float)Math.Sin(angle.Y)));
@@ -458,7 +465,6 @@ namespace FlyHigh
 
             if (keyboard.IsKeyDown(Keys.Q))
                 camPos += Vector3.Down * speed;
-
  
 
             // Keyevent wird nur einmalig ausgeführt
@@ -499,9 +505,6 @@ namespace FlyHigh
 
             // if (mouse.LeftButton == ButtonState.Pressed)
             if (keyboard.IsKeyDown(Keys.P))
-                Console.WriteLine("foo");
-            //gameState = GameState.ingame;
-
 
             // Alter keyboardstate muss aktualisiert werden -> für einmaliges Keyevent 
             lastKb = Keyboard.GetState();

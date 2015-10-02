@@ -923,3 +923,11 @@ G:\GitHub\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\obj\x86\Debug\Microsoft.Xna.
 G:\GitHub\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.exe
 G:\GitHub\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\obj\x86\Debug\FlyHigh.pdb
 C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\kreuz.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\poster3.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\poster3.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\poster3_0.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\teppich_0.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\Teppich.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\lazzor.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\cockpit2.xnb
+C:\Users\Jonas\Desktop\git\GDV-Projekt\FlyHigh.final\FlyHigh\FlyHigh\bin\x86\Debug\Content\Img\cockpit1.xnb

@@ -14,7 +14,6 @@ namespace FlyHigh
         private String text;
         public float time;
 
-        private Vector2 position;
         private bool started;
         private bool paused;
         private bool finished;
@@ -82,7 +81,7 @@ namespace FlyHigh
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            spriteBatch.DrawString(Game1.instance.font, "Restliche Zeit: " + text, new Vector2(50, 20), Color.White);
+            spriteBatch.DrawString(Game1.instance.font, "Restliche Zeit: " + text, new Vector2(50, 60), Color.White);
             spriteBatch.End();
         }
 

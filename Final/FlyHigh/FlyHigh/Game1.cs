@@ -127,7 +127,7 @@ namespace FlyHigh
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.IsFullScreen = false;
+            graphics.IsFullScreen = true;
 
             // Global game instance
             instance = this;

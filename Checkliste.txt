@@ -1,8 +1,0 @@
-1. Menu
-	-start
-	-beenden
-	-Flugzeugwahl
-	-Timer einstellen
-	-Leben (Easy, Mittel, Hard)
-	
-2. Hintergrundmusik (Musik, Spiel) 
